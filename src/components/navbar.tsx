@@ -27,7 +27,7 @@ export default function Navbar() {
       <Image
         src={Search}
         alt=""
-        className="w-[36px] h-[36px] absolute top-[23px] left-[39%]"
+        className="w-[36px] h-[36px] absolute top-[23px] left-[39.5%]"
       />
       <div className="flex align-end text-[14px] font-normal">
         <div className="flex">

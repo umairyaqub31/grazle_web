@@ -283,7 +283,7 @@ export default function Home() {
         </div>
       </div>
       {/* small appliances */}
-      <div className="lg:mx-[150px] md:mx-[60px] md:w-[645px] md:overflow-x-auto my-[16px] relative flex items-center justify-between">
+      <div className="lg:mx-[150px] md:mx-[60px]   my-[16px] relative flex items-center justify-between">
         <div
           style={{ backgroundColor: "rgba(195, 95, 65, 0.2)" }}
           className="lg:w-[308px] md:w-[460px] card h-[469px] rounded-lg  text-[#BC5A3D] p-[32px] box-border"
@@ -301,7 +301,7 @@ export default function Home() {
         </div>{" "}
         <div
           style={{ backgroundColor: "rgba(244, 162, 0, 0.2)" }}
-          className="lg:w-[308px] md:w-[460px] card h-[469px] rounded-lg  text-[#F4A200] p-[32px] box-border"
+          className="lg:w-[308px]  card h-[469px] rounded-lg  text-[#F4A200] p-[32px] box-border"
         >
           <p className=" text-[24px] font-semibold">Small Appliances</p>
           <p className=" text-[16px] font-semibold my-[24px]">
@@ -316,7 +316,7 @@ export default function Home() {
         </div>{" "}
         <div
           style={{ backgroundColor: "rgba(113, 111, 86, 0.2)" }}
-          className="lg:w-[308px] md:w-[460px] card h-[469px] rounded-lg  text-[#6B6A56] p-[32px] box-border"
+          className="lg:w-[308px]  card h-[469px] rounded-lg  text-[#6B6A56] p-[32px] box-border"
         >
           <p className=" text-[24px] font-semibold">Small Appliances</p>
           <p className=" text-[16px] font-semibold my-[24px]">
@@ -331,7 +331,7 @@ export default function Home() {
         </div>{" "}
         <div
           style={{ backgroundColor: "rgba(210, 236, 218, 1)" }}
-          className="lg:w-[308px] md:w-[460px] card h-[469px] rounded-lg bg-[#D2ECDA] text-[#4FAD2E]  p-[32px] box-border"
+          className="lg:w-[308px]  card h-[469px] rounded-lg bg-[#D2ECDA] text-[#4FAD2E]  p-[32px] box-border"
         >
           <p className=" text-[24px]  font-semibold">Small Appliances</p>
           <p className=" text-[16px]  font-semibold my-[24px]">
@@ -424,8 +424,8 @@ export default function Home() {
         <RecentViewSlider Data={sliderItems22} />
       </div>
       {/* small appliances */}
-      <div className="lg:mx-[150px] md:mx-[60px] md:w-[645px] lg:w-auto md:overflow-x-auto  my-[16px]  flex items-center justify-between">
-        <div className="lg:w-[402px] md:w-[600px] card relative h-[281px] flex items-center rounded-lg bg-[#EBFFF1] text-[#4FAD2E] p-[32px] box-border">
+      <div className="lg:mx-[150px] md:mx-[60px]  my-[16px]  flex items-center justify-between">
+        <div className="lg:w-[402px]  card relative h-[281px] flex items-center rounded-lg bg-[#EBFFF1] text-[#4FAD2E] p-[32px] box-border">
           <div className="w-[171px]">
             <p className=" text-[24px] font-semibold">Small Appliances</p>
             <p className=" text-[16px] font-semibold my-[24px]">

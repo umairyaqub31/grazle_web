@@ -27,7 +27,7 @@ export default function RootLayout({
         style={{ fontFamily: '"Poppins", sans-serif' }}
         className={inter.className}
       >
-        {/* <Navbar /> */}
+        <Navbar />
 
         {children}
         <Footer />
