@@ -10,7 +10,7 @@ import Location from "@/assets/location-icon.png";
 import Phone from "@/assets/phone-icon.png";
 export default function Footer() {
   return (
-    <div className="px-[150px] py-[63px] bg-[#F8F8F8] flex items-start justify-between">
+    <div className="lg:px-[150px] md:px-[60px] py-[63px] bg-[#F8F8F8] flex items-start justify-between">
       <div className="w-[196px]">
         <Image src={logo} alt="" className="w-[120px] h-[70-px]" />
         <div className="flex items-start justify-between mt-[40px]">

@@ -7,7 +7,7 @@ import Seller from "@/assets/Vector.png";
 import { Avatar } from "@mui/material";
 export default function Navbar() {
   return (
-    <div className="mx-[150px] my-[16px] flex items-center">
+    <div className="lg:mx-[150px] md:mx-[60px]  my-[16px] flex items-center">
       <Image src={logo} alt="" className="w-[80px] h-[47px]" />
       <div className="flex items-center color-[#393A44] text-[14px] font-normal mx-[64px]">
         <p className="mr-[24px]">Home</p>
@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="flex align-end text-[14px] font-normal">
         <div className="flex">
           <Image src={Cart} alt="" className="w-[24px] h-[24px] mr-2" />
-          <p>Cart</p>
+          <p className="sm:display:none">Cart</p>
         </div>
         <div className="border-r-[1px] border-[#D2D4DA] mx-[20px] h-4"></div>
         <div className="flex">
