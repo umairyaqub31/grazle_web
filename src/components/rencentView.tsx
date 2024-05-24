@@ -67,10 +67,10 @@ const RecentViewSlider: React.FC<Partial<Props>> = (props) => {
               src={item.imageUrl}
               className="w-full h-[203px] relative rounded-2xl"
             />
-            <div className="flex w-full justify-between items-center absolute px-[16px] top-[35px]">
+            <div className="flex w-full justify-between items-center absolute px-[16px] top-[10px]">
               <button
                 style={{ backgroundColor: "rgba(247, 0, 0, 0.1)" }}
-                className="text-[12px] font-semibold border-[1px] rounded-3xl border-[#F70000] text-[#F70000] w-[96px] w-[34px]"
+                className="text-[12px] font-semibold border-[1px] rounded-3xl border-[#F70000] text-[#F70000] w-[96px] h-[34px]"
               >
                 flash sale
               </button>

@@ -27,7 +27,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/mianSlider.js",
-    "src/components/rencentView.js"
+    "src/components/rencentView.tsxx"
   ],
   "exclude": ["node_modules"]
 }
