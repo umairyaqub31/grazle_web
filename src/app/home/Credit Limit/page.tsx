@@ -125,29 +125,6 @@ export default function CreditLimit() {
           </div>
         </div>
       </CustomModal>
-      <CustomModal showModal={showSendModel}>
-        <div className="flex-col justify-center w-[900px]">
-          <div className="mx-[150px] my-[100px]">
-            <div className="flex justify-center mb-[22px]">
-              <Image src={Dots} alt="" className="h-[64px] w-[64px]" />
-
-              <FaCircleCheck className="text-[#E24C4B] h-[105px] mx-[16px] w-[105px]" />
-              <Image src={Dots} alt="" className="h-[64px] w-[64px]" />
-            </div>
-            <p className="text-[32px] text-center font-bold text-[#434343]">
-              You Have Successfully purchased Prime Plan.
-            </p>
-            <div className="flex mt-[30px] mb-[100px] justify-center">
-              <button
-                className=" bg-[#F70000] rounded-lg h-[50px] w-[275px] text-white font-medium"
-                onClick={handleCloseModel}
-              >
-                Continue
-              </button>
-            </div>
-          </div>
-        </div>
-      </CustomModal>
     </div>
   );
 }

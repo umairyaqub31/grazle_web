@@ -42,6 +42,11 @@ import Register from "./Register/page";
 import RegisterSeller from "./RegisterSeller/page";
 import Review from "./Review/page";
 import Leave from "./Leave/page";
+import PaymentAndAddress from "./PaymentAndAddress/page";
+import Cartpage from "./CartPage/page";
+import StoreProduct from "./StoreProduct/page";
+import StoreProductpage from "./StoreProduct/StoreprouctPage/page";
+import ProductDetail from "./ProductDetail/page";
 export default function Home() {
   const sliderItems = [
     {
@@ -541,7 +546,7 @@ export default function Home() {
           />
         </div>
       </div> */}
-      <Leave />
+      <ProductDetail />
     </>
   );
 }

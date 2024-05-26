@@ -4,7 +4,7 @@ import PayPal from "@/assets/pngwing 6.png";
 import Visa from "@/assets/pngwing 7.png";
 import Google from "@/assets/Group 1820549999.png";
 import Card from "@/assets/card22.png";
-import  "@/assets/pngwing 2.png";
+import Chair from "@/assets/pngwing 2.png";
 import Location from "@/assets/layer1.png";
 import Home from "@/assets/Vectorhome.png";
 import Appartment from "@/assets/Group444.png";

@@ -62,7 +62,7 @@ export default function Review() {
       </div>
       <div
         style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-        className="w-[35%] rounded-[30px] p-[30px] h-[620px]"
+        className="w-[35%] rounded-[30px] p-[30px] h-[60px]"
       >
         <p className="text-[24px]  font-semibold">How to write a review</p>
         <p className="text-[16px]  font-medium text-[#777777] mt-5">
