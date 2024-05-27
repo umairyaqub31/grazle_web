@@ -165,11 +165,11 @@ export default function Home() {
   return (
     <>
       {/* mianSlider */}
-      {/* <div className="lg:mx-[150px] md:mx-[60px]">
+      <div className="lg:mx-[150px] md:mx-[60px]">
         <MainSlider />
-      </div> */}
+      </div>
       {/* categories */}
-      {/* <div className="lg:mx-[150px] md:mx-auto md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
+      <div className="lg:mx-[150px] md:mx-auto md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
         <div className="w-[125px] h-[134px] flex  flex-col justify-center items-center">
           <Image
             src={logo}
@@ -284,9 +284,9 @@ export default function Home() {
             Categories
           </p>
         </div>
-      </div> */}
+      </div>
       {/* small appliances */}
-      {/* <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto">
+      <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto">
         <div className="flex items-center justify-start space-x-[16px] w-max">
           <div
             style={{ backgroundColor: "rgba(195, 95, 65, 0.2)" }}
@@ -352,8 +352,8 @@ export default function Home() {
             />
           </div>
         </div>
-      </div> */}
-      {/* <div className="lg:mx-[150px] md:mx-[60px] my-[24px]">
+      </div>
+      <div className="lg:mx-[150px] md:mx-[60px] my-[24px]">
         <div>
           <p className="text-[24px] font-semibold">Recent viewed</p>
         </div>
@@ -364,9 +364,9 @@ export default function Home() {
           <p className="text-[24px] font-semibold">suggested for you</p>
         </div>
         <RecentViewSlider Data={sliderItems} />
-      </div> */}
+      </div>
       {/* Baner */}
-      {/* <div className="lg:mx-[150px] md:mx-[60px]  my-[16px]">
+      <div className="lg:mx-[150px] md:mx-[60px]  my-[16px]">
         <Image
           src={bg}
           alt=""
@@ -440,15 +440,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div> */}
-      {/* <div className="lg:mx-[150px] md:mx-[60px]  my-[24px]">
+      </div>
+      <div className="lg:mx-[150px] md:mx-[60px]  my-[24px]">
         <div>
           <p className="text-[24px] font-semibold">Trending</p>
         </div>
         <RecentViewSlider Data={sliderItems22} />
-      </div> */}
+      </div>
       {/* small appliances */}
-      {/* <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto">
+      <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto">
         <div className="flex items-center justify-start space-x-[16px] w-max">
           <div className="lg:w-[402px] md:w-[402px] sm:w-full card relative h-[281px] flex lg:items-center rounded-lg bg-[#FFF5EE] text-[#91553A] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto">
@@ -494,8 +494,8 @@ export default function Home() {
             />
           </div>
         </div>
-      </div> */}
-      {/* 
+      </div>
+
       <div
         style={{
           background:
@@ -545,8 +545,7 @@ export default function Home() {
             className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[180px] h-[300px] lg:relative lg:right-[40px] lg:bottom-[-66px] lg:mt-0 mt-[16px] md:absolute md:right-[40px] md:bottom-[0px] relative"
           />
         </div>
-      </div> */}
-      <ProductDetail />
+      </div>
     </>
   );
 }

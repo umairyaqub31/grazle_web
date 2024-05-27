@@ -56,7 +56,10 @@ export default function Navbar() {
             />
             <p className="hidden sm:block lg:block">Become Seller</p>
           </div>
-          <Avatar className="w-[44px] h-[44px] ml-[16px]" />
+          {/* <Avatar className="w-[44px] h-[44px] ml-[16px]" /> */}
+          <button className=" bg-[#F70000] rounded-2xl h-[40px]  w-[151px] text-[14px] font-medium text-white">
+            Before Login
+          </button>
         </div>
       </div>
 
