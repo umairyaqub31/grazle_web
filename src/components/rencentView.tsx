@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -7,6 +8,7 @@ import bg from "@/assets/dbfad4efe8eef812d27afa0fc56306fd.png";
 import Star from "@/assets/Star 1.png";
 import Cart from "@/assets/CartVector.png";
 import Like from "@/assets/Frame 1820551183.png";
+import { useRouter } from "next/navigation";
 
 interface Props {
   Data: any;
@@ -43,6 +45,12 @@ const responsive = {
 const RecentViewSlider: React.FC<Partial<Props>> = (props) => {
   const { Data } = props;
 
+  const router = useRouter();
+
+  const goToDetail = () => {
+    router.push("/ProductDetail");
+  };
+
   return (
     <div className="parent">
       <Carousel
@@ -56,6 +64,7 @@ const RecentViewSlider: React.FC<Partial<Props>> = (props) => {
       >
         {Data.map((item: any, index: any) => (
           <div
+            onClick={goToDetail}
             key={index}
             style={{
               width: "98%",

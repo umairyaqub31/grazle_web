@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { CiSquareCheck } from "react-icons/ci";
 import Image from "next/image";
@@ -5,9 +6,10 @@ import airpod from "@/assets/airpod.png";
 import { HiOutlineMinus, HiOutlinePlus } from "react-icons/hi";
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin6Fill } from "react-icons/ri";
+import { useRouter } from "next/navigation";
 export default function Cartpage() {
   const [count, setCount] = useState(1);
-
+  const router = useRouter();
   const handleIncrement = () => {
     setCount(count + 1);
   };
@@ -16,6 +18,10 @@ export default function Cartpage() {
     if (count > 0) {
       setCount(count - 1);
     }
+  };
+
+  const goToShippingAddress = () => {
+    router.push("/PaymentAndAddress");
   };
   return (
     <div className="mx-[150px] my-[50px] ">
@@ -199,7 +205,10 @@ export default function Cartpage() {
               <p className="text-[18px] font-bold text-black ">Cart Total</p>
               <p className="text-[18px] font-bold text-[#777777] ">$66.00</p>
             </div>
-            <button className=" bg-[#F70000] rounded-full h-[45px] mt-8  w-[100%] text-[18px] font-medium text-white">
+            <button
+              className=" bg-[#F70000] rounded-full h-[45px] mt-8  w-[100%] text-[18px] font-medium text-white"
+              onClick={goToShippingAddress}
+            >
               Continue Checkout
             </button>
           </div>

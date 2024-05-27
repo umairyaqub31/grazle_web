@@ -31,8 +31,7 @@ import CartVector from "@/assets/CartVector.png";
 import RecentViewSlider from "@/components/rencentView";
 import Slider1 from "@/assets/3fed67ae927a54329c0ab8ca6312e3e7.png";
 import Slider2 from "@/assets/dbfad4efe8eef812d27afa0fc56306fd.png";
-import Card from "@/assets/Frame 1820551169.png";
-import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
+
 export default function Home() {
   const sliderItems = [
     {

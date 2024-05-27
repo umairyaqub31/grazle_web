@@ -106,81 +106,9 @@ export default function Navbar() {
             <div className="relative w-[430px]">
               {/* Change the width of the input for small screens */}
               <input
-                onClick={handleToggle2}
                 placeholder="Search"
                 className="w-full lg:w-[400px] sm:w-[300px] h-[52px] rounded-full pl-[50px] focus:outline-none border-[1px] border-[#D2D4DA]"
               />
-              {isOpenSearch && (
-                <div
-                  style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
-                  className="absolute lg:w-[400px] h-auto top-[100px] left-[47%] transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-lg p-8 z-50"
-                >
-                  <div className="flex items-center gap-2">
-                    <IoIosTimer className="text-[#777777] text-[20px]" />
-                    <p className="font-semibold text-[16px]">Recent Searches</p>
-                  </div>
-                  <div className="flex items-center gap-2 mt-3">
-                    <div className="border-[1px] border-[#777777] rounded-full py-2 px-3">
-                      <p className="text-[14px]">Display Teach </p>
-                    </div>
-                    <div className="border-[1px] border-[#777777] rounded-full py-2 px-3">
-                      <p className="text-[14px]">Interaction Design </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 mt-3">
-                    <div className="border-[1px] border-[#777777] rounded-full py-2 px-3">
-                      <p className="text-[14px]">Electronics </p>
-                    </div>
-                    <div className="border-[1px] border-[#777777] rounded-full py-2 px-3">
-                      <p className="text-[14px]">Robotics</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 mt-3">
-                    <div className="border-[1px] border-[#777777] rounded-full py-2 px-3">
-                      <p className="text-[14px]">Image Sensory</p>
-                    </div>
-                    <div className="border-[1px] border-[#777777] rounded-full py-2 px-3">
-                      <p className="text-[14px]">Mechanics</p>
-                    </div>
-                    <div className="border-[1px] border-[#777777] rounded-full py-2 px-3">
-                      <p className="text-[14px]">All</p>
-                    </div>
-                  </div>
-                  <div className="bg-[#D8D8D8] rounded-2xl w-auto mt-5 p-2">
-                    <p className="text-[15px] font-semibold">
-                      Popular Searches
-                    </p>
-                    <div className="flex items-center gap-2 mt-3">
-                      <div className="border-[1px] border-white bg-white  rounded-full py-2 px-3">
-                        <p className="text-[14px] text-[#777777] ">Audio</p>
-                      </div>
-                      <div className="border-[1px] border-white bg-white rounded-full py-2 px-3">
-                        <p className="text-[14px] text-[#777777]">
-                          Interaction Design{" "}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2 mt-3">
-                      <div className="border-[1px] border-white bg-white  rounded-full py-2 px-3">
-                        <p className="text-[14px] text-[#777777] ">Mechincs</p>
-                      </div>
-                      <div className="border-[1px] border-white bg-white rounded-full py-2 px-3">
-                        <p className="text-[14px] text-[#777777]">Robotics</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2 mt-3">
-                      <div className="border-[1px] border-white bg-white  rounded-full py-2 px-3">
-                        <p className="text-[14px] text-[#777777] ">Audio</p>
-                      </div>
-                      <div className="border-[1px] border-white bg-white rounded-full py-2 px-3">
-                        <p className="text-[14px] text-[#777777]">
-                          Interaction Design{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
               <Image
                 src={Search}
                 alt="Search"
@@ -189,151 +117,26 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex items-center text-[14px] font-normal">
-            <div className="flex items-center mr-4">
+            <Link href="/CartPage" className="flex items-center mr-4">
               <Image src={Cart} alt="Cart" className="w-[24px] h-[24px] mr-2" />
               <p className="hidden sm:block">Cart</p>
-            </div>
+            </Link>
             <div className="border-r-[1px] border-[#D2D4DA] mx-[8px] md:mx-[20px] h-4"></div>
-            <div className="flex items-center">
+            <Link href="/RegisterSeller" className="flex items-center">
               <Image
                 src={Seller}
                 alt="Seller"
                 className="w-[24px] h-[24px] mr-2"
               />
               <p className="hidden sm:block lg:block">Become Seller</p>
-            </div>
-            <div ref={containerRef} className="relative inline-block">
-              <Avatar
-                className="w-[44px] h-[44px] ml-[16px] cursor-pointer"
-                onClick={handleToggle}
-              />
-              {isOpen && (
-                <div
-                  style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
-                  className="absolute w-[335px] top-[530px] left-1/2 transform -translate-x-1/2 -translate-y-full bg-white rounded-2xl shadow-lg p-8 z-50"
-                >
-                  <div className="flex items-center  gap-3">
-                    <Image
-                      src={user}
-                      alt="Logo"
-                      className="w-[18px] h-[18px] text-[#777777]"
-                    />
-
-                    <p className="text-[16px] text-[#777777] font-normal ">
-                      Your Account
-                    </p>
-                  </div>
-                  <div className="flex items-center mt-5  gap-3">
-                    <Image
-                      src={Fav}
-                      alt="Logo"
-                      className="w-[18px] h-[18px] text-[#777777]"
-                    />
-
-                    <p className="text-[16px] text-[#777777] font-normal ">
-                      Favourites
-                    </p>
-                  </div>
-                  <div className="flex items-center mt-5  gap-3">
-                    <Image
-                      src={Location}
-                      alt="Logo"
-                      className="w-[18px] h-[18px] text-[#777777]"
-                    />
-
-                    <p className="text-[16px] text-[#777777] font-normal ">
-                      Manage Addresses
-                    </p>
-                  </div>
-                  <div className="flex items-center mt-5  gap-3">
-                    <Image
-                      src={card}
-                      alt="Logo"
-                      className="w-[18px] h-[18px] text-[#777777]"
-                    />
-
-                    <p className="text-[16px] text-[#777777] font-normal ">
-                      Credit Limit
-                    </p>
-                  </div>
-                  <div className="flex items-center mt-5  gap-3">
-                    <Image
-                      src={bulid}
-                      alt="Logo"
-                      className="w-[18px] h-[18px] text-[#777777]"
-                    />
-
-                    <p className="text-[16px] text-[#777777] font-normal ">
-                      Referral Ranking
-                    </p>
-                  </div>
-                  <div className="flex items-center mt-5  gap-3">
-                    <Image
-                      src={crown}
-                      alt="Logo"
-                      className="w-[18px] h-[18px] text-[#777777]"
-                    />
-
-                    <p className="text-[16px] text-[#777777] font-normal ">
-                      Grazzle Membership
-                    </p>
-                  </div>
-                  <div className="flex items-center mt-5  gap-3">
-                    <Image
-                      src={Setting}
-                      alt="Logo"
-                      className="w-[18px] h-[18px] text-[#777777]"
-                    />
-
-                    <p className="text-[16px] text-[#777777] font-normal ">
-                      Notification Settings
-                    </p>
-                  </div>
-                  <p className="text-[16px] mt-4 text-[#777777] font-medium ">
-                    Grazzle
-                  </p>
-                  <div className="flex items-center mt-5  gap-3">
-                    <Image
-                      src={FAQ}
-                      alt="Logo"
-                      className="w-[18px] h-[18px] text-[#777777]"
-                    />
-
-                    <p className="text-[16px] text-[#777777] font-normal ">
-                      FAQs
-                    </p>
-                  </div>
-                  <div className="flex items-center mt-5  gap-3">
-                    <Image
-                      src={terms}
-                      alt="Logo"
-                      className="w-[18px] h-[18px] text-[#777777]"
-                    />
-
-                    <p className="text-[16px] text-[#777777] font-normal ">
-                      Terms of Use
-                    </p>
-                  </div>
-                  <div className="flex items-center mt-5  gap-3">
-                    <Image
-                      src={Privcy}
-                      alt="Logo"
-                      className="w-[18px] h-[18px] text-[#777777]"
-                    />
-
-                    <p className="text-[16px] text-[#777777] font-normal ">
-                      Privacy Policy
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-            {/* <button
+            </Link>
+            {/* <Avatar className="w-[44px] h-[44px] ml-[16px]" /> */}
+            <button
               className=" bg-[#F70000] rounded-2xl h-[40px]  w-[151px] text-[14px] font-medium text-white"
               onClick={() => hanldeGoToLogin()}
             >
               Before Login
-            </button> */}
+            </button>
           </div>
         </div>
 
