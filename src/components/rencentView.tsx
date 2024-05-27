@@ -52,66 +52,69 @@ const RecentViewSlider: React.FC<Partial<Props>> = (props) => {
         showDots={false}
         infinite={true}
         dotListClass="custom-dot-list-style"
+        itemClass="carousel-item"
       >
         {Data.map((item: any, index: any) => (
           <div
             key={index}
             style={{
-              width: "97%",
-              boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
+              width: "98%",
+              boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
             }}
-            className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+            className="group gap-4 mb-3 mt-2 h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
           >
-            <Image
-              alt=""
-              src={item.imageUrl}
-              className="w-full h-[203px] relative rounded-2xl"
-            />
-            <div className="flex w-full justify-between items-center absolute px-[16px] top-[10px]">
-              <button
-                style={{ backgroundColor: "rgba(247, 0, 0, 0.1)" }}
-                className="text-[12px] font-semibold border-[1px] rounded-3xl border-[#F70000] text-[#F70000] w-[96px] h-[34px]"
-              >
-                flash sale
-              </button>
+            <>
               <Image
-                src={Like}
                 alt=""
-                className="w-[40px] h-[40px] rounded-2xl"
+                src={item.imageUrl}
+                className="w-full h-[203px] relative rounded-2xl"
               />
-            </div>
-            <div className="p-3">
-              <p className="text-[16px] w-[80%] font-semibold">
-                {item.Heading}
-              </p>
-              <div className="flex items-center mt-[16px]">
-                <p className="text-[12px] text-[#F69B26]">{item.review}</p>
-                <Image alt="" src={Star} className="h-[12px] w-[12px] ml-2" />
+              <div className="flex w-full justify-between items-center absolute px-[16px] top-[10px]">
+                <button
+                  style={{ backgroundColor: "rgba(247, 0, 0, 0.1)" }}
+                  className="text-[12px] font-semibold border-[1px] rounded-3xl border-[#F70000] text-[#F70000] w-[96px] h-[34px]"
+                >
+                  flash sale
+                </button>
+                <Image
+                  src={Like}
+                  alt=""
+                  className="w-[40px] h-[40px] rounded-2xl"
+                />
               </div>
-              <p className="text-[20px] font-semibold mt-[16px]">
-                {item.newprice}
-              </p>
-              <div className="flex items-center mt-[16px]">
-                <p className="text-[16px] text-[#909198] line-through font-normal">
-                  {item.oldPrice}
+              <div className="p-3">
+                <p className="text-[16px] w-[80%] font-semibold">
+                  {item.Heading}
                 </p>
-                <p className="text-[16px] text-[#4FAD2E] ml-[24px] font-semibold">
-                  {item.discount}
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute bottom-4 w-full">
-              <button className="text-[#F70000] w-[90%] h-[40px] border-[1px] border-[#F70001] rounded-full">
-                <div className="flex items-center justify-center">
-                  <p className="font-semibold text-[14px]">Add to cart</p>
-                  <Image
-                    alt=""
-                    src={Cart}
-                    className="w-[17px] h-[17px] ml-[12px]"
-                  />
+                <div className="flex items-center mt-[16px]">
+                  <p className="text-[12px] text-[#F69B26]">{item.review}</p>
+                  <Image alt="" src={Star} className="h-[12px] w-[12px] ml-2" />
                 </div>
-              </button>
-            </div>
+                <p className="text-[20px] font-semibold mt-[16px]">
+                  {item.newprice}
+                </p>
+                <div className="flex items-center mt-[16px]">
+                  <p className="text-[16px] text-[#909198] line-through font-normal">
+                    {item.oldPrice}
+                  </p>
+                  <p className="text-[16px] text-[#4FAD2E] ml-[24px] font-semibold">
+                    {item.discount}
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute bottom-4 w-full">
+                <button className="text-[#F70000] w-[90%] h-[40px] border-[1px] border-[#F70001] rounded-full">
+                  <div className="flex items-center justify-center">
+                    <p className="font-semibold text-[14px]">Add to cart</p>
+                    <Image
+                      alt=""
+                      src={Cart}
+                      className="w-[17px] h-[17px] ml-[12px]"
+                    />
+                  </div>
+                </button>
+              </div>
+            </>
           </div>
         ))}
       </Carousel>

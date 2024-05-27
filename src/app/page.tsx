@@ -31,22 +31,8 @@ import CartVector from "@/assets/CartVector.png";
 import RecentViewSlider from "@/components/rencentView";
 import Slider1 from "@/assets/3fed67ae927a54329c0ab8ca6312e3e7.png";
 import Slider2 from "@/assets/dbfad4efe8eef812d27afa0fc56306fd.png";
-import PaymentPlan from "./PaymentPlan/page";
-import TermsConditions from "./Terms&Conditions/page";
-import Payment from "../Payment/page";
-import FAQs from "./FAQs/page";
-import MyAccount from "./MyAccount/page";
-import CreditLimit from "./Credit Limit/page";
-import Login from "./Login/page";
-import Register from "./Register/page";
-import RegisterSeller from "./RegisterSeller/page";
-import Review from "./Review/page";
-import Leave from "./Leave/page";
-import PaymentAndAddress from "./PaymentAndAddress/page";
-import Cartpage from "./CartPage/page";
-import StoreProduct from "./StoreProduct/page";
-import StoreProductpage from "./StoreProduct/StoreprouctPage/page";
-import ProductDetail from "./ProductDetail/page";
+import Card from "@/assets/Frame 1820551169.png";
+import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 export default function Home() {
   const sliderItems = [
     {
@@ -164,6 +150,27 @@ export default function Home() {
   ];
   return (
     <>
+      <div className="lg:mx-[150px] md:mx-[60px] mb-3 ">
+        <div className="flex items-center justify-between py-5 px-[80px] bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] w-full h-auto">
+          <div className="flex items-center gap-4">
+            <div className="rounded-full h-[40px] flex items-center justify-center w-[40px] bg-[#FA6464]">
+              <Image alt="" src={Card} className="h-[40px] w-[40px] " />
+            </div>
+            <div>
+              <p className="text-white text-[20px] font-semibold">
+                Credit Limit
+              </p>
+              <p className="text-white text-[14px] font-normal">
+                Get Credit Upto 10 Lacs
+              </p>
+            </div>
+          </div>
+          <button className="text-[#F70000] text-[16px] font-semibold bg-white border-[1px] border-[#F70000] rounded-full h-[45px] w-[200px]">
+            get now
+          </button>
+        </div>
+      </div>
+
       {/* mianSlider */}
       <div className="lg:mx-[150px] md:mx-[60px]">
         <MainSlider />
@@ -354,14 +361,30 @@ export default function Home() {
         </div>
       </div>
       <div className="lg:mx-[150px] md:mx-[60px] my-[24px]">
-        <div>
+        <div className="flex items-center justify-between">
           <p className="text-[24px] font-semibold">Recent viewed</p>
+          <div className="flex items-center gap-4">
+            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+              <IoMdArrowBack className="text-black h-[24px] w-[24px]" />
+            </div>
+            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+              <IoMdArrowForward className="text-black h-[24px] w-[24px]" />
+            </div>
+          </div>
         </div>
         <RecentViewSlider Data={sliderItems} />
       </div>
       <div className="lg:mx-[150px] md:mx-[60px]  my-[24px]">
-        <div>
-          <p className="text-[24px] font-semibold">suggested for you</p>
+        <div className="flex items-center justify-between">
+          <p className="text-[24px] font-semibold">Suggested for you</p>
+          <div className="flex items-center gap-4">
+            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+              <IoMdArrowBack className="text-black h-[24px] w-[24px]" />
+            </div>
+            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+              <IoMdArrowForward className="text-black h-[24px] w-[24px]" />
+            </div>
+          </div>
         </div>
         <RecentViewSlider Data={sliderItems} />
       </div>
@@ -442,8 +465,16 @@ export default function Home() {
         </div>
       </div>
       <div className="lg:mx-[150px] md:mx-[60px]  my-[24px]">
-        <div>
+        <div className="flex items-center justify-between">
           <p className="text-[24px] font-semibold">Trending</p>
+          <div className="flex items-center gap-4">
+            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+              <IoMdArrowBack className="text-black h-[24px] w-[24px]" />
+            </div>
+            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+              <IoMdArrowForward className="text-black h-[24px] w-[24px]" />
+            </div>
+          </div>
         </div>
         <RecentViewSlider Data={sliderItems22} />
       </div>
