@@ -31,22 +31,7 @@ import CartVector from "@/assets/CartVector.png";
 import RecentViewSlider from "@/components/rencentView";
 import Slider1 from "@/assets/3fed67ae927a54329c0ab8ca6312e3e7.png";
 import Slider2 from "@/assets/dbfad4efe8eef812d27afa0fc56306fd.png";
-import PaymentPlan from "./PaymentPlan/page";
-import TermsConditions from "./Terms&Conditions/page";
-import Payment from "../Payment/page";
-import FAQs from "./FAQs/page";
-import MyAccount from "./MyAccount/page";
-import CreditLimit from "./Credit Limit/page";
-import Login from "./Login/page";
-import Register from "./Register/page";
-import RegisterSeller from "./RegisterSeller/page";
-import Review from "./Review/page";
-import Leave from "./Leave/page";
-import PaymentAndAddress from "./PaymentAndAddress/page";
-import Cartpage from "./CartPage/page";
-import StoreProduct from "./StoreProduct/page";
-import StoreProductpage from "./StoreProduct/StoreprouctPage/page";
-import ProductDetail from "./ProductDetail/page";
+
 export default function Home() {
   const sliderItems = [
     {

@@ -8,13 +8,20 @@ import { IoMdMail } from "react-icons/io";
 import { TiLockClosed } from "react-icons/ti";
 import { Checkbox } from "@mui/material";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
-
+  const router = useRouter();
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
+  const goToSignup = () => {
+    router.push("/Register");
+  };
+
   return (
     <div className="w-[100%] h-[100vh] flex items-center ">
       <div className="w-[50%] h-[100vh] bounded-5xl ">
@@ -92,9 +99,9 @@ export default function Login() {
         </div>
         <p className="font-normal text-[#777777] text-[16px] text-center mt-10">
           Don’t Have an Account?
-          <strong className="ml-2 font-medium text-[#F70000]">
-            Sign Up
-          </strong>{" "}
+          <Link href="/Register">
+            <strong className="ml-2 font-medium text-[#F70000]">Sign Up</strong>{" "}
+          </Link>
         </p>
       </div>
     </div>

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Product from "@/assets/Product Image.png";
@@ -13,9 +14,10 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import Logoo from "@/assets/Grazle Logo.png";
 import { FaAngleDown, FaStar } from "react-icons/fa6";
 import { FaCheckCircle } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 export default function ProductDetail() {
   const [count, setCount] = useState(1);
-
+  const router = useRouter();
   const handleIncrement = () => {
     setCount(count + 1);
   };
@@ -24,6 +26,10 @@ export default function ProductDetail() {
     if (count > 0) {
       setCount(count - 1);
     }
+  };
+
+  const goToShop = () => {
+    router.push("/StoreProduct");
   };
   return (
     <div className="mx-[150px] my-[50px] ">
@@ -138,7 +144,10 @@ export default function ProductDetail() {
                     Grazle
                   </p>
                 </div>
-                <button className="border-[1px] border-[#F70000] text-[10px] rounded-full h-[25px] w-[85px] font-medium text-[#F70000]">
+                <button
+                  className="border-[1px] border-[#F70000] text-[10px] rounded-full h-[25px] w-[85px] font-medium text-[#F70000]"
+                  onClick={goToShop}
+                >
                   view shop
                 </button>
               </div>

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import airpod from "@/assets/airpod.png";
 import Delivery from "@/assets/Group 1820549945.png";

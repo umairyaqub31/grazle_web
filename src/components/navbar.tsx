@@ -55,19 +55,19 @@ export default function Navbar() {
           </div>
         </div>
         <div className="flex items-center text-[14px] font-normal">
-          <div className="flex items-center mr-4">
+          <Link href="/CartPage" className="flex items-center mr-4">
             <Image src={Cart} alt="Cart" className="w-[24px] h-[24px] mr-2" />
             <p className="hidden sm:block">Cart</p>
-          </div>
+          </Link>
           <div className="border-r-[1px] border-[#D2D4DA] mx-[8px] md:mx-[20px] h-4"></div>
-          <div className="flex items-center">
+          <Link href="/RegisterSeller" className="flex items-center">
             <Image
               src={Seller}
               alt="Seller"
               className="w-[24px] h-[24px] mr-2"
             />
             <p className="hidden sm:block lg:block">Become Seller</p>
-          </div>
+          </Link>
           {/* <Avatar className="w-[44px] h-[44px] ml-[16px]" /> */}
           <button
             className=" bg-[#F70000] rounded-2xl h-[40px]  w-[151px] text-[14px] font-medium text-white"

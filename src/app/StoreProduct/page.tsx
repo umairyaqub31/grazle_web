@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Main from "@/assets/Rectangle 2020.png";
