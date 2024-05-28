@@ -122,10 +122,10 @@ export default function Navbar() {
             </div>
           </Link>
           <div className="hidden lg:flex mr-[64px] md:ml-auto">
-            <div ref={searchContainerRef} className="relative w-[430px]">
+            <div ref={searchContainerRef} className="relative w-[380px]">
               <input
                 placeholder="Search"
-                className="w-full lg:w-[400px] sm:w-[300px] h-[52px] rounded-full pl-[50px] focus:outline-none border-[1px] border-[#D2D4DA]"
+                className="w-full lg:w-[380px] sm:w-[300px] h-[52px] rounded-full pl-[50px] focus:outline-none border-[1px] border-[#D2D4DA]"
                 onClick={handleToggleSearch}
               />
               <Image
@@ -201,7 +201,7 @@ export default function Navbar() {
           <div className="flex items-center text-[14px] font-normal">
             <Link href="/CartPage" className="flex items-center mr-4">
               <Image src={Cart} alt="Cart" className="w-[24px] h-[24px] mr-2" />
-              <p className="hidden sm:block">Cart</p>
+              <p className="text-[12px] hidden sm:block">Cart</p>
             </Link>
             <div className="border-r-[1px] border-[#D2D4DA] mx-[8px] md:mx-[20px] h-4"></div>
             <Link href="/RegisterSeller" className="flex items-center">
@@ -210,10 +210,12 @@ export default function Navbar() {
                 alt="Seller"
                 className="w-[24px] h-[24px] mr-2"
               />
-              <p className="hidden sm:block lg:block">Become Seller</p>
+              <p className="text-[12px] hidden sm:block lg:block">
+                Become Seller
+              </p>
             </Link>
             <button
-              className="bg-[#F70000] rounded-2xl h-[40px] lg:w-[151px] w-[100px] lg:text-[14px] text-[10px] font-medium text-white ml-[16px]"
+              className="bg-[#F70000] rounded-2xl h-[40px] lg:w-[120px] w-[100px] lg:text-[13px] text-[10px] font-medium text-white ml-[16px]"
               onClick={handleGoToLogin}
             >
               Before Login
