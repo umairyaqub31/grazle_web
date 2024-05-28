@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
@@ -9,6 +9,7 @@ import Star from "@/assets/Star 1.png";
 import Cart from "@/assets/CartVector.png";
 import Like from "@/assets/Frame 1820551183.png";
 import { useRouter } from "next/navigation";
+import { IoMdArrowBack } from "react-icons/io";
 
 interface Props {
   Data: any;
@@ -42,8 +43,10 @@ const responsive = {
   },
 };
 
-const RecentViewSlider: React.FC<Partial<Props>> = (props) => {
+const RecentViewSlider = React.forwardRef((props: Partial<Props>, ref: any) => {
   const { Data } = props;
+
+  // const ref = useRef<any>(null);
 
   const router = useRouter();
 
@@ -54,6 +57,8 @@ const RecentViewSlider: React.FC<Partial<Props>> = (props) => {
   return (
     <div className="parent">
       <Carousel
+        ref={ref}
+        arrows={false}
         responsive={responsive}
         swipeable={true}
         draggable={true}
@@ -129,6 +134,6 @@ const RecentViewSlider: React.FC<Partial<Props>> = (props) => {
       </Carousel>
     </div>
   );
-};
+});
 
 export default RecentViewSlider;
