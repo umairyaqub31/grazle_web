@@ -34,8 +34,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenSearch, setIsOpenSearch] = useState(false);
 
-  const containerRef = useRef(null);
-  const searchContainerRef = useRef(null);
+  const containerRef = useRef<any>(null);
+  const searchContainerRef = useRef<any>(null);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
