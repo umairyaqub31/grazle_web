@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { IoLockClosed } from "react-icons/io5";
