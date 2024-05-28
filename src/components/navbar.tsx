@@ -34,7 +34,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenSearch, setIsOpenSearch] = useState(false);
 
-  const containerRef = useRef(null);
+  const containerRef = useRef<any>(null);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
@@ -103,7 +103,7 @@ export default function Navbar() {
             </div>
           </Link>
           <div className="hidden lg:flex mr-[64px] md:ml-auto">
-            <div className="relative w-[430px]">
+            <div className="relative w-[430px]" onClick={handleToggle}>
               {/* Change the width of the input for small screens */}
               <input
                 placeholder="Search"

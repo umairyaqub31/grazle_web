@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import logo from "@/assets/card.png";
 import Logoo from "@/assets/Grazle Logo.png";
@@ -33,8 +33,14 @@ import RecentViewSlider from "@/components/rencentView";
 import Slider1 from "@/assets/3fed67ae927a54329c0ab8ca6312e3e7.png";
 import Slider2 from "@/assets/dbfad4efe8eef812d27afa0fc56306fd.png";
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+  const sliderRef1 = useRef<any>(null);
+  const sliderRef2 = useRef<any>(null);
+  const sliderRef3 = useRef<any>(null);
+
   const sliderItems = [
     {
       imageUrl: Slider1,
@@ -149,6 +155,35 @@ export default function Home() {
       discount: "30%off",
     },
   ];
+
+  const goToCreditLimit = () => {
+    router.push("/CreditLimit");
+  };
+
+  const handlePrev = (num: any) => {
+    if (num == 1) {
+      sliderRef1?.current?.previous();
+    }
+    if (num == 2) {
+      sliderRef2?.current?.previous();
+    }
+    if (num == 3) {
+      sliderRef3?.current?.previous();
+    }
+  };
+
+  const handleNext = (num: any) => {
+    if (num == 1) {
+      sliderRef1?.current?.next();
+    }
+    if (num == 2) {
+      sliderRef2?.current?.next();
+    }
+    if (num == 3) {
+      sliderRef3?.current?.next();
+    }
+  };
+
   return (
     <>
       <div className="lg:mx-[150px] md:mx-[60px] mb-3 ">
@@ -166,7 +201,10 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <button className="text-[#F70000] text-[16px] font-semibold bg-white border-[1px] border-[#F70000] rounded-full h-[45px] w-[200px]">
+          <button
+            className="text-[#F70000] text-[16px] font-semibold bg-white border-[1px] border-[#F70000] rounded-full h-[45px] w-[200px]"
+            onClick={goToCreditLimit}
+          >
             get now
           </button>
         </div>
@@ -365,29 +403,41 @@ export default function Home() {
         <div className="flex items-center justify-between">
           <p className="text-[24px] font-semibold">Recent viewed</p>
           <div className="flex items-center gap-4">
-            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+            <div
+              className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  "
+              onClick={() => handlePrev(1)}
+            >
               <IoMdArrowBack className="text-black h-[24px] w-[24px]" />
             </div>
-            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+            <div
+              className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  "
+              onClick={() => handleNext(1)}
+            >
               <IoMdArrowForward className="text-black h-[24px] w-[24px]" />
             </div>
           </div>
         </div>
-        <RecentViewSlider Data={sliderItems} />
+        <RecentViewSlider Data={sliderItems} ref={sliderRef1} />
       </div>
       <div className="lg:mx-[150px] md:mx-[60px]  my-[24px]">
         <div className="flex items-center justify-between">
           <p className="text-[24px] font-semibold">Suggested for you</p>
           <div className="flex items-center gap-4">
-            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+            <div
+              className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  "
+              onClick={() => handlePrev(2)}
+            >
               <IoMdArrowBack className="text-black h-[24px] w-[24px]" />
             </div>
-            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+            <div
+              className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  "
+              onClick={() => handleNext(2)}
+            >
               <IoMdArrowForward className="text-black h-[24px] w-[24px]" />
             </div>
           </div>
         </div>
-        <RecentViewSlider Data={sliderItems} />
+        <RecentViewSlider Data={sliderItems} ref={sliderRef2} />
       </div>
       {/* Baner */}
       <div className="lg:mx-[150px] md:mx-[60px]  my-[16px]">
@@ -469,15 +519,21 @@ export default function Home() {
         <div className="flex items-center justify-between">
           <p className="text-[24px] font-semibold">Trending</p>
           <div className="flex items-center gap-4">
-            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+            <div
+              className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  "
+              onClick={() => handlePrev(3)}
+            >
               <IoMdArrowBack className="text-black h-[24px] w-[24px]" />
             </div>
-            <div className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  ">
+            <div
+              className="h-[46px] w-[46px] rounded-full bg-[#F5F5F5] flex items-center justify-center  "
+              onClick={() => handleNext(3)}
+            >
               <IoMdArrowForward className="text-black h-[24px] w-[24px]" />
             </div>
           </div>
         </div>
-        <RecentViewSlider Data={sliderItems22} />
+        <RecentViewSlider Data={sliderItems22} ref={sliderRef3} />
       </div>
       {/* small appliances */}
       <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto">
