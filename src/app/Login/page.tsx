@@ -23,11 +23,11 @@ export default function Login() {
   };
 
   return (
-    <div className="w-[100%] h-[100vh] flex items-center ">
-      <div className="w-[50%] h-[100vh] bounded-5xl ">
+    <div className="w-[100%] lg:h-auto flex items-center flex-wrap md:flex-wrap sm:flex-wrap sm:h-auto md:h-auto ">
+      <div className="lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%] h-[100vh] bounded-5xl ">
         <Image src={login} alt="" className="w-[100%] h-full pt-8 " />
       </div>
-      <div className="w-[50%] h-[100vh] p-[50px]">
+      <div className="lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%] h-auto p-[50px]">
         <div className="flex flex-col justify-center items-center ">
           <Image src={logo} alt="" className="w-[210px] h-[125px]" />
           <p className="mt-6 text-[40px] font-semibold">Welcome Back</p>
@@ -58,7 +58,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center mt-3">
+        <div className="lg:flex flex-wrap lg:flex md:flex-wrap sm:flex-wrap justify-between items-center mt-3">
           <div className="flex items-center">
             <Checkbox
               sx={{
@@ -89,7 +89,7 @@ export default function Login() {
           </p>
           <div className="border-b-[#777777] border-[1px] w-full"></div>
         </div>
-        <div className="flex justify-between items-center gap-4">
+        <div className="lg:flex sm:flex-wrap md:flex-wrap flex-wrap justify-between  items-center gap-4">
           <button className=" bg-[#00000012] rounded-xl h-[50px] mt-[30px] w-[100%] text-[18px] font-medium text-black">
             Log in with Apple
           </button>

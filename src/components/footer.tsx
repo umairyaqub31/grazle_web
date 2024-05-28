@@ -18,7 +18,7 @@ export default function Footer() {
             alt=""
             className="w-[120px] h-[70px] mx-auto lg:mx-0"
           />
-          <div className="flex items-center justify-center lg:justify-start mt-[40px]">
+          <div className="flex items-center gap-2 justify-center lg:justify-start mt-[40px]">
             <Image
               src={Instagram}
               alt=""

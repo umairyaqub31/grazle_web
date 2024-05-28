@@ -65,22 +65,33 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="px-[16px] lg:px-[150px] bg-[#F8F8F8] py-1 md:px-[60px] flex items-center justify-between">
-        <p className="text-[14px] font-normal text-[#909198]">
+      <div className="px-[16px] lg:px-[150px] bg-[#F8F8F8] py-1 md:px-[60px]  flex-wrap lg:flex sm:flex-wrap   items-center justify-between">
+        <p className="text-[14px] font-normal text-[#909198] lg:text-start text-center">
           © 2020 Landify UI Kit. All rights reserved
         </p>
-        <div className="flex items-center">
-          <p className="text-[14px] font-normal text-[#909198]">
+        <div className="flex items-center lg:justify-start justify-center  ">
+          <Link
+            href="/Terms&Conditions"
+            className="lg:text-[14px] text-[10px] font-normal text-[#909198]"
+          >
             Terms & Conditions
-          </p>
+          </Link>
           <div className="border-l-[1px] border-[#909198] mx-2 h-2"></div>
-          <p className="text-[14px] font-normal text-[#909198]">
+          <Link
+            href="/Terms&Conditions"
+            className="lg:text-[14px] text-[10px] font-normal text-[#909198]"
+          >
             Privacy Policy
+          </Link>
+
+          <div className="border-l-[1px] border-[#909198] mx-2 h-2"></div>
+          <p className="lg:text-[14px] text-[10px] font-normal text-[#909198]">
+            Sitemap
           </p>
           <div className="border-l-[1px] border-[#909198] mx-2 h-2"></div>
-          <p className="text-[14px] font-normal text-[#909198]">Sitemap</p>
-          <div className="border-l-[1px] border-[#909198] mx-2 h-2"></div>
-          <p className="text-[14px] font-normal text-[#909198]">Disclaimer</p>
+          <p className="lg:text-[14px] text-[10px] font-normal text-[#909198]">
+            Disclaimer
+          </p>
         </div>
       </div>
       <div className="mx-[16px] lg:mx-[150px] md:mx-[60px] my-[16px] flex flex-col md:flex-wrap sm:flex-row sm:items-center">
@@ -89,9 +100,13 @@ export default function Navbar() {
             <Image
               src={MenuIcon}
               alt="Menu"
-              className="w-[24px] h-[24px] mr-2 sm:hidden"
+              className="w-[30px] h-[24px] mr-2 sm:hidden"
             />
-            <Image src={logo} alt="Logo" className="w-[80px] h-[47px]" />
+            <Image
+              src={logo}
+              alt="Logo"
+              className="lg:w-[80px] lg:h-[47px]  w-[60px] h-[37px] "
+            />
           </div>
           <Link
             href="/"
@@ -203,12 +218,12 @@ export default function Navbar() {
               />
               {isOpen && (
                 <div className="absolute right-0 mt-2 w-[335px] bg-white z-10 p-5 shadow-lg border border-[#D2D4DA] rounded-md">
-                  <div className="flex gap-2 items-center">
+                  <Link href="/MyAccount" className="flex gap-2 items-center">
                     <Image src={user} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-[#777777]">
                       Your Account
                     </p>
-                  </div>
+                  </Link>
                   <div className="flex gap-2 mt-4 items-center">
                     <Image src={Fav} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-[#777777]">
@@ -225,24 +240,30 @@ export default function Navbar() {
                       Manage Addresses
                     </p>
                   </div>{" "}
-                  <div className="flex gap-2 mt-4 items-center">
+                  <Link
+                    href="/CreditLimit"
+                    className="flex gap-2 mt-4 items-center"
+                  >
                     <Image src={card} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-[#777777]">
                       Credit Limit
                     </p>
-                  </div>
+                  </Link>
                   <div className="flex gap-2 mt-4 items-center">
                     <Image src={bulid} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-[#777777]">
                       Referral Ranking
                     </p>
                   </div>{" "}
-                  <div className="flex gap-2 mt-4 items-center">
+                  <Link
+                    href="/PaymentPlan"
+                    className="flex gap-2 mt-4 items-center"
+                  >
                     <Image src={crown} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-[#777777]">
                       Grazzle Membership
                     </p>
-                  </div>{" "}
+                  </Link>
                   <div className="flex gap-2 mt-4 items-center">
                     <Image src={Setting} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-[#777777]">
@@ -252,18 +273,21 @@ export default function Navbar() {
                   <p className="text-[16px] font-semibold mt-3 text-[#777777]">
                     Grazzle
                   </p>
-                  <div className="flex gap-2 mt-4 items-center">
+                  <Link href="/FAQs" className="flex gap-2 mt-4 items-center">
                     <Image src={FAQ} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-[#777777]">
                       FAQs
                     </p>
-                  </div>{" "}
-                  <div className="flex gap-2 mt-4 items-center">
+                  </Link>
+                  <Link
+                    href="/Terms&Conditions"
+                    className="flex gap-2 mt-4 items-center"
+                  >
                     <Image src={terms} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-[#777777]">
                       Terms of Use
                     </p>
-                  </div>{" "}
+                  </Link>
                   <div className="flex gap-2 mt-4 items-center">
                     <Image src={Privcy} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-[#777777]">

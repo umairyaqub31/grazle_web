@@ -27,7 +27,7 @@ import Fram11 from "@/assets/Frame 11.png";
 import Fram22 from "@/assets/Frame 22.png";
 import Fram33 from "@/assets/Frame33.png";
 import Fram44 from "@/assets/Frame 44.png";
-import CartVector from "@/assets/CartVector.png";
+import Cardmm from "@/assets/Cardmmm.png";
 import Card from "@/assets/Frame 1820551169.png";
 import RecentViewSlider from "@/components/rencentView";
 import Slider1 from "@/assets/3fed67ae927a54329c0ab8ca6312e3e7.png";
@@ -186,26 +186,26 @@ export default function Home() {
 
   return (
     <>
-      <div className="lg:mx-[150px] md:mx-[60px] mb-3 ">
-        <div className="flex items-center justify-between py-5 px-[80px] bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] w-full h-auto">
+      <div className="mx-auto lg:mx-[150px] md:mx-[60px] mb-3">
+        <div className="flex flex-col lg:flex-row items-center justify-between py-5 px-5 lg:px-10 bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] w-full lg:w-[100%] h-auto rounded-lg shadow-lg">
           <div className="flex items-center gap-4">
-            <div className="rounded-full h-[40px] flex items-center justify-center w-[40px] bg-[#FA6464]">
-              <Image alt="" src={Card} className="h-[40px] w-[40px] " />
+            <div className="rounded-full h-[60px] w-[60px] bg-[#FA6464] flex items-center justify-center">
+              <Image alt="" src={Card} className="h-[40px] w-[40px]" />
             </div>
             <div>
-              <p className="text-white text-[20px] font-semibold">
+              <p className="text-white text-xl lg:text-2xl font-semibold">
                 Credit Limit
               </p>
-              <p className="text-white text-[14px] font-normal">
-                Get Credit Upto 10 Lacs
+              <p className="text-white text-base lg:text-lg font-normal">
+                Get Credit Up to 10 Lacs
               </p>
             </div>
           </div>
           <button
-            className="text-[#F70000] text-[16px] font-semibold bg-white border-[1px] border-[#F70000] rounded-full h-[45px] w-[200px]"
+            className="text-[#F70000] text-lg lg:text-xl font-semibold bg-white border-[1px] border-[#F70000] rounded-full h-[45px] lg:h-[50px] px-6 lg:px-8"
             onClick={goToCreditLimit}
           >
-            get now
+            Get Now
           </button>
         </div>
       </div>
@@ -215,17 +215,15 @@ export default function Home() {
         <MainSlider />
       </div>
       {/* categories */}
-      <div className="lg:mx-[150px] md:mx-auto md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
-        <div className="w-[125px] h-[134px] flex  flex-col justify-center items-center">
-          <Image
-            src={logo}
-            alt=""
-            className="lg:w-[92px] md:w-[192px] sm:w-[192px] lg:h-[92px]"
-          />
-          <p className="color-[#393A44] text-[14px] font-normal mt-[7px]">
-            Credit limit
+      <div className="lg:mx-[150px] sm:mt-3 md:mx-auto md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
+        <div className="w-[92px] sm:mt-2  flex flex-col justify-center items-center">
+          <div className=" flex  justify-center items-center w-[92px] h-[92px] rounded-full bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] ">
+            <Image src={Cardmm} alt="" className="w-[40px] h-[40px] " />
+          </div>
+          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+            Categories
           </p>
-        </div>{" "}
+        </div>
         <div className="w-[92px]  flex flex-col justify-center items-center">
           <div className="border-[1px] flex  justify-center items-center w-[92px] h-[92px]  border-[#F70000] rounded-full bg-[#F8F8F8] ">
             <Image src={Widget} alt="" className="w-[40px] h-[40px] " />

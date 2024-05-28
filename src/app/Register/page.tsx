@@ -15,19 +15,19 @@ export default function Register() {
     setShowPassword(!showPassword);
   };
   return (
-    <div className="w-[100%] h-[100vh] flex items-center p-[50px] ">
+    <div className="w-[100%] h-auto lg:flex flex-wrap lg:flex md:flex-wrap sm:flex-wrap items-center lg:p-[50px] p-[20px] sm:p-[20px] md:p-[30px]">
       <div
         style={{
           background:
             "linear-gradient(162.65deg, #FF781E 1.87%, #FDC197 88.1%)",
         }}
-        className="w-[50%] h-[90vh] text-white relative rounded-[60px] px-[40px] py-[50px] my-[50px] "
+        className="lg:w-[50%] h-[400px] sm:h-[400px] md:h-[400px]  lg:h-[700px] sm:[100%] md:[100%] w-[100%] h-autotext-white relative rounded-[60px] lg:px-[40px] sm:px-[20px] px-[30px] lg:py-[50px] sm:py-[20px] py-[20px] lg:my-[50px] sm:my-[10px] my-[0px]"
       >
-        <p className="text-[40px] font-semibold">
+        <p className="lg:text-[40px] text-[16px] sm:text-[18px] md:text-[24px] font-semibold">
           Discover endless possibilities
         </p>
         <div className="w-[60%]">
-          <p className="text-[60px]  font-bold  ">
+          <p className="lg:text-[40px] text-[16px] sm:text-[18px] md:text-[24px] font-bold  ">
             Explore, buy, and sell with our vibrant maketplace
           </p>
         </div>
@@ -35,10 +35,10 @@ export default function Register() {
         <Image
           src={register}
           alt=""
-          className="w-[100%] top-[100px] absolute right-[30px] h-[650px]"
+          className=" lg:w-[100%] lg:top-[100px] top:[0px] absolute right-[30px] lg:h-[650px] h-[320px]"
         />
       </div>
-      <div className="w-[50%] h-[100vh] pl-[50px] py-[50px] ">
+      <div className="lg:w-[50%] sm:[100%] md:[100%] w-[100%] h-auto lg:pl-[50px] pl-[0px] py-[50px] ">
         <div className="flex flex-col justify-center items-center ">
           <Image src={logo} alt="" className="w-[210px] h-[125px]" />
           <p className="mt-6 text-[40px] font-semibold">Welcome Back</p>
