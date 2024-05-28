@@ -23,9 +23,9 @@ export default function Login() {
   };
 
   return (
-    <div className="w-[100%] lg:h-auto flex items-center flex-wrap md:flex-wrap sm:flex-wrap sm:h-auto md:h-auto ">
+    <div className="w-[100%] lg:h-auto flex items-start flex-wrap md:flex-wrap sm:flex-wrap sm:h-auto md:h-auto ">
       <div className="lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%] h-[100vh] bounded-5xl ">
-        <Image src={login} alt="" className="w-[100%] h-full pt-8 " />
+        <Image src={login} alt="" className="w-[100%]  h-[800px] pt-8 " />
       </div>
       <div className="lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%] h-auto p-[50px]">
         <div className="flex flex-col justify-center items-center ">

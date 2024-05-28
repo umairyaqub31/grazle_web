@@ -40,6 +40,7 @@ export default function Navbar() {
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
+
   const handleToggleSearch = () => {
     setIsOpenSearch((prev) => !prev);
   };
@@ -62,7 +63,6 @@ export default function Navbar() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
   return (
     <>
       <div className="px-[16px] lg:px-[150px] bg-[#F8F8F8] py-1 md:px-[60px]  flex-wrap lg:flex sm:flex-wrap   items-center justify-between">
@@ -134,7 +134,7 @@ export default function Navbar() {
                 className="w-[36px] h-[36px] absolute top-[50%] left-[10px] transform -translate-y-1/2"
               />
               {isOpenSearch && (
-                <div className="absolute right-[7%] mt-2 w-[400px] bg-white z-10 p-4 px-6 shadow-lg border border-[#D2D4DA] rounded-xl">
+                <div className="absolute right-[0%] mt-2 w-[400px] bg-white z-10 p-4 px-6 shadow-lg border border-[#D2D4DA] rounded-xl">
                   <div className="flex gap-3 items-center">
                     <CiTimer className="text-black text-[#777777]" />
                     <p className="text-black text-[16px] font-semibold">
@@ -142,11 +142,14 @@ export default function Navbar() {
                     </p>
                   </div>
                   <div className="flex gap-3 mt-3">
-                    <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
+                    <Link
+                      href="/StoreprouctPage"
+                      className="border-[1px] border-[#777777] rounded-full px-3 py-2"
+                    >
                       <p className="text-black text-[14px] font-normal">
                         Display Tech
                       </p>
-                    </div>
+                    </Link>
                     <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
                       <p className="text-black text-[14px] font-normal">
                         Display Tech
@@ -214,13 +217,12 @@ export default function Navbar() {
                 Become Seller
               </p>
             </Link>
-
-            {/*<button
+            {/* <button
               className="bg-[#F70000] rounded-2xl h-[40px] lg:w-[120px] w-[100px] lg:text-[13px] text-[10px] font-medium text-white ml-[16px]"
               onClick={handleGoToLogin}
             >
               Before Login
-            </button>*/}
+            </button> */}
             <div ref={containerRef} className="relative">
               <Avatar
                 className="w-[44px] h-[44px] ml-[16px]"
@@ -240,7 +242,7 @@ export default function Navbar() {
                       Favourites
                     </p>
                   </div>{" "}
-                  {/* <div className="flex gap-2 mt-4 items-center">
+                  <div className="flex gap-2 mt-4 items-center">
                     <Image
                       src={Location}
                       alt=""
@@ -249,7 +251,7 @@ export default function Navbar() {
                     <p className="text-[16px] font-normal text-[#777777]">
                       Manage Addresses
                     </p>
-                  </div>{" "} */}
+                  </div>{" "}
                   <Link
                     href="/CreditLimit"
                     className="flex gap-2 mt-4 items-center"
@@ -307,9 +309,15 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+            {/* <button
+              className="bg-[#F70000] rounded-2xl h-[40px] w-[151px] text-[14px] font-medium text-white ml-[16px]"
+              onClick={handleGoToLogin}
+            >
+              Before Login
+            </button> */}
           </div>
         </div>
-        <div className="mt-4 sm:mt-0 md:mt-3 w-full lg:hidden">
+        {/* <div className="mt-4 sm:mt-0 md:mt-3 w-full lg:hidden">
           <div ref={searchContainerRef} className="relative w-full">
             <input
               placeholder="Search"
@@ -327,7 +335,7 @@ export default function Navbar() {
               </div>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

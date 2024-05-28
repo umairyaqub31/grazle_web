@@ -215,7 +215,7 @@ export default function Home() {
         <MainSlider />
       </div>
       {/* categories */}
-      <div className="lg:mx-[150px] sm:mt-3 md:mx-auto md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
+      <div className="lg:mx-[150px] lg:mt-0 mt-3 md:mx-auto md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
         <div className="w-[92px] sm:mt-2  flex flex-col justify-center items-center">
           <div className=" flex  justify-center items-center w-[92px] h-[92px] rounded-full bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] ">
             <Image src={Cardmm} alt="" className="w-[40px] h-[40px] " />
