@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { AiOutlineUser } from "react-icons/ai";
 import { IoHeartOutline } from "react-icons/io5";
-import { CiLocationOn } from "react-icons/ci";
+import { CiLocationOn, CiTimer } from "react-icons/ci";
 import { MdOutlinePrivacyTip } from "react-icons/md";
 import user from "@/assets/users.png";
 import Fav from "@/assets/hearts.png";
@@ -28,18 +28,19 @@ import { IoIosTimer } from "react-icons/io";
 export default function Navbar() {
   const router = useRouter();
 
-  const hanldeGoToLogin = () => {
+  const handleGoToLogin = () => {
     router.push("/Login");
   };
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenSearch, setIsOpenSearch] = useState(false);
 
   const containerRef = useRef(null);
+  const searchContainerRef = useRef(null);
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
-  const handleToggle2 = () => {
+  const handleToggleSearch = () => {
     setIsOpenSearch((prev) => !prev);
   };
 
@@ -47,7 +48,10 @@ export default function Navbar() {
     if (containerRef.current && !containerRef.current.contains(event.target)) {
       setIsOpen(false);
     }
-    if (containerRef.current && !containerRef.current.contains(event.target)) {
+    if (
+      searchContainerRef.current &&
+      !searchContainerRef.current.contains(event.target)
+    ) {
       setIsOpenSearch(false);
     }
   };
@@ -58,13 +62,13 @@ export default function Navbar() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
   return (
     <>
       <div className="px-[16px] lg:px-[150px] bg-[#F8F8F8] py-1 md:px-[60px] flex items-center justify-between">
         <p className="text-[14px] font-normal text-[#909198]">
           © 2020 Landify UI Kit. All rights reserved
         </p>
-
         <div className="flex items-center">
           <p className="text-[14px] font-normal text-[#909198]">
             Terms & Conditions
@@ -89,7 +93,6 @@ export default function Navbar() {
             />
             <Image src={logo} alt="Logo" className="w-[80px] h-[47px]" />
           </div>
-
           <Link
             href="/"
             className="hidden lg:flex items-center color-[#393A44] text-[14px] font-normal mx-[64px]"
@@ -103,17 +106,80 @@ export default function Navbar() {
             </div>
           </Link>
           <div className="hidden lg:flex mr-[64px] md:ml-auto">
-            <div className="relative w-[430px]">
-              {/* Change the width of the input for small screens */}
+            <div ref={searchContainerRef} className="relative w-[430px]">
               <input
                 placeholder="Search"
                 className="w-full lg:w-[400px] sm:w-[300px] h-[52px] rounded-full pl-[50px] focus:outline-none border-[1px] border-[#D2D4DA]"
+                onClick={handleToggleSearch}
               />
               <Image
                 src={Search}
                 alt="Search"
                 className="w-[36px] h-[36px] absolute top-[50%] left-[10px] transform -translate-y-1/2"
               />
+              {isOpenSearch && (
+                <div className="absolute right-[7%] mt-2 w-[400px] bg-white z-10 p-4 px-6 shadow-lg border border-[#D2D4DA] rounded-xl">
+                  <div className="flex gap-3 items-center">
+                    <CiTimer className="text-black text-[#777777]" />
+                    <p className="text-black text-[16px] font-semibold">
+                      Recent Searches
+                    </p>
+                  </div>
+                  <div className="flex gap-3 mt-3">
+                    <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
+                      <p className="text-black text-[14px] font-normal">
+                        Display Tech
+                      </p>
+                    </div>
+                    <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
+                      <p className="text-black text-[14px] font-normal">
+                        Display Tech
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 mt-3">
+                    <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
+                      <p className="text-black text-[14px] font-normal">
+                        Display Tech
+                      </p>
+                    </div>
+                    <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
+                      <p className="text-black text-[14px] font-normal">
+                        Display Tech
+                      </p>
+                    </div>
+                  </div>
+                  <div className="rounded-xl mt-3 bg-[#E8E8E8] p-3 w-[80%]">
+                    <p className="text-black text-[16px] font-semibold">
+                      Popular Searches
+                    </p>{" "}
+                    <div className="flex gap-3 mt-3">
+                      <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                        <p className="text-black text-[14px] font-normal">
+                          Display Tech
+                        </p>
+                      </div>
+                      <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                        <p className="text-black text-[14px] font-normal">
+                          Display Tech
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex gap-3 mt-3">
+                      <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                        <p className="text-black text-[14px] font-normal">
+                          Display Tech
+                        </p>
+                      </div>
+                      <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                        <p className="text-black text-[14px] font-normal">
+                          Display Tech
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           <div className="flex items-center text-[14px] font-normal">
@@ -130,28 +196,108 @@ export default function Navbar() {
               />
               <p className="hidden sm:block lg:block">Become Seller</p>
             </Link>
-            {/* <Avatar className="w-[44px] h-[44px] ml-[16px]" /> */}
-            <button
-              className=" bg-[#F70000] rounded-2xl h-[40px]  w-[151px] text-[14px] font-medium text-white"
-              onClick={() => hanldeGoToLogin()}
+            <div ref={containerRef} className="relative">
+              <Avatar
+                className="w-[44px] h-[44px] ml-[16px]"
+                onClick={handleToggle}
+              />
+              {isOpen && (
+                <div className="absolute right-0 mt-2 w-[335px] bg-white z-10 p-5 shadow-lg border border-[#D2D4DA] rounded-md">
+                  <div className="flex gap-2 items-center">
+                    <Image src={user} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-[#777777]">
+                      Your Account
+                    </p>
+                  </div>
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={Fav} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-[#777777]">
+                      Favourites
+                    </p>
+                  </div>{" "}
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image
+                      src={Location}
+                      alt=""
+                      className="w-[18px] h-[18px]"
+                    />
+                    <p className="text-[16px] font-normal text-[#777777]">
+                      Manage Addresses
+                    </p>
+                  </div>{" "}
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={card} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-[#777777]">
+                      Credit Limit
+                    </p>
+                  </div>
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={bulid} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-[#777777]">
+                      Referral Ranking
+                    </p>
+                  </div>{" "}
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={crown} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-[#777777]">
+                      Grazzle Membership
+                    </p>
+                  </div>{" "}
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={Setting} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-[#777777]">
+                      Notification Settings
+                    </p>
+                  </div>{" "}
+                  <p className="text-[16px] font-semibold mt-3 text-[#777777]">
+                    Grazzle
+                  </p>
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={FAQ} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-[#777777]">
+                      FAQs
+                    </p>
+                  </div>{" "}
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={terms} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-[#777777]">
+                      Terms of Use
+                    </p>
+                  </div>{" "}
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={Privcy} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-[#777777]">
+                      Privacy Policy
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+            {/* <button
+              className="bg-[#F70000] rounded-2xl h-[40px] w-[151px] text-[14px] font-medium text-white ml-[16px]"
+              onClick={handleGoToLogin}
             >
               Before Login
-            </button>
+            </button> */}
           </div>
         </div>
-
         <div className="mt-4 sm:mt-0 md:mt-3 w-full lg:hidden">
-          <div className="relative w-full">
-            {/* Change the width of the input for small screens */}
+          <div ref={searchContainerRef} className="relative w-full">
             <input
               placeholder="Search"
               className="w-full sm:w-[300px] md:w-full h-[52px] rounded-full pl-[50px] focus:outline-none border-[1px] border-[#D2D4DA]"
+              onClick={handleToggleSearch}
             />
             <Image
               src={Search}
               alt="Search"
               className="w-[36px] h-[36px] absolute top-[50%] left-[8px] transform -translate-y-1/2"
             />
+            {isOpenSearch && (
+              <div className="absolute w-full bg-white shadow-lg border border-[#D2D4DA] mt-2 rounded-md">
+                <p className="p-4">Search Dropdown Content</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
