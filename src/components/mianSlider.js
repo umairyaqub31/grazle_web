@@ -63,7 +63,7 @@ const MainSlider = () => {
       >
         {sliderItems.map((item, index) => (
           <div key={index} style={{ width: "100%" }}>
-            <Image src={item.imageUrl} />
+            <Image src={item.imageUrl} className="lg:h-[400px] h-[260px]" />
           </div>
         ))}
       </Carousel>

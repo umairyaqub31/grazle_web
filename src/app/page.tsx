@@ -215,7 +215,7 @@ export default function Home() {
         <MainSlider />
       </div>
       {/* categories */}
-      <div className="lg:mx-[150px] lg:mt-0 mt-3 md:mx-auto md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
+      <div className="lg:mx-[150px] lg:mt-0 mt-3 lg:mt-2 md:mx-auto overflow: -webkit-scrollbar: none; md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
         <div className="w-[92px] sm:mt-2  flex flex-col justify-center items-center">
           <div className=" flex  justify-center items-center w-[92px] h-[92px] rounded-full bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] ">
             <Image src={Cardmm} alt="" className="w-[40px] h-[40px] " />
@@ -398,7 +398,7 @@ export default function Home() {
         </div>
       </div>
       <div className="lg:mx-[150px] md:mx-[60px] my-[24px]">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between lg:px-0 px-2">
           <p className="text-[24px] font-semibold">Recent viewed</p>
           <div className="flex items-center gap-4">
             <div
@@ -418,7 +418,7 @@ export default function Home() {
         <RecentViewSlider Data={sliderItems} ref={sliderRef1} />
       </div>
       <div className="lg:mx-[150px] md:mx-[60px]  my-[24px]">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between lg:px-0 px-2">
           <p className="text-[24px] font-semibold">Suggested for you</p>
           <div className="flex items-center gap-4">
             <div
@@ -442,7 +442,7 @@ export default function Home() {
         <Image
           src={bg}
           alt=""
-          className="w-[100%] md:h-[300px] sm:h-[200px]  lg:h-[417px]"
+          className="w-[100%] md:h-[300px] sm:h-[200px] h-[220px]  lg:h-[417px]"
         />
         <div
           style={{
@@ -451,7 +451,7 @@ export default function Home() {
           }}
           className="lg:h-[428px] md:h-auto sm:h-auto p-[16px]"
         >
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center lg:px-0 px-2">
             <p className="text-[14px] font-semibold">Best of all</p>
             <Image src={Arrow} alt="" className="w-[24px] h-[24px]" />
           </div>
@@ -514,7 +514,7 @@ export default function Home() {
         </div>
       </div>
       <div className="lg:mx-[150px] md:mx-[60px]  my-[24px]">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between lg:px-0 px-2">
           <p className="text-[24px] font-semibold">Trending</p>
           <div className="flex items-center gap-4">
             <div
@@ -536,7 +536,7 @@ export default function Home() {
       {/* small appliances */}
       <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto">
         <div className="flex items-center justify-start space-x-[16px] w-max">
-          <div className="lg:w-[402px] md:w-[402px] sm:w-full card relative h-[281px] flex lg:items-center rounded-lg bg-[#FFF5EE] text-[#91553A] p-[32px] box-border">
+          <div className="lg:w-[402px] md:w-[402px] sm:w-full card relative h-[290px] flex lg:items-center rounded-lg bg-[#FFF5EE] text-[#91553A] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto">
               <p className="text-[24px] font-semibold">Small Appliances</p>
               <p className="text-[16px] font-semibold my-[24px]">
@@ -547,11 +547,11 @@ export default function Home() {
             <Image
               src={Rasmcc}
               alt=""
-              className="w-[200px] sm:w-auto absolute top-[30px] h-[260px] left-[200px] sm:left-auto"
+              className="lg:w-[200px] w-[150px] sm:w-auto absolute lg:top-[30px] top-[120px] lg:h-[260px] h:[170px] lg:left-[200px] left-[160px] sm:left-auto"
             />
           </div>
 
-          <div className="lg:w-[402px] md:w-[402px] sm:w-[350px] card relative h-[281px] flex lg:items-center rounded-lg bg-[#EBF4FF] text-[#1B9CE4] p-[32px] box-border">
+          <div className="lg:w-[402px] md:w-[402px] sm:w-[350px] card relative h-[290px] flex lg:items-center rounded-lg bg-[#EBF4FF] text-[#1B9CE4] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto ">
               <p className="text-[24px] font-semibold">Small Appliances</p>
               <p className="text-[16px] font-semibold my-[24px]">
@@ -562,10 +562,10 @@ export default function Home() {
             <Image
               src={Rasmbb}
               alt=""
-              className="w-[200px] absolute top-[30px] h-[260px] left-[200px]"
+              className="lg:w-[200px] w-[150px] sm:w-auto absolute lg:top-[30px] top-[120px] lg:h-[260px] h:[180px] lg:left-[200px] left-[160px] sm:left-auto"
             />
           </div>
-          <div className="lg:w-[402px] md:w-[402px] sm:w-[350px] card relative h-[281px] flex lg:items-center rounded-lg bg-[#FFF5EE] text-[#91553A] p-[32px] box-border">
+          <div className="lg:w-[402px] md:w-[402px] sm:w-[350px] card relative h-[290px] flex lg:items-center rounded-lg bg-[#FFF5EE] text-[#91553A] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto ">
               <p className="text-[24px] font-semibold">Small Appliances</p>
               <p className="text-[16px] font-semibold my-[24px]">
@@ -576,7 +576,7 @@ export default function Home() {
             <Image
               src={Rasmaa}
               alt=""
-              className="w-[200px] absolute top-[30px] h-[260px] left-[200px]"
+              className="lg:w-[200px] w-[150px] sm:w-auto absolute lg:top-[30px] top-[120px] lg:h-[260px] h:[180px] lg:left-[200px] left-[160px] sm:left-auto"
             />
           </div>
         </div>
@@ -587,17 +587,17 @@ export default function Home() {
           background:
             "linear-gradient(97.69deg, rgba(247, 0, 0, 0.1) 3.55%, rgba(145, 131, 0, 0.1) 91.28%)",
         }}
-        className="lg:mx-[150px] md:mx-[60px] mx-[16px] relative lg:h-[491px] md:h-[400px] sm:h-auto lg:px-[100px] sm:px-[40px] md:px-[40px] py-[60px] my-[16px] flex flex-col lg:flex-row justify-between"
+        className="lg:mx-[150px] md:mx-[60px] mx-[0px] relative lg:h-[491px] md:h-[400px] sm:h-auto lg:px-[100px] px-[20px] sm:px-[40px] md:px-[40px] py-[0px] my-[16px] flex lg:flex-row justify-between"
       >
-        <div className="flex flex-col items-start lg:w-auto md:w-auto w-full">
+        <div className="flex flex-col items-start lg:w-auto md:w-auto w-[45%] lg:mt-7 mt-3">
           <Image
             src={Logoo}
             alt=""
             className="lg:w-[120px] lg:h-[70px] md:w-[100px] md:h-[60px] w-[80px] h-[50px]"
           />
           <div className="lg:w-[570px] md:w-[400px] w-full mt-[32px]">
-            <p className="lg:text-[48px] md:text-[36px] text-[28px] font-bold">
-              simplify your shopping with GRAZLE
+            <p className="lg:text-[48px] md:text-[36px] text-[18px] font-bold">
+              Simplify your shopping with GRAZLE
             </p>
             <p className="lg:text-[16px] md:text-[14px] text-[12px]">
               SHOPPING ON THE GO IS FAST AND EASY
@@ -619,16 +619,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex lg:ml-[32px] md:ml-[24px] ml-[16px] lg:mt-0 mt-[32px] lg:flex-row flex-col items-center lg:w-auto md:w-auto w-full">
+        <div className="flex lg:ml-[32px] md:ml-[24px] ml-[16px] lg:mt-0 mt-[0px] lg:flex-row flex-col items-center lg:w-auto md:w-auto w-full">
           <Image
             src={Phone1}
             alt=""
-            className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[180px] h-[300px] lg:relative lg:right-[34px] lg:top-[-66px] lg:ml-[16px] md:absolute md:right-[185px] md:top-[0px] relative"
+            className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[150px] h-[180px] lg:relative lg:right-[34px] lg:top-[-66px] lg:ml-[16px] md:absolute md:right-[185px] md:top-[0px] relative"
           />
           <Image
             src={Phone2}
             alt=""
-            className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[180px] h-[300px] lg:relative lg:right-[40px] lg:bottom-[-66px] lg:mt-0 mt-[16px] md:absolute md:right-[40px] md:bottom-[0px] relative"
+            className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[150px] h-[180px] lg:relative lg:right-[40px] right-[-80px] lg:bottom-[-66px] lg:mt-0 mt-[16px] md:absolute md:right-[40px] md:bottom-[0px] relative"
           />
         </div>
       </div>

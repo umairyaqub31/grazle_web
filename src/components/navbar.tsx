@@ -45,7 +45,7 @@ export default function Navbar() {
     setIsOpenSearch((prev) => !prev);
   };
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside = (event: any) => {
     if (containerRef.current && !containerRef.current.contains(event.target)) {
       setIsOpen(false);
     }
