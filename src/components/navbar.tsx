@@ -101,6 +101,7 @@ export default function Navbar() {
               src={MenuIcon}
               alt="Menu"
               className="w-[30px] h-[24px] mr-2 sm:hidden"
+              onClick={handleToggle}
             />
             <Image
               src={logo}
@@ -211,11 +212,17 @@ export default function Navbar() {
               />
               <p className="hidden sm:block lg:block">Become Seller</p>
             </Link>
+            <button
+              className="bg-[#F70000] rounded-2xl h-[40px] lg:w-[151px] w-[100px] lg:text-[14px] text-[10px] font-medium text-white ml-[16px]"
+              onClick={handleGoToLogin}
+            >
+              Before Login
+            </button>
             <div ref={containerRef} className="relative">
-              <Avatar
+              {/* <Avatar
                 className="w-[44px] h-[44px] ml-[16px]"
                 onClick={handleToggle}
-              />
+              /> */}
               {isOpen && (
                 <div className="absolute right-0 mt-2 w-[335px] bg-white z-10 p-5 shadow-lg border border-[#D2D4DA] rounded-md">
                   <Link href="/MyAccount" className="flex gap-2 items-center">
