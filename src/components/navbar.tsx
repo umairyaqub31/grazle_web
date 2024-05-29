@@ -300,12 +300,15 @@ export default function Navbar() {
                       Terms of Use
                     </p>
                   </Link>
-                  <div className="flex gap-2 mt-4 items-center">
+                  <Link
+                    href="/Terms&Conditions"
+                    className="flex gap-2 mt-4 items-center"
+                  >
                     <Image src={Privcy} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-[#777777]">
                       Privacy Policy
                     </p>
-                  </div>
+                  </Link>
                 </div>
               )}
             </div>

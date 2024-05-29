@@ -5,7 +5,7 @@ export default function TermsConditions() {
     <div className="flex items-center justify-center">
       <div
         style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-        className="rounded-3xl w-[1333px] h-auto mx-[150px] mt-[78px] mb-[100px] p-[35px]"
+        className="rounded-3xl w-[1333px] h-auto lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px] mt-[78px] mb-[100px] p-[35px]"
       >
         <p className="font-bold text-[24px]">Grazle</p>
         <p className="font-normal mt-[25px] text-[15px] text-[#777777]">

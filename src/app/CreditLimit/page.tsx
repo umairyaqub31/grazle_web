@@ -16,10 +16,10 @@ export default function CreditLimit() {
     setShowSendModel(false);
   };
   return (
-    <div className="mx-[150px] gap-4  flex  my-[32px]">
+    <div className="lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px] gap-4 flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap lg:my-[32px] my-[20px] sm:my-[20px] md: my-[30px] ">
       <div
         style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-        className="w-[60%] rounded-3xl p-[24px] h-auto"
+        className="lg:w-[60%] w-[100%] sm:w-[100%] md:w-[100%] rounded-3xl p-[24px] h-auto"
       >
         <div className="flex-col mt-[30px] ">
           <label className="text-[16px] font-semibold">Shop Name</label>
@@ -82,7 +82,7 @@ export default function CreditLimit() {
           background:
             "linear-gradient(107.86deg, #F70000 -1.3%, #F69B26 81.68%",
         }}
-        className="w-[40%] text-white rounded-2xl p-[24px] h-[300px]"
+        className="lg:w-[40%] w-[100%] sm:w-[100%] md:w-[100%] text-white rounded-2xl p-[24px] h-[300px]"
       >
         <div className="flex items-center">
           <div className="w-[60px] h-[60px] bg-[#F96609] rounded-full flex items-center justify-center">

@@ -37,11 +37,11 @@ export default function MyAccount() {
     setShowSendModel(true);
   };
   return (
-    <div className="mx-[150px] my-[80px]">
-      <div className="flex items-start gap-6 h-auto">
+    <div className="lg:my-[80px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px]">
+      <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-start gap-6 h-auto">
         <div
           style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-          className="rounded-3xl p-[30px] w-[23%] h-[454px]"
+          className="rounded-3xl p-[30px] lg:w-[23%] w-[100%] h-[454px]"
         >
           <div
             onClick={() => handleSectionChange("Personal Info")}
@@ -104,15 +104,15 @@ export default function MyAccount() {
             Logout{" "}
           </div>
         </div>
-        <div className="rounded-3xl  w-[77%] min-h-[454px] max-h-auto">
+        <div className="rounded-3xl  lg:w-[77%] w-[100%] min-h-[454px] max-h-auto">
           {activeSection === "Personal Info" && (
             <div
               style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
               className="rounded-3xl p-[30px] w-full "
             >
               <Avatar className="w-[80px] h-[80px]" />
-              <div className="flex items-center gap-4  ">
-                <div className="flex-col mt-[30px] w-[50%]">
+              <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center gap-4  ">
+                <div className="flex-col mt-[30px] lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%]">
                   <label className="text-[16px] font-semibold">
                     {" "}
                     First Name *
@@ -122,7 +122,7 @@ export default function MyAccount() {
                     className="border-[1px] mt-[9px] border-[#7777777]  w-full rounded-md h-[50px] p-3 focus:outline-none"
                   />
                 </div>{" "}
-                <div className="flex-col mt-[30px] w-[50%]">
+                <div className="flex-col mt-[30px] lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%]">
                   <label className="text-[16px] font-semibold">
                     {" "}
                     Last Name *
