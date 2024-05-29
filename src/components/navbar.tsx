@@ -242,7 +242,7 @@ export default function Navbar() {
                       Favourites
                     </p>
                   </div>{" "}
-                  <div className="flex gap-2 mt-4 items-center">
+                  {/* <div className="flex gap-2 mt-4 items-center">
                     <Image
                       src={Location}
                       alt=""
@@ -251,7 +251,7 @@ export default function Navbar() {
                     <p className="text-[16px] font-normal text-[#777777]">
                       Manage Addresses
                     </p>
-                  </div>{" "}
+                  </div>{" "} */}
                   <Link
                     href="/CreditLimit"
                     className="flex gap-2 mt-4 items-center"

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { HiOutlineDotsVertical } from "react-icons/hi";
-import { IoLockClosed } from "react-icons/io5";
+import { IoCloseSharp, IoLockClosed } from "react-icons/io5";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import Chair from "@/assets/pngwing 2.png";
 import close from "@/assets/close.png";
@@ -94,14 +94,16 @@ export default function Leave() {
                 </p>
               </div>
 
-              <div className="flex items-center">
-                <RiDeleteBin6Fill
-                  className="w-[28px] h-[36px] text-[#FC0005] mr-4 cursor-pointer"
-                  onClick={handleOpeneModel}
-                />
-                <p className="text-[#FC0005] text-[24px] font-semibold mr-4">
-                  Cancel Order
-                </p>
+              <div className="flex items-center ">
+                <div className="flex items-center p-2 rounded-lg shadow-lg mr-3 cursor-pointer">
+                  <IoCloseSharp
+                    className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
+                    onClick={handleOpeneModel}
+                  />
+                  <p className="text-[#FC0005] text-[16px] font-semibold mr-4">
+                    Cancel Order
+                  </p>
+                </div>
                 <div className="border-#00000017 border-[1px] rounded-md h-[30px] w-[30px] flex items-center justify-center">
                   <HiOutlineDotsVertical className="h-[15px] w-4 text-[#D9D9D9]" />
                 </div>
@@ -151,10 +153,15 @@ export default function Leave() {
               </div>
 
               <div className="flex items-center">
-                <RiDeleteBin6Fill className="w-[28px] h-[36px] text-[#FC0005] mr-4" />
-                <p className="text-[#FC0005] text-[24px] font-semibold mr-4">
-                  Cancel Order
-                </p>
+                <div className="flex items-center p-2 rounded-lg shadow-lg mr-3 cursor-pointer">
+                  <IoCloseSharp
+                    className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
+                    onClick={handleOpeneModel}
+                  />
+                  <p className="text-[#FC0005] text-[16px] font-semibold mr-4">
+                    Cancel Order
+                  </p>
+                </div>
                 <div className="border-#00000017 border-[1px] rounded-md h-[30px] w-[30px] flex items-center justify-center">
                   <HiOutlineDotsVertical className="h-[15px] w-4 text-[#D9D9D9]" />
                 </div>
