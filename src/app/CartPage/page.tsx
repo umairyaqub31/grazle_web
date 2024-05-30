@@ -24,18 +24,18 @@ export default function Cartpage() {
     router.push("/PaymentAndAddress");
   };
   return (
-    <div className="mx-[150px] my-[50px] ">
+    <div className=" lg:my-[50px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px]">
       <div className="flex items-center">
         <p className="text-[40px] font-semibold mr-3 ">Cart</p>
         <p className="text-[24px] font-medium text-[#777777] ">(3 Products)</p>
       </div>
-      <div className="flex  gap-8">
-        <div className="w-[70%] h-auto ">
+      <div className="flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap  gap-8">
+        <div className="lg:w-[70%] w-[100%] sm:w-[100%] md:w-[100%] h-auto ">
           <div
             style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
             className="w-[100%] rounded-[20px] p-[20px]  border-[1px] border-[#F70000]"
           >
-            <div className="flex items-center">
+            <div className="flex  items-center">
               <CiSquareCheck className="text-[#F70000] text-[24px] mr-3" />
               <p className="text-[24px] font-normal">Wear Saka Store</p>
             </div>
@@ -46,7 +46,7 @@ export default function Cartpage() {
               </p>
               <p className="text-[16px] font-medium text-[#F70000]">+ Add</p>
             </div>
-            <div className="mt-5 flex items-center justify-between">
+            <div className="mt-5 flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap items-center justify-between">
               <div className="flex items-center">
                 <CiSquareCheck className="text-[#F70000] text-[32px] mr-3" />
                 <Image
@@ -55,7 +55,7 @@ export default function Cartpage() {
                   className="rounded-2xl w-[90px] h-[90px] mr-7"
                 />{" "}
                 <div>
-                  <p className="text-[24px] font-medium text-black">
+                  <p className="lg:text-[24px] text-[16px] sm:text-[18px] md:text-[18px] font-medium text-black">
                     Wear Saka Store
                   </p>
                   <div className="my-3 flex items-center">
@@ -64,7 +64,7 @@ export default function Cartpage() {
                         10%
                       </p>
                     </div>
-                    <p className="line-through text-[16px] font-medium text-[#777777]">
+                    <p className="line-through lg:text-[16px] text-[12px] sm:text-[14px] md:text-[16px] font-medium text-[#777777]">
                       Rs 345.000
                     </p>
                   </div>
@@ -73,7 +73,7 @@ export default function Cartpage() {
               </div>
 
               <div>
-                <div className="w-[124px] rounded-full border-[1px] border-[#E6E6E6] p-2 flex items-center justify-between">
+                <div className="lg:w-[124px] lg:mt-0 mt-3 sm:mt-3 md:mt-3   rounded-full border-[1px] border-[#E6E6E6] p-2 flex items-center justify-between">
                   <div className="w-[34px] h-[34px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
                     <HiOutlineMinus className="text-[16px] font-bold " />
                   </div>
@@ -95,9 +95,9 @@ export default function Cartpage() {
           </div>
           <div
             style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-            className="w-[100%] mt-5 rounded-[20px] p-[20px]  border-[1px] border-[#F70000]"
+            className="w-[100%] rounded-[20px] p-[20px] lg:mt-6 mt-4 sm:mt-4 md:mt-4  border-[1px] border-[#F70000]"
           >
-            <div className="flex items-center">
+            <div className="flex  items-center">
               <CiSquareCheck className="text-[#F70000] text-[24px] mr-3" />
               <p className="text-[24px] font-normal">Wear Saka Store</p>
             </div>
@@ -108,7 +108,7 @@ export default function Cartpage() {
               </p>
               <p className="text-[16px] font-medium text-[#F70000]">+ Add</p>
             </div>
-            <div className="mt-5 flex items-center justify-between">
+            <div className="mt-5 flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap items-center justify-between">
               <div className="flex items-center">
                 <CiSquareCheck className="text-[#F70000] text-[32px] mr-3" />
                 <Image
@@ -117,7 +117,7 @@ export default function Cartpage() {
                   className="rounded-2xl w-[90px] h-[90px] mr-7"
                 />{" "}
                 <div>
-                  <p className="text-[24px] font-medium text-black">
+                  <p className="lg:text-[24px] text-[16px] sm:text-[18px] md:text-[18px] font-medium text-black">
                     Wear Saka Store
                   </p>
                   <div className="my-3 flex items-center">
@@ -126,7 +126,7 @@ export default function Cartpage() {
                         10%
                       </p>
                     </div>
-                    <p className="line-through text-[16px] font-medium text-[#777777]">
+                    <p className="line-through lg:text-[16px] text-[12px] sm:text-[14px] md:text-[16px] font-medium text-[#777777]">
                       Rs 345.000
                     </p>
                   </div>
@@ -135,19 +135,13 @@ export default function Cartpage() {
               </div>
 
               <div>
-                <div className="w-[124px] rounded-full border-[1px] border-[#E6E6E6] p-2 flex items-center justify-between">
-                  <div
-                    className="w-[34px] h-[34px] rounded-full bg-[#F2F2F2] flex items-center cursor-pointer justify-center"
-                    onClick={handleDecrement}
-                  >
-                    <HiOutlineMinus className="text-[16px] font-bold" />
+                <div className="lg:w-[124px] lg:mt-0 mt-3 sm:mt-3 md:mt-3   rounded-full border-[1px] border-[#E6E6E6] p-2 flex items-center justify-between">
+                  <div className="w-[34px] h-[34px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
+                    <HiOutlineMinus className="text-[16px] font-bold " />
                   </div>
-                  <p className="text-[16px] font-bold">{count}</p>
-                  <div
-                    className="w-[34px] h-[34px] rounded-full bg-[#F2F2F2] flex items-center cursor-pointer justify-center"
-                    onClick={handleIncrement}
-                  >
-                    <HiOutlinePlus className="text-[16px] font-bold" />
+                  <p className="text-[16px] font-bold ">1</p>
+                  <div className="w-[34px] h-[34px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
+                    <HiOutlinePlus className="text-[16px] font-bold " />
                   </div>
                 </div>
                 <div className="flex justify-end mt-4 gap-4">
@@ -164,7 +158,7 @@ export default function Cartpage() {
         </div>
         <div
           style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-          className="w-[35%] rounded-[20px] p-[20px]"
+          className="lg:w-[35%] w-[100%] sm:w-[100%] md:w-[100%] rounded-[20px] p-[20px]"
         >
           <div className="w-[100%] ">
             <p className="text-[16px] font-medium text-[#777777]">

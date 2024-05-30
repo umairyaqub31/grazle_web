@@ -11,7 +11,7 @@ export default function RegisterSeller() {
     setShowPassword(!showPassword);
   };
   return (
-    <div className="w-[100%] h-[100vh] flex items-center p-[50px] ">
+    <div className="w-[100%] h-auto flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center p-[50px] ">
       <div
         style={{
           background:
@@ -31,7 +31,7 @@ export default function RegisterSeller() {
         <Image
           src={register}
           alt=""
-          className="w-[100%] top-[100px] absolute right-[30px] h-[650px]"
+          className="w-[100%] top-[100px] absolute right-[30px] h-[600px]"
         />
       </div>
       <div className="w-[50%] h-[100vh] pl-[50px] py-[50px] ">
@@ -108,7 +108,7 @@ export default function RegisterSeller() {
           </p>
         </div>
 
-        <button className=" bg-[#F70000] rounded-xl h-[50px] mt-[30px] w-[100%] text-[18px] font-medium text-white">
+        <button className=" bg-[#F70000] mb-4 rounded-xl h-[50px] mt-[30px] w-[100%] text-[18px] font-medium text-white">
           Register
         </button>
       </div>

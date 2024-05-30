@@ -34,11 +34,11 @@ export default function FAQs() {
     };
 
   return (
-    <div className="mx-[150px] my-[80px]">
-      <div className="flex items-center gap-6">
+    <div className=" lg:my-[80px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px]">
+      <div className="flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap items-start gap-6">
         <div
           style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-          className="rounded-3xl p-[30px] w-[23%] h-[554px]"
+          className="rounded-3xl p-[30px] lg:w-[23%] w-[100%] h-[554px] "
         >
           <div className="border-l-[4px] rounded-sm border-[#F70000]">
             <p className="ml-3 text-[18px] font-normal">Grocery</p>
@@ -69,7 +69,7 @@ export default function FAQs() {
         </div>
         <div
           style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-          className="rounded-3xl p-[30px] w-[77%] h-[554px]"
+          className="rounded-3xl p-[30px] lg:w-[77%] w-[100%] lg:h-[554px] h-auto"
         >
           <p className="text-[24px] font-medium">
             Below are frequently asked questions, you may find the answer for

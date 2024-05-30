@@ -19,7 +19,7 @@ export default function Payment() {
   };
   return (
     <>
-      <div className="flex mt-[40px] justify-center">
+      <div className="flex mt-[40px] lg:mx-0 mx-2 sm:mx-2 md:mx-4 justify-center">
         <div className="h-[614px] w-[640px] text-center">
           <p className="text-[32px] font-bold">Select Payment</p>
           <div className="rounded-3xl mt-[20px]  flex items-center p-[35px] hover:border-[1px] border-[#F70000]">
