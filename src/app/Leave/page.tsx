@@ -44,14 +44,14 @@ export default function Leave() {
     setShowSendModel(false);
   };
   return (
-    <div className="mx-[150px] my-[80px]">
+    <div className="lg:my-[50px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px]">
       <div
         style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-        className="rounded-3xl p-[20px] w-[100%] gap-8 flex items-algin "
+        className="rounded-3xl p-[20px] w-[100%] gap-8  flex items-algin "
       >
         <p
           onClick={() => handleSectionChange("Active")}
-          className={`text-[16px] font-normal text-[#777777] cursor-pointer ${
+          className={`lg:text-[16px] text-[12px] sm:text-[13px] md:text-[14px]  font-normal text-[#777777] cursor-pointer ${
             activeSection === "Active"
               ? "border-b-[4px] border-[#F70000] font-semibold"
               : "text-[#8B8B8B]"
@@ -61,7 +61,7 @@ export default function Leave() {
         </p>
         <p
           onClick={() => handleSectionChange("Completed")}
-          className={`text-[16px] font-normal text-[#777777] cursor-pointer ${
+          className={`lg:text-[16px] text-[12px] sm:text-[13px] md:text-[14px] font-normal text-[#777777] cursor-pointer ${
             activeSection === "Completed"
               ? "border-b-[4px] border-[#F70000] font-semibold"
               : "text-[#8B8B8B]"
@@ -71,7 +71,7 @@ export default function Leave() {
         </p>
         <p
           onClick={() => handleSectionChange("Cancelled")}
-          className={`text-[16px] font-normal text-[#777777] cursor-pointer ${
+          className={`lg:text-[16px] text-[12px] sm:text-[13px] md:text-[14px] font-normal text-[#777777] cursor-pointer ${
             activeSection === "Cancelled"
               ? "border-b-[4px] border-[#F70000] font-semibold"
               : "text-[#8B8B8B]"
@@ -86,7 +86,7 @@ export default function Leave() {
             style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
             className="w-100 rounded-3xl p-6 mt-6 hover:border-[1px] border-[#F70000]"
           >
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center  justify-between">
               <div className="border-[1px] border-[#777777] rounded-full w-[230px] px-4 py-2 flex items-center">
                 <IoLockClosed className="w-[14px] h-[14px] mr-2" />
                 <p className="text-[14px] font-normal text-[#777777]">
@@ -94,7 +94,7 @@ export default function Leave() {
                 </p>
               </div>
 
-              <div className="flex items-center ">
+              <div className="flex items-center mt-3 lg:mt-0 sm:mt-3 md:mt-2 ">
                 <div className="flex items-center p-2 rounded-lg shadow-lg mr-3 cursor-pointer">
                   <IoCloseSharp
                     className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
@@ -109,7 +109,7 @@ export default function Leave() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-5">
+            <div className="flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap items-center justify-between mt-5">
               <div className="flex items-center">
                 <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                   <Image src={Chair} alt="" className="w-[60px] h-[60px]" />
@@ -124,13 +124,13 @@ export default function Leave() {
                   </p>
                 </div>
               </div>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="lg:text-[24px] text-[18px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                 Quantity 4
               </p>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="lg:text-[24px] text-[18px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                 Price: $567.00
               </p>
-              <div className="flex-col flex">
+              <div className="flex-col mt-3 lg:mt-0 sm:mt-3 md:mt-3  flex">
                 <button className=" bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  w-[181px] text-[18px] font-medium text-[#07D459]">
                   In Progress
                 </button>
@@ -144,7 +144,7 @@ export default function Leave() {
             style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
             className="w-100 rounded-3xl p-6 mt-6 hover:border-[1px] border-[#F70000]"
           >
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center  justify-between">
               <div className="border-[1px] border-[#777777] rounded-full w-[230px] px-4 py-2 flex items-center">
                 <IoLockClosed className="w-[14px] h-[14px] mr-2" />
                 <p className="text-[14px] font-normal text-[#777777]">
@@ -152,7 +152,7 @@ export default function Leave() {
                 </p>
               </div>
 
-              <div className="flex items-center">
+              <div className="flex items-center mt-3 lg:mt-0 sm:mt-3 md:mt-2 ">
                 <div className="flex items-center p-2 rounded-lg shadow-lg mr-3 cursor-pointer">
                   <IoCloseSharp
                     className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
@@ -167,7 +167,7 @@ export default function Leave() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-5">
+            <div className="flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap items-center justify-between mt-5">
               <div className="flex items-center">
                 <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                   <Image src={Chair} alt="" className="w-[60px] h-[60px]" />
@@ -182,13 +182,13 @@ export default function Leave() {
                   </p>
                 </div>
               </div>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="lg:text-[24px] text-[18px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                 Quantity 4
               </p>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="lg:text-[24px] text-[18px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                 Price: $567.00
               </p>
-              <div className="flex-col flex">
+              <div className="flex-col mt-3 lg:mt-0 sm:mt-3 md:mt-3  flex">
                 <button className=" bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  w-[181px] text-[18px] font-medium text-[#07D459]">
                   In Progress
                 </button>
@@ -253,7 +253,7 @@ export default function Leave() {
             style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
             className="w-100 rounded-3xl p-6 mt-6 hover:border-[1px] border-[#F70000]"
           >
-            <div className="flex items-center justify-between">
+            <div className="flex  items-center justify-between">
               <div className="border-[1px] border-[#777777] rounded-full w-[230px] px-4 py-2 flex items-center">
                 <IoLockClosed className="w-[14px] h-[14px] mr-2" />
                 <p className="text-[14px] font-normal text-[#777777]">
@@ -261,13 +261,13 @@ export default function Leave() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-5">
+            <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center justify-between mt-5">
               <div className="flex items-center">
                 <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                   <Image src={Chair} alt="" className="w-[60px] h-[60px]" />
                 </div>
                 <div>
-                  <p className="text-[18px] font-medium">Wear Saka Store </p>
+                  <p className="text-[18px] font-medium ">Wear Saka Store </p>
                   <p className="text-[16px] mt-2 text-[#777777] font-medium">
                     Color: Grey
                   </p>
@@ -276,13 +276,13 @@ export default function Leave() {
                   </p>
                 </div>
               </div>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="text-[24px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 mr-2 lg:mr-0  font-medium">
                 Quantity 4
               </p>
               <p className="text-[24px] text-[#777777]  font-medium">
                 Price: $567.00
               </p>
-              <div>
+              <div className="mt-3 lg:mt-0 sm:mt-3">
                 <button className=" mr-4 bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  w-[181px] text-[18px] font-medium text-[#07D459]">
                   Completed
                 </button>
@@ -299,7 +299,7 @@ export default function Leave() {
             style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
             className="w-100 rounded-3xl p-6 mt-6 hover:border-[1px] border-[#F70000]"
           >
-            <div className="flex items-center justify-between">
+            <div className="flex  items-center justify-between">
               <div className="border-[1px] border-[#777777] rounded-full w-[230px] px-4 py-2 flex items-center">
                 <IoLockClosed className="w-[14px] h-[14px] mr-2" />
                 <p className="text-[14px] font-normal text-[#777777]">
@@ -307,13 +307,13 @@ export default function Leave() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-5">
+            <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center justify-between mt-5">
               <div className="flex items-center">
                 <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                   <Image src={Chair} alt="" className="w-[60px] h-[60px]" />
                 </div>
                 <div>
-                  <p className="text-[18px] font-medium">Wear Saka Store </p>
+                  <p className="text-[18px] font-medium ">Wear Saka Store </p>
                   <p className="text-[16px] mt-2 text-[#777777] font-medium">
                     Color: Grey
                   </p>
@@ -322,17 +322,20 @@ export default function Leave() {
                   </p>
                 </div>
               </div>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="text-[24px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 mr-2 lg:mr-0  font-medium">
                 Quantity 4
               </p>
               <p className="text-[24px] text-[#777777]  font-medium">
                 Price: $567.00
               </p>
-              <div>
+              <div className="mt-3 lg:mt-0 sm:mt-3">
                 <button className=" mr-4 bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  w-[181px] text-[18px] font-medium text-[#07D459]">
                   Completed
                 </button>
-                <button className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px]  w-[181px] text-[18px] font-medium text-[#F69B26]">
+                <button
+                  className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px]  w-[181px] text-[18px] font-medium text-[#F69B26]"
+                  onClick={handleOpeneModelLeave}
+                >
                   Leave Review
                 </button>
               </div>
@@ -342,7 +345,7 @@ export default function Leave() {
             style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
             className="w-100 rounded-3xl p-6 mt-6 hover:border-[1px] border-[#F70000]"
           >
-            <div className="flex items-center justify-between">
+            <div className="flex  items-center justify-between">
               <div className="border-[1px] border-[#777777] rounded-full w-[230px] px-4 py-2 flex items-center">
                 <IoLockClosed className="w-[14px] h-[14px] mr-2" />
                 <p className="text-[14px] font-normal text-[#777777]">
@@ -350,13 +353,13 @@ export default function Leave() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-5">
+            <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center justify-between mt-5">
               <div className="flex items-center">
                 <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                   <Image src={Chair} alt="" className="w-[60px] h-[60px]" />
                 </div>
                 <div>
-                  <p className="text-[18px] font-medium">Wear Saka Store </p>
+                  <p className="text-[18px] font-medium ">Wear Saka Store </p>
                   <p className="text-[16px] mt-2 text-[#777777] font-medium">
                     Color: Grey
                   </p>
@@ -365,17 +368,20 @@ export default function Leave() {
                   </p>
                 </div>
               </div>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="text-[24px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 mr-2 lg:mr-0  font-medium">
                 Quantity 4
               </p>
               <p className="text-[24px] text-[#777777]  font-medium">
                 Price: $567.00
               </p>
-              <div>
+              <div className="mt-3 lg:mt-0 sm:mt-3">
                 <button className=" mr-4 bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  w-[181px] text-[18px] font-medium text-[#07D459]">
                   Completed
                 </button>
-                <button className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px]  w-[181px] text-[18px] font-medium text-[#F69B26]">
+                <button
+                  className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px]  w-[181px] text-[18px] font-medium text-[#F69B26]"
+                  onClick={handleOpeneModelLeave}
+                >
                   Leave Review
                 </button>
               </div>
@@ -486,7 +492,7 @@ export default function Leave() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-5">
+            <div className=" items-center flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap justify-between mt-5">
               <div className="flex items-center">
                 <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                   <Image src={Chair} alt="" className="w-[60px] h-[60px]" />
@@ -501,13 +507,13 @@ export default function Leave() {
                   </p>
                 </div>
               </div>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                 Quantity 4
               </p>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                 Price: $567.00
               </p>
-              <div>
+              <div className="lg:mt-0 mt-3 sm:mt-3 md:mt-3">
                 <button className=" mr-4 bg-[#F700001A] rounded-2xl h-[50px] outline-[2px] outline-[#F70000] outline-dashed  w-[181px] text-[18px] font-medium text-[#F70000]">
                   Completed
                 </button>
@@ -526,7 +532,7 @@ export default function Leave() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-5">
+            <div className=" items-center flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap justify-between mt-5">
               <div className="flex items-center">
                 <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                   <Image src={Chair} alt="" className="w-[60px] h-[60px]" />
@@ -541,19 +547,19 @@ export default function Leave() {
                   </p>
                 </div>
               </div>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                 Quantity 4
               </p>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                 Price: $567.00
               </p>
-              <div>
+              <div className="lg:mt-0 mt-3 sm:mt-3 md:mt-3">
                 <button className=" mr-4 bg-[#F700001A] rounded-2xl h-[50px] outline-[2px] outline-[#F70000] outline-dashed  w-[181px] text-[18px] font-medium text-[#F70000]">
                   Completed
                 </button>
               </div>
             </div>
-          </div>
+          </div>{" "}
           <div
             style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
             className="w-100 rounded-3xl p-6 mt-6 hover:border-[1px] border-[#F70000]"
@@ -566,7 +572,7 @@ export default function Leave() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-5">
+            <div className=" items-center flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap justify-between mt-5">
               <div className="flex items-center">
                 <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                   <Image src={Chair} alt="" className="w-[60px] h-[60px]" />
@@ -581,13 +587,13 @@ export default function Leave() {
                   </p>
                 </div>
               </div>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                 Quantity 4
               </p>
-              <p className="text-[24px] text-[#777777]  font-medium">
+              <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                 Price: $567.00
               </p>
-              <div>
+              <div className="lg:mt-0 mt-3 sm:mt-3 md:mt-3">
                 <button className=" mr-4 bg-[#F700001A] rounded-2xl h-[50px] outline-[2px] outline-[#F70000] outline-dashed  w-[181px] text-[18px] font-medium text-[#F70000]">
                   Completed
                 </button>

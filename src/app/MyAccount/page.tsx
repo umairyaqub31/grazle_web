@@ -203,7 +203,7 @@ export default function MyAccount() {
           )}
           {activeSection === "Orders" && (
             <div>
-              <div className="flex justify-between items-center">
+              <div className="flex flex-wrap sm:flex-wrap md:flex-nowrap lg:flex-nowrap justify-between items-center">
                 <p className="text-[18px] font-bold">Orders (2)</p>
                 <div className="flex items-center">
                   <p className="text-[18px] ">Sort by:</p>
@@ -217,7 +217,7 @@ export default function MyAccount() {
                 style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
                 className="rounded-3xl mt-[24px]  w-full "
               >
-                <div className="bg-[#FFBA35] h-[80px] flex items-center justify-between rounded-t-3xl px-8">
+                <div className="bg-[#FFBA35] lg:py-2 py-3 sm:py-3 md:py-3 lg:h-[80px] h-auto flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap  items-center justify-between rounded-t-3xl px-8">
                   <div>
                     <p className="text-[#777777] text-[16px] font-medium">
                       Order ID
@@ -299,11 +299,11 @@ export default function MyAccount() {
                     <button className="mr-4 bg-[#FFA31A1A] border-[1px] border-[#F70000] rounded-full h-[50px]  w-[137px] text-[18px] font-medium text-[#F70000]">
                       Accepted
                     </button>
-                    <p className="text-[20px] font-semibold text-[#434343]">
+                    <p className="lg:text-[20px] sm:text-[14px] text-[14px]  font-semibold text-[#434343]">
                       Your order has been accepted
                     </p>
                   </div>
-                  <div className="flex items-center justify-between mt-8 ">
+                  <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center justify-between mt-8 ">
                     <div className="flex items-center ">
                       <button className="mr-4 bg-[#F70000] border-[1px] border-[#F70000] rounded-full h-[50px]  w-[137px] text-[18px] font-medium text-white">
                         Track Order
@@ -315,7 +315,7 @@ export default function MyAccount() {
                         Invoice
                       </button>
                     </div>
-                    <p className="text-[18px] font-semibold text-[#F70000]">
+                    <p className="text-[18px] lg:mt-0 mt-3 sm:mt-3 text-center font-semibold text-[#F70000]">
                       Cancel order
                     </p>
                   </div>
@@ -506,8 +506,8 @@ export default function MyAccount() {
                 className="rounded-3xl p-[30px] w-full mt-6 "
               >
                 <p className="text-[24px] font-semibold">Add New Address</p>
-                <div className="flex items-center gap-4  ">
-                  <div className="flex-col mt-[30px] w-[50%]">
+                <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap   items-center gap-4  ">
+                  <div className="flex-col mt-[30px] lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%]">
                     <label className="text-[16px] font-semibold">
                       {" "}
                       First Name *
@@ -517,7 +517,7 @@ export default function MyAccount() {
                       className="border-[1px] mt-[9px] border-[#7777777]  w-full rounded-md h-[50px] p-3 focus:outline-none"
                     />
                   </div>{" "}
-                  <div className="flex-col mt-[30px] w-[50%]">
+                  <div className="flex-col mt-[30px] lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%]">
                     <label className="text-[16px] font-semibold">
                       {" "}
                       Last Name *
@@ -693,8 +693,8 @@ export default function MyAccount() {
                     className="border-[1px] mt-[9px] border-[#7777777]  w-full rounded-md h-[50px] p-3 focus:outline-none"
                   />
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="flex-col mt-[20px]">
+                <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center gap-4">
+                  <div className="flex-col mt-[20px] lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%]">
                     <label className="text-[16px] font-semibold">
                       {" "}
                       Create New Password *
@@ -704,7 +704,7 @@ export default function MyAccount() {
                       className="border-[1px] mt-[9px] border-[#7777777]  w-full rounded-md h-[50px] p-3 focus:outline-none"
                     />
                   </div>
-                  <div className="flex-col mt-[20px]">
+                  <div className="flex-col mt-[20px] lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%]">
                     <label className="text-[16px] font-semibold">
                       {" "}
                       Create New Password *

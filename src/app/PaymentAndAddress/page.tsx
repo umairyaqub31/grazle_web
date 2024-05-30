@@ -27,8 +27,8 @@ export default function PaymentAndAddress() {
     setShowSendModel(false);
   };
   return (
-    <div className="mx-[150px] my-[50px] flex items-start gap-8">
-      <div className="w-[70%] rounded-3xl p-[20px] ">
+    <div className="lg:my-[50px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[10px] sm:mx-[10px] md:mx-[30px] flex  flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-start gap-8">
+      <div className="lg:w-[70%] w-[100%] sm:w-[100%] md:w-[100%] rounded-3xl p-[20px] ">
         {" "}
         <div
           style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
@@ -38,7 +38,7 @@ export default function PaymentAndAddress() {
             <IoLocationOutline className=" w-[33px] h-[46px] mr-3" />
             <p className="text-[40px] font-bold">Shipping Address</p>
           </div>
-          <div className="flex items-center gap-4 mt-6">
+          <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center gap-4 mt-6">
             <div className="flex-col ">
               <label className="text-[16px] font-normal text-[#7777777]">
                 First Name
@@ -58,7 +58,7 @@ export default function PaymentAndAddress() {
             </label>
             <input className="border-[1px] mt-[9px] border-[#7777777]  w-full rounded-md h-[50px] p-3 focus:outline-none" />
           </div>{" "}
-          <div className="flex items-center gap-4 mt-6">
+          <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center gap-4 mt-6">
             <div className="flex-col ">
               <label className="text-[16px] font-normal text-[#7777777]">
                 State
@@ -78,11 +78,11 @@ export default function PaymentAndAddress() {
               <input className="border-[1px] mt-[9px] border-[#7777777]  w-full rounded-md h-[50px] p-3 focus:outline-none" />
             </div>
           </div>
-          <div className="mt-7 flex items-center">
-            <button className="mr-4 bg-[#D2D4DA] rounded-md h-[50px]  w-[150px] text-[18px] font-medium text-white">
+          <div className="mt-7 flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center">
+            <button className="lg:mr-4 mr-0 bg-[#D2D4DA] rounded-md h-[50px]  lg:w-[150px] w-[100%] sm:w-[100%] text-[18px] font-medium text-white">
               Cancel
             </button>
-            <button className=" bg-[#F70000] rounded-md h-[50px]  w-[210px] text-[18px] font-medium text-white">
+            <button className=" bg-[#F70000] mt-4 lg:mt-0 rounded-md h-[50px]  lg:w-[210px] w-[100%] sm:w-[100%]  text-[18px] font-medium text-white">
               Use this Addresss
             </button>
           </div>
@@ -93,7 +93,9 @@ export default function PaymentAndAddress() {
         >
           <div className="flex items-center gap-2">
             <Image src={Delivery} alt="Airpod" className=" w-[54px] h-[32px]" />
-            <p className="text-[40px] font-medium ">Delivery Partner</p>
+            <p className="lg:text-[40px] text-[24px] sm:text-[24px] font-medium ">
+              Delivery Partner
+            </p>
           </div>
           <div className="flex items-center gap-2 mt-2">
             <Image src={FedEx} alt="Airpod" className=" w-[74px] h-[32px]" />
@@ -110,7 +112,9 @@ export default function PaymentAndAddress() {
               alt="Airpod"
               className=" w-[42px] h-[42px] mr-2"
             />
-            <p className="text-[40px] font-medium ">All Payment Options</p>
+            <p className="lg:text-[40px] text-[24px] sm:text-[24px] font-medium ">
+              All Payment Options
+            </p>
           </div>
           <div
             className={`border-[1px] mt-3 p-3 rounded-xl ${
@@ -143,7 +147,7 @@ export default function PaymentAndAddress() {
               </label>
               <input className="border-[1px] mt-[9px] border-[#777777] w-full rounded-md h-[50px] p-3 focus:outline-none" />
             </div>
-            <div className="flex items-center gap-4 mt-6">
+            <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center gap-4 mt-6">
               <div className="flex-col">
                 <label className="text-[16px] font-normal text-[#777777]">
                   Name On Card
@@ -241,7 +245,7 @@ export default function PaymentAndAddress() {
       </div>
       <CustomModal showModal={showSendModel}>
         <div className="flex-col justify-center w-[900px]">
-          <div className="mx-[150px] my-[100px]">
+          <div className="mx-[150px]  my-[100px]">
             <div className="flex justify-center mb-[22px]">
               <Image src={Dots} alt="" className="h-[64px] w-[64px]" />
 
@@ -272,7 +276,7 @@ export default function PaymentAndAddress() {
           </div>
         </div>
       </CustomModal>
-      <div className="w-[30%] h-auto">
+      <div className="lg:w-[30%] w-[100%] sm:w-[100%] md:w-[100%] h-auto">
         <div
           style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
           className="w-full rounded-3xl p-5"
@@ -305,7 +309,7 @@ export default function PaymentAndAddress() {
           className="w-full h-full rounded-3xl p-5 mt-5 relative"
         >
           <div className="mt-[0px] flex items-center justify-between">
-            <div className="relative w-[90px] h-[90px]">
+            <div className="relative w-[90px] h-[90px]  mr-2">
               <p className="absolute text-[16px] top-2 right-2 font-medium text-[#777777]">
                 4
               </p>
@@ -324,7 +328,7 @@ export default function PaymentAndAddress() {
             <p className="text-[16px] font-medium text-[#777777]">$567.00</p>
           </div>
           <div className="mt-5 flex items-center justify-between">
-            <div className="relative w-[90px] h-[90px]">
+            <div className="relative w-[90px] h-[90px]  mr-2 ">
               <p className="absolute text-[16px] top-2 right-2 font-medium text-[#777777]">
                 4
               </p>
@@ -343,7 +347,7 @@ export default function PaymentAndAddress() {
             <p className="text-[16px] font-medium text-[#777777]">$567.00</p>
           </div>
           <div className="mt-5 flex items-center justify-between">
-            <div className="relative w-[90px] h-[90px]">
+            <div className="relative w-[90px] h-[90px]  mr-2">
               <p className="absolute text-[16px] top-2 right-2 font-medium text-[#777777]">
                 4
               </p>
@@ -362,7 +366,7 @@ export default function PaymentAndAddress() {
             <p className="text-[16px] font-medium text-[#777777]">$567.00</p>
           </div>
           <div className="mt-5 flex items-center justify-between">
-            <div className="relative w-[90px] h-[90px]">
+            <div className="relative w-[90px] h-[90px]  mr-2 ">
               <p className="absolute text-[16px] top-2 right-2 font-medium text-[#777777]">
                 4
               </p>

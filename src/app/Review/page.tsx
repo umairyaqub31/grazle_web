@@ -3,12 +3,14 @@ import React from "react";
 
 export default function Review() {
   return (
-    <div className="mx-[150px] my-[50px] flex items-center gap-8">
+    <div className="lg:my-[50px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px] flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap  items-start gap-8">
       <div
         style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-        className="w-[65%] rounded-[30px] p-[30px] h-[620px]"
+        className="lg:w-[65%] w-[100%] sm:w-[100%] md:w-[100%] rounded-[30px] p-[30px] lg:h-[620px] h-auto sm:auto md:auto"
       >
-        <p className="text-[40px]  font-medium">Write a Review</p>
+        <p className="lg:text-[40px] text-[32px] sm:text-[32px]  font-medium">
+          Write a Review
+        </p>
         <p className="text-[20px]  font-semibold  mt-3">Rate the Product</p>
         <Rating
           name="read-only"
@@ -22,8 +24,8 @@ export default function Review() {
           }}
         />
 
-        <div className="flex items-center gap-5 mt-5">
-          <div className="w-[50%]">
+        <div className="flex flex-wrap sm:flex-wrap lg:flex-nowrap md:flex-wrap items-center gap-5 mt-5">
+          <div className="lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%]">
             <label className="text-[16px] font-semibold text-[#777777]">
               Name
             </label>
@@ -32,7 +34,7 @@ export default function Review() {
               placeholder="Email Address"
             />
           </div>
-          <div className="w-[50%] ">
+          <div className="lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%]">
             <label className="text-[16px] font-semibold text-[#777777]">
               Email
             </label>
@@ -62,7 +64,7 @@ export default function Review() {
       </div>
       <div
         style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-        className="w-[35%] rounded-[30px] p-[30px] h-[60px]"
+        className="lg:w-[35%] w-[100%] sm:w-[100%] md:w-[100%] rounded-[30px] p-[30px] h-auto"
       >
         <p className="text-[24px]  font-semibold">How to write a review</p>
         <p className="text-[16px]  font-medium text-[#777777] mt-5">

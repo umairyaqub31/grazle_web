@@ -13,7 +13,7 @@ export default function PaymentPlan() {
       <p className="mt-[18px] lg:text-[40px] text-[24px] sm:text-[24px] md:text-[24px] font-bold">
         Buy Grazle Premium
       </p>
-      <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center gap-4">
+      <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap lg:mx-0 mx-3 sm:mx-3 md:mx-3 items-center gap-4">
         <div
           style={{
             boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
