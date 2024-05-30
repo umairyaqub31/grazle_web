@@ -45,7 +45,7 @@ export default function StoreProduct() {
   }, [isOpen]);
 
   return (
-    <div className="mx-[150px] my-[50px] ">
+    <div className="lg:my-[50px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px]">
       <div className="relative w-[100%] h-[250px]">
         <Image src={Main} alt="Main" className="w-full h-full" />
         <div
@@ -167,13 +167,12 @@ export default function StoreProduct() {
           )}
         </div>
       </div>
-      <div className="flex justify-between items-start gap-2 mt-5 ">
+      <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap justify-between items-start gap-2 mt-5 ">
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -226,10 +225,9 @@ export default function StoreProduct() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -282,10 +280,9 @@ export default function StoreProduct() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -338,10 +335,9 @@ export default function StoreProduct() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -394,10 +390,9 @@ export default function StoreProduct() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -449,13 +444,12 @@ export default function StoreProduct() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-start gap-2 mt-5 ">
+      <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap justify-between items-start gap-2 mt-5 ">
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -508,10 +502,9 @@ export default function StoreProduct() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -564,10 +557,9 @@ export default function StoreProduct() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -620,10 +612,9 @@ export default function StoreProduct() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -676,10 +667,9 @@ export default function StoreProduct() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""

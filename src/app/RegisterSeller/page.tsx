@@ -11,19 +11,19 @@ export default function RegisterSeller() {
     setShowPassword(!showPassword);
   };
   return (
-    <div className="w-[100%] h-auto flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center p-[50px] ">
+    <div className="w-[100%] mb-10 h-auto flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center lg:p-[50px] p-[10px] sm:p-[10px] md:p-[10px] ">
       <div
         style={{
           background:
             "linear-gradient(162.65deg, #FF781E 1.87%, #FDC197 88.1%)",
         }}
-        className="w-[50%] h-[90vh] text-white relative rounded-[60px] px-[40px] py-[50px] my-[50px] "
+        className="lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%] h-[100vh] text-white relative rounded-[60px] px-[40px] py-[50px] my-[50px] "
       >
-        <p className="text-[40px] font-semibold">
+        <p className="lg:text-[40px] text-[24px] sm:text-[24px]  md:text-[24px]  font-semibold">
           Discover endless possibilities
         </p>
         <div className="w-[60%]">
-          <p className="text-[60px]  font-bold  ">
+          <p className="lg:text-[60px] text-[32px] sm:text-[32px]  md:text-[232px]  font-bold  ">
             Explore, buy, and sell with our vibrant maketplace
           </p>
         </div>
@@ -31,10 +31,10 @@ export default function RegisterSeller() {
         <Image
           src={register}
           alt=""
-          className="w-[100%] top-[100px] absolute right-[30px] h-[600px]"
+          className="w-[100%] top-[100px] absolute right-[30px] lg:h-[600px] h-[650px] sm:h-[800px]"
         />
       </div>
-      <div className="w-[50%] h-[100vh] pl-[50px] py-[50px] ">
+      <div className="lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%]  h-[100vh] lg:pl-[50px] lg:m-0 m-3 lg:py-[50px] ">
         <div className="flex flex-col justify-center items-center ">
           <Image src={logo} alt="" className="w-[210px] h-[125px]" />
           <p className="mt-6 text-[40px] font-semibold">Welcome Back</p>
@@ -49,7 +49,7 @@ export default function RegisterSeller() {
               placeholder="Full NAME"
             />
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center lg:gap-4">
             <div className=" mt-[20px] w-full">
               <input
                 className="bg-[#F5F7F9] w-full rounded-md h-[50px] p-3 focus:outline-none placeholder:text-[#777777]"
@@ -63,7 +63,7 @@ export default function RegisterSeller() {
               />
             </div>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center lg:gap-4">
             <div className=" mt-[20px] w-full">
               <input
                 className="bg-[#F5F7F9] w-full rounded-md h-[50px] p-3 focus:outline-none placeholder:text-[#777777]"

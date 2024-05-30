@@ -94,7 +94,7 @@ export default function Navbar() {
           </p>
         </div>
       </div>
-      <div className="mx-[16px] lg:mx-[150px] md:mx-[60px] my-[16px] flex flex-col md:flex-wrap sm:flex-row sm:items-center">
+      <div className="mx-[16px] lg:mx-[150px] md:mx-[60px] my-[16px] flex flex-col md:flex-wrap  sm:flex-row sm:items-center">
         <div className="flex items-center justify-between w-full md:w-auto sm:w-auto">
           <div className="flex items-center">
             <Image
@@ -201,7 +201,7 @@ export default function Navbar() {
               )}
             </div>
           </div>
-          <div className="flex items-center text-[14px] font-normal">
+          <div className="flex items-center md:ml-[325px] text-[14px] font-normal">
             <Link href="/CartPage" className="flex items-center mr-4">
               <Image src={Cart} alt="Cart" className="w-[24px] h-[24px] mr-2" />
               <p className="text-[12px] hidden sm:block">Cart</p>
