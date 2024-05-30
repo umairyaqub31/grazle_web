@@ -7,12 +7,17 @@ import Chair from "@/assets/pngwing 2.png";
 import close from "@/assets/close.png";
 import Shoes from "@/assets/Rectangle 2032.png";
 import Image from "next/image";
+import AAA from "@/assets/Health Report.png";
+import BBB from "@/assets/Box.png";
+import CCC from "@/assets/Shipping.png";
+import DDD from "@/assets/sort by time.png";
 import CustomModal from "@/components/CustomModel";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { FaCircleCheck } from "react-icons/fa6";
 import Dots from "@/assets/Group 1820549907.png";
 import { Rating } from "@mui/material";
 import { PiCameraThin } from "react-icons/pi";
+import { FaCheckCircle } from "react-icons/fa";
 export default function Leave() {
   const [activeSection, setActiveSection] = useState<string>("Active");
   const handleSectionChange = (section: string) => {
@@ -42,6 +47,11 @@ export default function Leave() {
   };
   const handleCloseModel = () => {
     setShowSendModel(false);
+  };
+  const [isDivVisible, setIsDivVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsDivVisible((prev) => !prev);
   };
   return (
     <div className="lg:my-[50px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px]">
@@ -94,8 +104,8 @@ export default function Leave() {
                 </p>
               </div>
 
-              <div className="flex items-center mt-3 lg:mt-0 sm:mt-3 md:mt-2 ">
-                <div className="flex items-center p-2 rounded-lg shadow-lg mr-3 cursor-pointer">
+              <div className="flex items-center mt-3 lg:mt-0 sm:mt-3 md:mt-2   ">
+                <div className="flex items-center p-2 rounded-lg shadow-lg mr-3  cursor-pointer">
                   <IoCloseSharp
                     className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
                     onClick={handleOpeneModel}
@@ -131,72 +141,102 @@ export default function Leave() {
                 Price: $567.00
               </p>
               <div className="flex-col mt-3 lg:mt-0 sm:mt-3 md:mt-3  flex">
-                <button className=" bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  w-[181px] text-[18px] font-medium text-[#07D459]">
+                <button className=" bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  lg:w-[181px] w-[300px] sm:w-[300px] md:w-[300px] text-[18px] font-medium text-[#07D459]">
                   In Progress
                 </button>
-                <button className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#26F63B] outline-dashed rounded-2xl h-[50px]  w-[181px] text-[18px] font-medium text-[#F69B26]">
+                <button
+                  className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#26F63B] outline-dashed rounded-2xl h-[50px] lg:w-[181px] w-[300px] sm:w-[300px] md:w-[300px]  text-[18px] font-medium text-[#F69B26]"
+                  onClick={handleButtonClick}
+                >
                   Order Tracking
                 </button>
               </div>
             </div>
-          </div>
-          <div
-            style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-            className="w-100 rounded-3xl p-6 mt-6 hover:border-[1px] border-[#F70000]"
-          >
-            <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center  justify-between">
-              <div className="border-[1px] border-[#777777] rounded-full w-[230px] px-4 py-2 flex items-center">
-                <IoLockClosed className="w-[14px] h-[14px] mr-2" />
-                <p className="text-[14px] font-normal text-[#777777]">
-                  Yesterday, 12 jan, 2024
-                </p>
-              </div>
-
-              <div className="flex items-center mt-3 lg:mt-0 sm:mt-3 md:mt-2 ">
-                <div className="flex items-center p-2 rounded-lg shadow-lg mr-3 cursor-pointer">
-                  <IoCloseSharp
-                    className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
-                    onClick={handleOpeneModel}
-                  />
-                  <p className="text-[#FC0005] text-[16px] font-semibold mr-4">
-                    Cancel Order
+            {isDivVisible && (
+              <>
+                <div className="mt-4">
+                  <p className="text-[16px] font-semibold">Delivery Details</p>
+                </div>
+                <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap  gap-8 mt-5">
+                  <p className="text-[14px] text-[#909198] font-normal">
+                    Delivery Details
+                  </p>
+                  <p className="text-[14px] text-black font-semibold">
+                    23 sep 2023
+                  </p>
+                  <p className="text-[14px] text-[#909198] font-normal">
+                    Tracking ID:
+                  </p>
+                  <p className="text-[14px] text-black font-semibold">
+                    TYRGSH465Y6443
                   </p>
                 </div>
-                <div className="border-#00000017 border-[1px] rounded-md h-[30px] w-[30px] flex items-center justify-center">
-                  <HiOutlineDotsVertical className="h-[15px] w-4 text-[#D9D9D9]" />
+                <div className="mt-4">
+                  <p className="text-[16px] font-semibold">Delivery Details</p>
                 </div>
-              </div>
-            </div>
-            <div className="flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap items-center justify-between mt-5">
-              <div className="flex items-center">
-                <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
-                  <Image src={Chair} alt="" className="w-[60px] h-[60px]" />
+                <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap  gap-8 mt-5">
+                  <div className="flex items-center gap-4 lg:w-auto w-[100%] sm: w-[100%] md: w-[100%]">
+                    <Image src={AAA} alt="" className="w-[32px] h-[32px]" />
+                    <div>
+                      <p className="text-[14px] text-black font-semibold">
+                        Order placed
+                      </p>
+                      <p className="text-[14px] text-[#909198] font-normal">
+                        12 sep 2024, 04:25 PM
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Image src={BBB} alt="" className="w-[32px] h-[32px]" />
+                    <div>
+                      <p className="text-[14px] text-black font-semibold">
+                        Order placed
+                      </p>
+                      <p className="text-[14px] text-[#909198] font-normal">
+                        12 sep 2024, 04:25 PM
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Image src={CCC} alt="" className="w-[32px] h-[32px]" />
+                    <div>
+                      <p className="text-[14px] text-black font-semibold">
+                        Order placed
+                      </p>
+                      <p className="text-[14px] text-[#909198] font-normal">
+                        12 sep 2024, 04:25 PM
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Image src={DDD} alt="" className="w-[32px] h-[32px]" />
+                    <div>
+                      <p className="text-[14px] text-black font-semibold">
+                        Order placed
+                      </p>
+                      <p className="text-[14px] text-[#909198] font-normal">
+                        12 sep 2024, 04:25 PM
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[18px] font-medium">Wear Saka Store </p>
-                  <p className="text-[16px] mt-2 text-[#777777] font-medium">
-                    Color: Grey
-                  </p>
-                  <p className="text-[16px] text-[#777777] mt-3 font-medium">
-                    Size 10.5 UK
-                  </p>
+                <div className="flex items-center  gap-3 mt-5">
+                  <FaCheckCircle className="text-[#F70000] h-[24px] w-[24px]" />
+                  <div className="border-[#F70000] border-t-[2px] w-[200px] ">
+                    {" "}
+                  </div>
+                  <FaCheckCircle className="text-[#F70000] h-[24px] w-[24px]" />
+                  <div className="border-[#D2D4DA] border-t-[2px] w-[200px] ">
+                    {" "}
+                  </div>
+                  <FaCheckCircle className="text-[#D2D4DA] h-[24px] w-[24px]" />
+                  <div className="border-[#D2D4DA] border-t-[2px] w-[200px] ">
+                    {" "}
+                  </div>
+                  <FaCheckCircle className="text-[#D2D4DA] h-[24px] w-[24px]" />
                 </div>
-              </div>
-              <p className="lg:text-[24px] text-[18px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
-                Quantity 4
-              </p>
-              <p className="lg:text-[24px] text-[18px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
-                Price: $567.00
-              </p>
-              <div className="flex-col mt-3 lg:mt-0 sm:mt-3 md:mt-3  flex">
-                <button className=" bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  w-[181px] text-[18px] font-medium text-[#07D459]">
-                  In Progress
-                </button>
-                <button className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#26F63B] outline-dashed rounded-2xl h-[50px]  w-[181px] text-[18px] font-medium text-[#F69B26]">
-                  Order Tracking
-                </button>
-              </div>
-            </div>
+              </>
+            )}
           </div>
           <CustomModal showModal={showSendModel}>
             <div className="w-[600px]  my-[40px]">

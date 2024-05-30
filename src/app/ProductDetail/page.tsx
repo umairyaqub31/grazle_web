@@ -32,40 +32,44 @@ export default function ProductDetail() {
     router.push("/StoreProduct");
   };
   return (
-    <div className="mx-[150px] my-[50px] ">
-      <div className="flex justify-between">
-        <div className="w-[40%]">
-          <Image alt="" src={Product} className="w-full  h-[500px]" />{" "}
+    <div className="lg:my-[50px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px]">
+      <div className="flex  flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap justify-between">
+        <div className="w-[100%] sm:w-[100%] md:w-[100%] lg:w-[40%]">
+          <Image
+            alt=""
+            src={Product}
+            className="w-full h-[350px]  sm:[400px] md:[400px] lg:h-[500px]"
+          />{" "}
           <div className="flex justify-between">
             <Image
               alt=""
               src={Product}
-              className="w-[90px]  h-[90px] hover:border-[1px] border-[#F70000]"
+              className="lg:w-[90px]  lg:h-[90px] h-[60px] sm:h-[60px] md:h-[60px] w-[60px] sm:w-[60px] md:w-[60px] hover:border-[1px] border-[#F70000]"
             />
             <Image
               alt=""
               src={Product}
-              className="w-[90px]  h-[90px] hover:border-[1px] border-[#F70000]"
+              className="lg:w-[90px]  lg:h-[90px] h-[60px] sm:h-[60px] md:h-[60px] w-[60px] sm:w-[60px] md:w-[60px] hover:border-[1px] border-[#F70000]"
             />{" "}
             <Image
               alt=""
               src={Product}
-              className="w-[90px]  h-[90px] hover:border-[1px] border-[#F70000]"
+              className="lg:w-[90px]  lg:h-[90px] h-[60px] sm:h-[60px] md:h-[60px] w-[60px] sm:w-[60px] md:w-[60px] hover:border-[1px] border-[#F70000]"
             />{" "}
             <Image
               alt=""
               src={Product}
-              className="w-[90px]  h-[90px] hover:border-[1px] border-[#F70000]"
+              className="lg:w-[90px]  lg:h-[90px] h-[60px] sm:h-[60px] md:h-[60px] w-[60px] sm:w-[60px] md:w-[60px] hover:border-[1px] border-[#F70000]"
             />{" "}
             <Image
               alt=""
               src={Product}
-              className="w-[90px]  h-[90px] hover:border-[1px] border-[#F70000]"
+              className="lg:w-[90px]  lg:h-[90px] h-[60px] sm:h-[60px] md:h-[60px] w-[60px] sm:w-[60px] md:w-[60px] hover:border-[1px] border-[#F70000]"
             />
           </div>
         </div>
-        <div className="w-[50%]">
-          <p className="text-[32px] font-semibold">
+        <div className="w-[100%] sm:w-[100%] md:w-[100%] lg:w-[50%]">
+          <p className="lg:text-[32px] text-[24px] sm:text-[24px] md:text-[24px]  font-semibold">
             capttain pure by kapil dev xtra pure 18xtra pure 18
           </p>
           <div className="flex mt-2 items-center gap-2">
@@ -95,7 +99,7 @@ export default function ProductDetail() {
           </div>
           <div className="mt-4">
             <p className="text-[14px] text-[#000000] font-semibold">Variants</p>
-            <div className="flex items-center justify-between mt-2 gap-3">
+            <div className="flex flex-wrap sm:flex-wrap  md:flex-wrap lg:flex-nowrap items-center justify-between mt-2 gap-3">
               <div className="flex items-center  gap-3">
                 <div className="py-2 px-3 bg-[#FEF2F2] rounded-lg border-[1px] border-[#F70000] text-[#F70000]">
                   Small
@@ -124,10 +128,10 @@ export default function ProductDetail() {
               </div>
             </div>
             <div className="flex gap-4">
-              <button className=" bg-[#F70000] rounded-full h-[50px] mt-[20px] w-[275px] font-medium text-white">
+              <button className=" bg-[#F70000] rounded-full h-[50px] mt-[20px] lg:w-[275px] w-[200px] sm:w-[200px] md:w-[200px] font-medium text-white">
                 Add to carts
               </button>
-              <button className="border-[1px] border-[#F70000] rounded-full h-[50px] mt-[20px] w-[275px] font-medium text-[#F70000]">
+              <button className="border-[1px] border-[#F70000] rounded-full h-[50px] mt-[20px] lg:w-[275px] w-[200px] sm:w-[200px] md:w-[200px]  font-medium text-[#F70000]">
                 Get Started
               </button>
               <div className="flex justify-center mt-[20px] items-center rounded-full bg-[#F8F8F8] h-[52px] w-[52px] ">
@@ -228,7 +232,7 @@ export default function ProductDetail() {
             Proin convallis odio volutpat finibus posuere.
           </p>
         </div>
-        <p className="text-[14px] mt-3 w-[650px] text-[#808080] font-normal">
+        <p className="text-[14px] mt-3 lg:w-[650px] w-[100%] sm:w-[100%] md:w-[100%] text-[#808080] font-normal">
           Cras et diam maximus, accumsan sapien et, sollicitudin velit. Nulla
           blandit eros non turpis lobortis iaculis at ut massa. .
         </p>
@@ -239,7 +243,7 @@ export default function ProductDetail() {
             Ratings & Reviews
           </p>
         </div>
-        <div className="py-3 px-10 flex items-center  border-b-[1px] border-[#0000001A]">
+        <div className="py-3 px-10 flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap  items-center  border-b-[1px]  border-[#0000001A]">
           <div className="mt-5">
             <div className="flex items-center gap-4">
               <p className="text-[18px] font-semibold">5.0</p>
@@ -265,7 +269,7 @@ export default function ProductDetail() {
               133 Rating
             </p>
           </div>
-          <div className="border-l-[2px] border-[#0000001A] mx-10 h-[100px]"></div>
+          <div className="border-l-[2px] border-l-[0px] sm:border-l-[0px] md:border-l-[0px] border-[#0000001A] mx-10 h-[100px]"></div>
           <div>
             <div className="flex items-center gap-4">
               <Rating
@@ -279,7 +283,7 @@ export default function ProductDetail() {
                   },
                 }}
               />
-              <div className="w-[270px]">
+              <div className="lg:w-[270px] w-[130px] md:w-[130px] sm:w-[130px]">
                 <LinearProgress color="warning" determinate value={100} />
               </div>
 
@@ -297,7 +301,7 @@ export default function ProductDetail() {
                   },
                 }}
               />
-              <div className="w-[270px]">
+              <div className="lg:w-[270px] w-[130px] md:w-[130px] sm:w-[130px]">
                 <LinearProgress color="warning" determinate value={80} />
               </div>
 
@@ -315,7 +319,7 @@ export default function ProductDetail() {
                   },
                 }}
               />
-              <div className="w-[270px]">
+              <div className="lg:w-[270px] w-[130px] md:w-[130px] sm:w-[130px]">
                 <LinearProgress color="warning" determinate value={60} />
               </div>
 
@@ -333,7 +337,7 @@ export default function ProductDetail() {
                   },
                 }}
               />
-              <div className="w-[270px]">
+              <div className="lg:w-[270px] w-[130px] md:w-[130px] sm:w-[130px]">
                 <LinearProgress color="warning" determinate value={40} />
               </div>
 
@@ -351,7 +355,7 @@ export default function ProductDetail() {
                   },
                 }}
               />
-              <div className="w-[270px]">
+              <div className="lg:w-[270px] w-[130px] md:w-[130px] sm:w-[130px]">
                 <LinearProgress color="warning" determinate value={20} />
               </div>
 
@@ -370,8 +374,8 @@ export default function ProductDetail() {
           </div>
         </div>
         <div className="px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+          <div className="flex lg:gap-0 gap-3 sm:gap-3 flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center justify-between">
+            <div className="lg:gap-0 gap-9 sm:gap-9  flex items-center gap-3">
               <Rating
                 name="read-only"
                 mt-3
@@ -397,7 +401,7 @@ export default function ProductDetail() {
           <p className="text-[#000000] mt-2 text-[16px] font-medium">
             I'm very happy because this Value for money 🤑 and thanks Rider
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center  lg:gap-4 gap-2 sm:gap-2 ">
             <Image
               alt=""
               src={Card1}
@@ -421,27 +425,27 @@ export default function ProductDetail() {
             <Image
               alt=""
               src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
+              className="lg:w-[68px] sm:hidden md:sm:hidden hidden lg:h-[68px] rounded-md"
             />{" "}
             <Image
               alt=""
               src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
+              className="lg:w-[68px] sm:hidden md:sm:hidden hidden lg:h-[68px] rounded-md"
             />{" "}
             <Image
               alt=""
               src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
+              className="lg:w-[68px] sm:hidden md:sm:hidden hidden lg:h-[68px] rounded-md"
             />{" "}
             <Image
               alt=""
               src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
+              className="lg:w-[68px] sm:hidden md:sm:hidden hidden lg:h-[68px] rounded-md"
             />{" "}
             <Image
               alt=""
               src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
+              className="lg:w-[68px] sm:hidden md:sm:hidden hidden lg:h-[68px] rounded-md"
             />
           </div>
           <p className="text-[#74767E] mt-2 text-[16px] font-medium">
@@ -449,8 +453,8 @@ export default function ProductDetail() {
           </p>
         </div>
         <div className="px-4 py-3 border-t-[1px] border-[#0000001A]">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+          <div className="flex lg:gap-0 gap-3 sm:gap-3 flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center justify-between">
+            <div className="lg:gap-0 gap-9 sm:gap-9  flex items-center gap-3">
               <Rating
                 name="read-only"
                 mt-3
@@ -476,7 +480,7 @@ export default function ProductDetail() {
           <p className="text-[#000000] mt-2 text-[16px] font-medium">
             I'm very happy because this Value for money 🤑 and thanks Rider
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center  lg:gap-4 gap-2 sm:gap-2 ">
             <Image
               alt=""
               src={Card1}
@@ -500,264 +504,27 @@ export default function ProductDetail() {
             <Image
               alt=""
               src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
+              className="lg:w-[68px] sm:hidden md:sm:hidden hidden lg:h-[68px] rounded-md"
             />{" "}
             <Image
               alt=""
               src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
+              className="lg:w-[68px] sm:hidden md:sm:hidden hidden lg:h-[68px] rounded-md"
             />{" "}
             <Image
               alt=""
               src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
+              className="lg:w-[68px] sm:hidden md:sm:hidden hidden lg:h-[68px] rounded-md"
             />{" "}
             <Image
               alt=""
               src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
+              className="lg:w-[68px] sm:hidden md:sm:hidden hidden lg:h-[68px] rounded-md"
             />{" "}
             <Image
               alt=""
               src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />
-          </div>
-          <p className="text-[#74767E] mt-2 text-[16px] font-medium">
-            Color Family:Gold, Bracelet Size:One Size
-          </p>
-        </div>
-        <div className="px-4 py-3 border-t-[1px] border-[#0000001A]">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Rating
-                name="read-only"
-                mt-3
-                defaultValue={5}
-                readOnly
-                sx={{
-                  "& .MuiSvgIcon-root": {
-                    fontSize: 13,
-                  },
-                }}
-              />
-              <p className="text-[#000000] text-[12px] font-medium">
-                raoahsan R.
-              </p>
-              <p className="text-[#74767E] text-[12px] font-normal">
-                12 month ago
-              </p>
-            </div>
-            <p className="text-[#74767E] text-[16px] font-normal">
-              12 month ago
-            </p>
-          </div>
-          <p className="text-[#000000] mt-2 text-[16px] font-medium">
-            I'm very happy because this Value for money 🤑 and thanks Rider
-          </p>
-          <div className="flex items-center gap-4">
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />
-          </div>
-          <p className="text-[#74767E] mt-2 text-[16px] font-medium">
-            Color Family:Gold, Bracelet Size:One Size
-          </p>
-        </div>
-        <div className="px-4 py-3 border-t-[1px] border-[#0000001A]">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Rating
-                name="read-only"
-                mt-3
-                defaultValue={5}
-                readOnly
-                sx={{
-                  "& .MuiSvgIcon-root": {
-                    fontSize: 13,
-                  },
-                }}
-              />
-              <p className="text-[#000000] text-[12px] font-medium">
-                raoahsan R.
-              </p>
-              <p className="text-[#74767E] text-[12px] font-normal">
-                12 month ago
-              </p>
-            </div>
-            <p className="text-[#74767E] text-[16px] font-normal">
-              12 month ago
-            </p>
-          </div>
-          <p className="text-[#000000] mt-2 text-[16px] font-medium">
-            I'm very happy because this Value for money 🤑 and thanks Rider
-          </p>
-          <div className="flex items-center gap-4">
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />
-          </div>
-          <p className="text-[#74767E] mt-2 text-[16px] font-medium">
-            Color Family:Gold, Bracelet Size:One Size
-          </p>
-        </div>
-        <div className="px-4 py-3 border-t-[1px] border-[#0000001A]">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Rating
-                name="read-only"
-                mt-3
-                defaultValue={5}
-                readOnly
-                sx={{
-                  "& .MuiSvgIcon-root": {
-                    fontSize: 13,
-                  },
-                }}
-              />
-              <p className="text-[#000000] text-[12px] font-medium">
-                raoahsan R.
-              </p>
-              <p className="text-[#74767E] text-[12px] font-normal">
-                12 month ago
-              </p>
-            </div>
-            <p className="text-[#74767E] text-[16px] font-normal">
-              12 month ago
-            </p>
-          </div>
-          <p className="text-[#000000] mt-2 text-[16px] font-medium">
-            I'm very happy because this Value for money 🤑 and thanks Rider
-          </p>
-          <div className="flex items-center gap-4">
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
-            />{" "}
-            <Image
-              alt=""
-              src={Card1}
-              className="w-[68px]  h-[68px] rounded-md"
+              className="lg:w-[68px] sm:hidden md:sm:hidden hidden lg:h-[68px] rounded-md"
             />
           </div>
           <p className="text-[#74767E] mt-2 text-[16px] font-medium">
@@ -768,13 +535,12 @@ export default function ProductDetail() {
       <p className="text-[14px] mt-6 text-[#000000] font-bold">
         More from frequently Our Store
       </p>
-      <div className="flex justify-between items-start gap-2 mt-5 ">
+      <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap justify-between items-start gap-2 mt-5 ">
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -827,10 +593,9 @@ export default function ProductDetail() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -883,10 +648,9 @@ export default function ProductDetail() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -939,10 +703,9 @@ export default function ProductDetail() {
         </div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
@@ -993,13 +756,11 @@ export default function ProductDetail() {
             </button>
           </div>
         </div>
-        <div></div>
         <div
           style={{
-            width: "20%",
             boxShadow: "3px 4px 15.6px 0px rgba(0, 0, 0, 0.05)",
           }}
-          className="group h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+          className="group lg:w-[20%] w-[100%] md:w-[100%] sm:w-[100%] h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
         >
           <Image
             alt=""
