@@ -121,7 +121,7 @@ export default function Navbar() {
               <p className="ml-[24px]">Categories</p>
             </div>
           </Link>
-          <div className="hidden lg:flex mr-[64px] md:ml-auto">
+          <div className="hidden lg:flex mr-[64px] ">
             <div ref={searchContainerRef} className="relative w-[380px]">
               <input
                 placeholder="Search"
@@ -201,8 +201,8 @@ export default function Navbar() {
               )}
             </div>
           </div>
-          <div className="flex items-center md:ml-[325px] text-[14px] font-normal">
-            <Link href="/CartPage" className="flex items-center mr-4">
+          <div className="flex items-center  text-[14px] font-normal lg:ml-[0px] md:ml-[200px] sm:ml-[0px]">
+            <Link href="/CartPage" className="flex items-center mr-4 ">
               <Image src={Cart} alt="Cart" className="w-[24px] h-[24px] mr-2" />
               <p className="text-[12px] hidden sm:block">Cart</p>
             </Link>
@@ -217,107 +217,111 @@ export default function Navbar() {
                 Become Seller
               </p>
             </Link>
-            {/* <button
-              className="bg-[#F70000] rounded-2xl h-[40px] lg:w-[120px] w-[100px] lg:text-[13px] text-[10px] font-medium text-white ml-[16px]"
-              onClick={handleGoToLogin}
-            >
-              Before Login
-            </button> */}
-            <div ref={containerRef} className="relative">
-              <Avatar
-                className="w-[44px] h-[44px] ml-[16px]"
-                onClick={handleToggle}
-              />
-              {isOpen && (
-                <div className="absolute right-0 mt-2 w-[335px] bg-white z-10 p-5 shadow-lg border border-[#D2D4DA] rounded-md">
-                  <Link href="/MyAccount" className="flex gap-2 items-center">
-                    <Image src={user} alt="" className="w-[18px] h-[18px]" />
-                    <p className="text-[16px] font-normal text-[#777777]">
-                      Your Account
+            <div className="w-[130px] flex justify-end">
+              {/* <button
+                className="bg-[#F70000] rounded-2xl h-[40px] lg:w-[120px] w-[100px] lg:text-[13px] text-[10px] font-medium text-white ml-[16px]"
+                onClick={handleGoToLogin}
+              >
+                Before Login
+              </button> */}
+              <div ref={containerRef} className="relative">
+                <Avatar
+                  className="w-[44px] h-[44px] ml-[16px] "
+                  onClick={handleToggle}
+                />
+                {isOpen && (
+                  <div className="absolute right-0 mt-2 w-[335px] bg-white z-10 p-5 shadow-lg border border-[#D2D4DA] rounded-md">
+                    <Link href="/MyAccount" className="flex gap-2 items-center">
+                      <Image src={user} alt="" className="w-[18px] h-[18px]" />
+                      <p className="text-[16px] font-normal text-[#777777]">
+                        Your Account
+                      </p>
+                    </Link>
+                    <div className="flex gap-2 mt-4 items-center">
+                      <Image src={Fav} alt="" className="w-[18px] h-[18px]" />
+                      <p className="text-[16px] font-normal text-[#777777]">
+                        Favourites
+                      </p>
+                    </div>{" "}
+                    <div className="flex gap-2 mt-4 items-center">
+                      <Image
+                        src={Location}
+                        alt=""
+                        className="w-[18px] h-[18px]"
+                      />
+                      <p className="text-[16px] font-normal text-[#777777]">
+                        Manage Addresses
+                      </p>
+                    </div>{" "}
+                    <Link
+                      href="/CreditLimit"
+                      className="flex gap-2 mt-4 items-center"
+                    >
+                      <Image src={card} alt="" className="w-[18px] h-[18px]" />
+                      <p className="text-[16px] font-normal text-[#777777]">
+                        Credit Limit
+                      </p>
+                    </Link>
+                    <div className="flex gap-2 mt-4 items-center">
+                      <Image src={bulid} alt="" className="w-[18px] h-[18px]" />
+                      <p className="text-[16px] font-normal text-[#777777]">
+                        Referral Ranking
+                      </p>
+                    </div>{" "}
+                    <Link
+                      href="/PaymentPlan"
+                      className="flex gap-2 mt-4 items-center"
+                    >
+                      <Image src={crown} alt="" className="w-[18px] h-[18px]" />
+                      <p className="text-[16px] font-normal text-[#777777]">
+                        Grazzle Membership
+                      </p>
+                    </Link>
+                    <div className="flex gap-2 mt-4 items-center">
+                      <Image
+                        src={Setting}
+                        alt=""
+                        className="w-[18px] h-[18px]"
+                      />
+                      <p className="text-[16px] font-normal text-[#777777]">
+                        Notification Settings
+                      </p>
+                    </div>{" "}
+                    <p className="text-[16px] font-semibold mt-3 text-[#777777]">
+                      Grazzle
                     </p>
-                  </Link>
-                  <div className="flex gap-2 mt-4 items-center">
-                    <Image src={Fav} alt="" className="w-[18px] h-[18px]" />
-                    <p className="text-[16px] font-normal text-[#777777]">
-                      Favourites
-                    </p>
-                  </div>{" "}
-                  <div className="flex gap-2 mt-4 items-center">
-                    <Image
-                      src={Location}
-                      alt=""
-                      className="w-[18px] h-[18px]"
-                    />
-                    <p className="text-[16px] font-normal text-[#777777]">
-                      Manage Addresses
-                    </p>
-                  </div>{" "}
-                  <Link
-                    href="/CreditLimit"
-                    className="flex gap-2 mt-4 items-center"
-                  >
-                    <Image src={card} alt="" className="w-[18px] h-[18px]" />
-                    <p className="text-[16px] font-normal text-[#777777]">
-                      Credit Limit
-                    </p>
-                  </Link>
-                  <div className="flex gap-2 mt-4 items-center">
-                    <Image src={bulid} alt="" className="w-[18px] h-[18px]" />
-                    <p className="text-[16px] font-normal text-[#777777]">
-                      Referral Ranking
-                    </p>
-                  </div>{" "}
-                  <Link
-                    href="/PaymentPlan"
-                    className="flex gap-2 mt-4 items-center"
-                  >
-                    <Image src={crown} alt="" className="w-[18px] h-[18px]" />
-                    <p className="text-[16px] font-normal text-[#777777]">
-                      Grazzle Membership
-                    </p>
-                  </Link>
-                  <div className="flex gap-2 mt-4 items-center">
-                    <Image src={Setting} alt="" className="w-[18px] h-[18px]" />
-                    <p className="text-[16px] font-normal text-[#777777]">
-                      Notification Settings
-                    </p>
-                  </div>{" "}
-                  <p className="text-[16px] font-semibold mt-3 text-[#777777]">
-                    Grazzle
-                  </p>
-                  <Link href="/FAQs" className="flex gap-2 mt-4 items-center">
-                    <Image src={FAQ} alt="" className="w-[18px] h-[18px]" />
-                    <p className="text-[16px] font-normal text-[#777777]">
-                      FAQs
-                    </p>
-                  </Link>
-                  <Link
-                    href="/Terms&Conditions"
-                    className="flex gap-2 mt-4 items-center"
-                  >
-                    <Image src={terms} alt="" className="w-[18px] h-[18px]" />
-                    <p className="text-[16px] font-normal text-[#777777]">
-                      Terms of Use
-                    </p>
-                  </Link>
-                  <Link
-                    href="/Terms&Conditions"
-                    className="flex gap-2 mt-4 items-center"
-                  >
-                    <Image src={Privcy} alt="" className="w-[18px] h-[18px]" />
-                    <p className="text-[16px] font-normal text-[#777777]">
-                      Privacy Policy
-                    </p>
-                  </Link>
-                </div>
-              )}
+                    <Link href="/FAQs" className="flex gap-2 mt-4 items-center">
+                      <Image src={FAQ} alt="" className="w-[18px] h-[18px]" />
+                      <p className="text-[16px] font-normal text-[#777777]">
+                        FAQs
+                      </p>
+                    </Link>
+                    <Link
+                      href="/Terms&Conditions"
+                      className="flex gap-2 mt-4 items-center"
+                    >
+                      <Image src={terms} alt="" className="w-[18px] h-[18px]" />
+                      <p className="text-[16px] font-normal text-[#777777]">
+                        Terms of Use
+                      </p>
+                    </Link>
+                    <Link
+                      href="/Terms&Conditions"
+                      className="flex gap-2 mt-4 items-center"
+                    >
+                      <Image
+                        src={Privcy}
+                        alt=""
+                        className="w-[18px] h-[18px]"
+                      />
+                      <p className="text-[16px] font-normal text-[#777777]">
+                        Privacy Policy
+                      </p>
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
-            {/* <button
-              className="bg-[#F70000] rounded-2xl h-[40px] w-[151px] text-[14px] font-medium text-white ml-[16px]"
-              onClick={handleGoToLogin}
-            >
-              Before Login
-            </button> */}
           </div>
         </div>
         <div className="mt-4 sm:mt-0 md:mt-3 w-full lg:hidden">
