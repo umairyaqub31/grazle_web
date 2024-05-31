@@ -37,7 +37,7 @@ export default function Navbar() {
   const [isOpenSearch, setIsOpenSearch] = useState(false);
   const [menuBar, setIsMenuBar] = useState(false);
 
-  const containerRef = useRef(null);
+  const containerRef: any = useRef(null);
   const searchContainerRef: any = useRef(null);
   const MenubarRef: any = useRef(null);
 
