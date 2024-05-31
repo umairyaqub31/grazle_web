@@ -72,10 +72,9 @@ const RecentViewSlider = React.forwardRef((props: Partial<Props>, ref: any) => {
             onClick={goToDetail}
             key={index}
             style={{
-              width: "98%",
-              boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+              boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 4px",
             }}
-            className="group gap-4 mb-3 mt-2 h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
+            className="group lg:w-[98%] sm:w-[100%] w-[100%]  mb-3 mt-2 h-[398px] mt-[24px] rounded-2xl hover:border-[1px] border-[#F70001] hover:h-[450px] relative"
           >
             <>
               <Image
