@@ -227,7 +227,7 @@ export default function Home() {
               className="lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] sm:h-[30px] sm:w-[30px] "
             />
           </div>
-          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -239,7 +239,7 @@ export default function Home() {
               className="lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] sm:h-[30px] sm:w-[30px] "
             />
           </div>
-          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -251,7 +251,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -263,7 +263,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -275,7 +275,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -287,7 +287,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -299,7 +299,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -311,7 +311,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -323,7 +323,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -335,7 +335,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
