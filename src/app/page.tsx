@@ -213,7 +213,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-
       {/* mianSlider */}
       <div className="lg:mx-[150px] md:mx-[60px] lg:px-0 sm:px-3 px-3 md:px-3">
         <MainSlider />
@@ -432,6 +431,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>{" "}
+      <div className="px-[20px] sm:px-[20px] md:px-[20px] lg:px-[0px]">
         <RecentViewSlider Data={sliderItems} ref={sliderRef1} />
       </div>
       <div className="lg:mx-[150px] md:mx-[60px]  my-[24px]">
@@ -452,21 +453,23 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <RecentViewSlider Data={sliderItems} ref={sliderRef2} />
+        <div className="mx-[20px] sm:mx-[20px] md:mx-[20px] lg:mx-[0px]">
+          <RecentViewSlider Data={sliderItems} ref={sliderRef2} />
+        </div>
       </div>
       {/* Baner */}
-      <div className="lg:mx-[150px] md:mx-[60px]  my-[16px]">
+      <div className="lg:mx-[150px] md:mx-[60px] m-[20px]  my-[16px]">
         <Image
           src={bg}
           alt=""
-          className="w-[100%] md:h-[300px] sm:h-[200px] h-[220px]  lg:h-[417px]"
+          className="w-[100%] md:h-[300px] sm:h-[200px] h-[220px] lg:rounded-none rounded-lg sm:rounded-lg lg:h-[417px]"
         />
         <div
           style={{
             background:
               "linear-gradient(180deg, rgba(233, 136, 11, 0.2) 0%, rgba(247, 120, 3, 0.2) 100%)",
           }}
-          className="lg:h-[428px] md:h-auto sm:h-auto p-[16px]"
+          className="lg:h-[428px] md:h-auto sm:h-auto lg:p-[16px] py-[16px] lg:py-[0px] sm:py-[16px] pl-[16px] lg:pl-[16px] sm:pl-[16px]"
         >
           <div className="flex justify-between items-center lg:px-0 px-2">
             <p className="text-[14px] font-semibold">Best of all</p>
@@ -548,12 +551,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <RecentViewSlider Data={sliderItems22} ref={sliderRef3} />
+        <div className="mx-[20px] sm:mx-[20px] md:mx-[20px] lg:mx-[0px]">
+          <RecentViewSlider Data={sliderItems22} ref={sliderRef3} />
+        </div>
       </div>
       {/* small appliances */}
-      <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow:-webkit-scrollbar: none; overflow-x-auto">
+      <div className="lg:mx-[150px] md:mx-[60px] mx-[20px] my-[16px] overflow:-webkit-scrollbar: none; overflow-x-auto">
         <div className="flex items-center justify-start space-x-[16px] w-max">
-          <div className="lg:w-[415px] md:w-[33%] sm:w-full card relative h-[290px] flex lg:items-center rounded-lg bg-[#EBFFF1] text-[#4FAD2E] p-[32px] box-border">
+          <div className="lg:w-[415px] md:w-[402px] w-[410px] sm:w-full card relative h-[290px] flex lg:items-center rounded-lg bg-[#EBFFF1] text-[#4FAD2E] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto">
               <p className="text-[24px] font-semibold text-[#4FAD2E] ">
                 Small Appliances
@@ -571,7 +576,7 @@ export default function Home() {
               className="lg:w-[200px] w-[150px] sm:w-auto absolute lg:top-[30px] top-[120px] lg:h-[260px] h:[170px] lg:left-[200px] left-[160px] sm:left-auto"
             />
           </div>
-          <div className="lg:w-[415px] md:w-[402px] sm:w-[350px] card relative h-[290px] flex lg:items-center rounded-lg bg-[#EBF4FF] text-[#1B9CE4] p-[32px] box-border">
+          <div className="lg:w-[415px] md:w-[402px] w-[410px] sm:w-[350px] card relative h-[290px] flex lg:items-center rounded-lg bg-[#EBF4FF] text-[#1B9CE4] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto ">
               <p className="text-[24px] font-semibold">Small Appliances</p>
               <p className="text-[16px] font-semibold my-[24px]">
@@ -585,7 +590,7 @@ export default function Home() {
               className="lg:w-[200px] w-[150px] sm:w-auto absolute lg:top-[30px] top-[120px] lg:h-[260px] h:[180px] lg:left-[215px] left-[160px] sm:left-auto"
             />
           </div>
-          <div className="lg:w-[415px] md:w-[402px] sm:w-[350px] card relative h-[290px] flex lg:items-center rounded-lg bg-[#FFF5EE] text-[#91553A] p-[32px] box-border">
+          <div className="lg:w-[415px] md:w-[402px] w-[410px] sm:w-[350px] card relative h-[290px] flex lg:items-center rounded-lg bg-[#FFF5EE] text-[#91553A] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto ">
               <p className="text-[24px] font-semibold">Small Appliances</p>
               <p className="text-[16px] font-semibold my-[24px]">
@@ -601,13 +606,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div
         style={{
           background:
             "linear-gradient(97.69deg, rgba(247, 0, 0, 0.1) 3.55%, rgba(145, 131, 0, 0.1) 91.28%)",
         }}
-        className="lg:mx-[150px] md:mx-[60px] mx-[0px] relative lg:h-[491px] md:h-[400px] sm:h-auto lg:px-[100px] px-[20px] sm:px-[40px] md:px-[40px] py-[0px] my-[16px] flex lg:flex-row justify-between"
+        className="lg:mx-[150px] md:mx-[60px] mx-[20px] relative lg:h-[491px] md:h-[400px] sm:h-auto lg:px-[100px] px-[20px] sm:px-[40px] md:px-[40px] py-[0px] my-[16px] flex lg:flex-row justify-between"
       >
         <div className="flex flex-col items-start lg:w-auto md:w-auto w-[45%] lg:mt-7 mt-3">
           <Image
@@ -648,7 +652,7 @@ export default function Home() {
           <Image
             src={Phone2}
             alt=""
-            className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[100px] h-[130px] lg:relative lg:right-[40px] top-[-10px]  right-[-80px] lg:bottom-[-66px] lg:mt-0 mt-[16px] md:absolute md:right-[40px] md:bottom-[0px] relative"
+            className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[100px] h-[130px] lg:relative lg:right-[40px] top-[-10px]  right-[-55px] lg:bottom-[-66px] lg:mt-0 mt-[16px] md:absolute md:right-[40px] md:bottom-[0px] relative"
           />
         </div>
       </div>
