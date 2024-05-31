@@ -34,12 +34,12 @@ export default function ReferralRanking() {
           </p>
         </div>
         <div className="lg:w-[20%] w-[33%] sm:w-[33%]">
-          <p className="text-[24px] text-center font-medium text-[#777777] mt-3">
+          <p className="text-[16px] text-center font-medium text-[#777777] mt-3">
             Referral Rate
           </p>
         </div>
       </div>
-      <div className="flex lg:gap-3 w-[100%] justify-between items-center mt-2 p-3  bg-[#FDFDFD]">
+      <div className="flex lg:gap-3 w-[100%] justify-between justify-between sm items-center mt-2 p-3  bg-[#FDFDFD]">
         <div className="lg:w-[20%] flex items-center gap-3 w-[33%] sm:w-[33%]">
           <Image alt="" src={airpod} className="h-[42px] w-[42px]" />
           <p className="text-[16px] font-medium text-[#191919]">Name</p>
@@ -64,7 +64,7 @@ export default function ReferralRanking() {
           </button>
         </div>
         <div className="lg:w-[20%] lg:block hidden sm:hidden md:hidden  w-[33%] sm:w-[33%]">
-          <p className="text-[24px] text-center font-medium text-[#191919]">
+          <p className="text-[16px] text-center font-medium text-[#191919]">
             180/200
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function ReferralRanking() {
           </button>
         </div>
         <div className="lg:w-[20%] lg:block hidden sm:hidden md:hidden  w-[33%] sm:w-[33%]">
-          <p className="text-[24px] text-center font-medium text-[#191919]">
+          <p className="text-[16px] text-center font-medium text-[#191919]">
             180/200
           </p>
         </div>

@@ -186,11 +186,15 @@ export default function Home() {
 
   return (
     <>
-      <div className="lg:my-[20px] my-[10px] sm:my-[10px] md:my-[20px] lg:mx-[150px] mx-[0px] sm:mx-[20px] md:mx-[30px]">
+      <div className="lg:my-[20px] my-[10px] lg:px-0 sm:px-3 px-3 md:px-3 sm:my-[10px] md:my-[20px] lg:mx-[150px] mx-[0px] sm:mx-[20px] md:mx-[30px]">
         <div className="flex  items-center justify-between py-5 px-5  bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] w-full lg:w-[100%] h-auto rounded-lg shadow-lg">
           <div className="flex items-center gap-4">
-            <div className="rounded-full h-[60px] w-[60px] bg-[#FA6464] flex items-center justify-center">
-              <Image alt="" src={Card} className="h-[40px] w-[40px]" />
+            <div className="rounded-full lg:h-[60px] lg:w-[60px] h-[40px] w-[40px] sm:w-[40px] sm:h-[40px] bg-[#FA6464] flex items-center justify-center">
+              <Image
+                alt=""
+                src={Cardmm}
+                className="lg:h-[40px] lg:w-[40px] w-[30px] h-[30px] sm:w-[30px] sm:h-[30px] "
+              />
             </div>
             <div>
               <p className="text-white text-md lg:text-2xl font-semibold">
@@ -211,117 +215,125 @@ export default function Home() {
       </div>
 
       {/* mianSlider */}
-      <div className="lg:mx-[150px] md:mx-[60px]">
+      <div className="lg:mx-[150px] md:mx-[60px] lg:px-0 sm:px-3 px-3 md:px-3">
         <MainSlider />
       </div>
       {/* categories */}
-      <div className="lg:mx-[150px] lg:mt-0 mt-3 lg:mt-2 md:mx-auto overflow: -webkit-scrollbar: none; md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
-        <div className="w-[92px] sm:mt-2  flex flex-col justify-center items-center">
-          <div className=" flex  justify-center items-center w-[92px] h-[92px] rounded-full bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] ">
-            <Image src={Cardmm} alt="" className="w-[40px] h-[40px] " />
+      <div className="lg:mx-[150px] lg:mt-0 gap-2 sm:gap-2 lg:gap-0 mt-3 lg:mt-2 md:mx-auto overflow:-webkit-scrollbar: none; md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
+        <div className="w-[92px] sm:mt-2   md:gap-2 flex flex-col justify-center items-center">
+          <div className=" flex  justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px] rounded-full bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] ">
+            <Image
+              src={Cardmm}
+              alt=""
+              className="lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] sm:h-[30px] sm:w-[30px] "
+            />
           </div>
           <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
         <div className="w-[92px]  flex flex-col justify-center items-center">
-          <div className="border-[1px] flex  justify-center items-center w-[92px] h-[92px]  border-[#F70000] rounded-full bg-[#F8F8F8] ">
-            <Image src={Widget} alt="" className="w-[40px] h-[40px] " />
+          <div className="border-[1px] flex  justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px]  border-[#F70000] rounded-full bg-[#F8F8F8] ">
+            <Image
+              src={Widget}
+              alt=""
+              className="lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] sm:h-[30px] sm:w-[30px] "
+            />
           </div>
           <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
-        <div className="w-[92px]  flex flex-col justify-center items-center">
-          <div className="border-[1px] border-dashed flex justify-center items-center w-[92px] h-[92px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
+        <div className="lg:w-[92px]  w-[70px]  sm:w-[70px]   flex flex-col justify-center items-center">
+          <div className="border-[1px] border-dashed flex justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
             <Image
               src={Dami}
               alt=""
-              className="w-[80px] h-[80px] rounded-full "
+              className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
           <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
-        <div className="w-[92px]  flex flex-col justify-center items-center">
-          <div className="border-[1px] border-dashed flex justify-center items-center w-[92px] h-[92px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
+        <div className="lg:w-[92px]  w-[70px]  sm:w-[70px]   flex flex-col justify-center items-center">
+          <div className="border-[1px] border-dashed flex justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
             <Image
               src={Dami2}
               alt=""
-              className="w-[80px] h-[80px] rounded-full "
+              className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
           <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
-        <div className="w-[92px]  flex flex-col justify-center items-center">
-          <div className="border-[1px] border-dashed flex justify-center items-center w-[92px] h-[92px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
+        <div className="lg:w-[92px]  w-[70px]  sm:w-[70px]   flex flex-col justify-center items-center">
+          <div className="border-[1px] border-dashed flex justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
             <Image
               src={Dami1}
               alt=""
-              className="w-[80px] h-[80px] rounded-full "
+              className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
           <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
-        <div className="w-[92px]  flex flex-col justify-center items-center">
-          <div className="border-[1px] border-dashed flex justify-center items-center w-[92px] h-[92px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
+        <div className="lg:w-[92px]  w-[70px]  sm:w-[70px]   flex flex-col justify-center items-center">
+          <div className="border-[1px] border-dashed flex justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
             <Image
               src={Dami1}
               alt=""
-              className="w-[80px] h-[80px] rounded-full "
+              className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
           <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
-        <div className="w-[92px]  flex flex-col justify-center items-center">
-          <div className="border-[1px] border-dashed flex justify-center items-center w-[92px] h-[92px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
+        <div className="lg:w-[92px]  w-[70px]  sm:w-[70px]   flex flex-col justify-center items-center">
+          <div className="border-[1px] border-dashed flex justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
             <Image
               src={Dami1}
               alt=""
-              className="w-[80px] h-[80px] rounded-full "
+              className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
           <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
-        <div className="w-[92px]  flex flex-col justify-center items-center">
-          <div className="border-[1px] border-dashed flex justify-center items-center w-[92px] h-[92px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
+        <div className="lg:w-[92px]  w-[70px]  sm:w-[70px]   flex flex-col justify-center items-center">
+          <div className="border-[1px] border-dashed flex justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
             <Image
               src={Dami1}
               alt=""
-              className="w-[80px] h-[80px] rounded-full "
+              className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
           <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
-        <div className="w-[92px]  flex flex-col justify-center items-center">
-          <div className="border-[1px] border-dashed flex justify-center items-center w-[92px] h-[92px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
+        <div className="lg:w-[92px]  w-[70px]  sm:w-[70px]   flex flex-col justify-center items-center">
+          <div className="border-[1px] border-dashed flex justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
             <Image
               src={Dami1}
               alt=""
-              className="w-[80px] h-[80px] rounded-full "
+              className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
           <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
-        <div className="w-[92px]  flex flex-col justify-center items-center">
-          <div className="border-[1px] border-dashed flex justify-center items-center w-[92px] h-[92px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
+        <div className="lg:w-[92px]  w-[70px]  sm:w-[70px]   flex flex-col justify-center items-center">
+          <div className="border-[1px] border-dashed flex justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px] border-[#F70000] rounded-full bg-[#F8F8F8] ">
             <Image
               src={Dami3}
               alt=""
-              className="w-[80px] h-[80px] rounded-full "
+              className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
           <p className="color-[#393A44] text-[14px] font-normal mt-[4px]">
@@ -330,11 +342,11 @@ export default function Home() {
         </div>
       </div>
       {/* small appliances */}
-      <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto">
+      <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto overflow:-webkit-scrollbar: none;">
         <div className="flex items-center justify-start space-x-[16px] w-max">
           <div
             style={{ backgroundColor: "rgba(195, 95, 65, 0.2)" }}
-            className="lg:w-[308px] md:w-[460px] sm:w-[308px] card h-[469px] rounded-lg text-[#BC5A3D] p-[32px] box-border relative"
+            className="lg:w-[308px] md:w-[460px] sm:w-[308px] card lg:h-[469px] h-[369px] sm:h-[369px]  rounded-lg text-[#BC5A3D] p-[32px] box-border relative"
           >
             <div>
               <p className="text-[24px] font-semibold">Small Appliances</p>
@@ -346,12 +358,12 @@ export default function Home() {
             <Image
               src={Rasmcc}
               alt=""
-              className="w-[278px] absolute top-[235px] h-[232px]"
+              className="w-[278px] absolute lg:top-[235px] top-[140px] sm:top-[150px] h-[232px]"
             />
           </div>
           <div
             style={{ backgroundColor: "rgba(244, 162, 0, 0.2)" }}
-            className="lg:w-[308px] md:w-[460px] sm:w-[308px] card h-[469px] rounded-lg text-[#F4A200] p-[32px] box-border relative"
+            className="lg:w-[308px] md:w-[460px] sm:w-[308px] card lg:h-[469px] h-[369px] sm:h-[369px] rounded-lg text-[#F4A200] p-[32px] box-border relative"
           >
             <div>
               <p className="text-[24px] font-semibold">Small Appliances</p>
@@ -363,12 +375,12 @@ export default function Home() {
             <Image
               src={Rasm1}
               alt=""
-              className="w-[278px] absolute top-[235px] h-[232px]"
+              className="w-[278px] absolute lg:top-[235px] top-[140px] sm:top-[150px] h-[232px]"
             />
           </div>
           <div
             style={{ backgroundColor: "rgba(113, 111, 86, 0.2)" }}
-            className="lg:w-[308px] md:w-[460px] sm:w-[308px] card h-[469px] rounded-lg text-[#6B6A56] p-[32px] box-border relative"
+            className="lg:w-[308px] md:w-[460px] sm:w-[308px] card lg:h-[469px] h-[369px] sm:h-[369px] rounded-lg text-[#6B6A56] p-[32px] box-border relative"
           >
             <div>
               <p className="text-[24px] font-semibold">Small Appliances</p>
@@ -380,12 +392,12 @@ export default function Home() {
             <Image
               src={Rasm2}
               alt=""
-              className="w-[278px] absolute top-[235px] h-[232px]"
+              className="w-[278px] absolute lg:top-[235px] top-[140px] sm:top-[150px] h-[232px]"
             />
           </div>
           <div
             style={{ backgroundColor: "rgba(210, 236, 218, 1)" }}
-            className="lg:w-[308px] md:w-[460px] sm:w-[308px] card h-[469px] rounded-lg bg-[#D2ECDA] text-[#4FAD2E] p-[32px] box-border relative"
+            className="lg:w-[308px] md:w-[460px] sm:w-[308px] card lg:h-[469px] h-[369px] sm:h-[369px] rounded-lg bg-[#D2ECDA] text-[#4FAD2E] p-[32px] box-border relative"
           >
             <div>
               <p className="text-[24px] font-semibold">Small Appliances</p>
@@ -397,7 +409,7 @@ export default function Home() {
             <Image
               src={Rasm3}
               alt=""
-              className="w-[272px] absolute top-[235px] h-[232px]"
+              className="w-[278px] absolute lg:top-[235px] top-[140px] sm:top-[150px] h-[232px]"
             />
           </div>
         </div>
@@ -460,7 +472,7 @@ export default function Home() {
             <p className="text-[14px] font-semibold">Best of all</p>
             <Image src={Arrow} alt="" className="w-[24px] h-[24px]" />
           </div>
-          <div className="flex lg:flex-row md:flex-row sm:flex-col sm:space-y-[16px] lg:space-y-0 justify-between mt-[16px] overflow-x-auto">
+          <div className="flex lg:flex-row md:flex-row sm:flex-col sm:space-y-[16px] lg:space-y-0 justify-between mt-[16px] overflow-x-auto overflow:-webkit-scrollbar: none;">
             <div className="flex space-x-[16px] lg:space-x-4 lg:flex-row sm:flex-col md:flex-row">
               <div className="w-[300px] p-[8px] bg-[white] rounded-lg flex-shrink-0">
                 <Image
@@ -539,9 +551,9 @@ export default function Home() {
         <RecentViewSlider Data={sliderItems22} ref={sliderRef3} />
       </div>
       {/* small appliances */}
-      <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto">
+      <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow:-webkit-scrollbar: none; overflow-x-auto">
         <div className="flex items-center justify-start space-x-[16px] w-max">
-          <div className="lg:w-[402px] md:w-[402px] sm:w-full card relative h-[290px] flex lg:items-center rounded-lg bg-[#EBFFF1] text-[#4FAD2E] p-[32px] box-border">
+          <div className="lg:w-[415px] md:w-[33%] sm:w-full card relative h-[290px] flex lg:items-center rounded-lg bg-[#EBFFF1] text-[#4FAD2E] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto">
               <p className="text-[24px] font-semibold text-[#4FAD2E] ">
                 Small Appliances
@@ -559,8 +571,7 @@ export default function Home() {
               className="lg:w-[200px] w-[150px] sm:w-auto absolute lg:top-[30px] top-[120px] lg:h-[260px] h:[170px] lg:left-[200px] left-[160px] sm:left-auto"
             />
           </div>
-
-          <div className="lg:w-[402px] md:w-[402px] sm:w-[350px] card relative h-[290px] flex lg:items-center rounded-lg bg-[#EBF4FF] text-[#1B9CE4] p-[32px] box-border">
+          <div className="lg:w-[415px] md:w-[402px] sm:w-[350px] card relative h-[290px] flex lg:items-center rounded-lg bg-[#EBF4FF] text-[#1B9CE4] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto ">
               <p className="text-[24px] font-semibold">Small Appliances</p>
               <p className="text-[16px] font-semibold my-[24px]">
@@ -571,10 +582,10 @@ export default function Home() {
             <Image
               src={Rasmbb}
               alt=""
-              className="lg:w-[200px] w-[150px] sm:w-auto absolute lg:top-[30px] top-[120px] lg:h-[260px] h:[180px] lg:left-[200px] left-[160px] sm:left-auto"
+              className="lg:w-[200px] w-[150px] sm:w-auto absolute lg:top-[30px] top-[120px] lg:h-[260px] h:[180px] lg:left-[215px] left-[160px] sm:left-auto"
             />
           </div>
-          <div className="lg:w-[402px] md:w-[402px] sm:w-[350px] card relative h-[290px] flex lg:items-center rounded-lg bg-[#FFF5EE] text-[#91553A] p-[32px] box-border">
+          <div className="lg:w-[415px] md:w-[402px] sm:w-[350px] card relative h-[290px] flex lg:items-center rounded-lg bg-[#FFF5EE] text-[#91553A] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto ">
               <p className="text-[24px] font-semibold">Small Appliances</p>
               <p className="text-[16px] font-semibold my-[24px]">

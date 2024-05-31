@@ -134,25 +134,36 @@ export default function Navbar() {
                   <Link
                     href="/MyAccount"
                     className="flex gap-2 mt-6 items-center"
+                    onClick={handleMenuclose}
                   >
                     <Image src={user} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-black">
                       Your Account
                     </p>
                   </Link>
-                  <div className="flex gap-2 mt-4 items-center">
+                  <Link
+                    href="/MyOrders"
+                    className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
+                  >
                     <Image src={bulid} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-black">
                       My Order
                     </p>
-                  </div>{" "}
-                  <div className="flex gap-2 mt-4 items-center">
+                  </Link>
+                  <div
+                    className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
+                  >
                     <Image src={Fav} alt="" className="w-[20px] h-[18px]" />
                     <p className="text-[16px] font-normal text-black">
                       Favourites
                     </p>
                   </div>{" "}
-                  <div className="flex gap-2 mt-4 items-center">
+                  <div
+                    className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
+                  >
                     <Image
                       src={Location}
                       alt=""
@@ -165,6 +176,7 @@ export default function Navbar() {
                   <Link
                     href="/CreditLimit"
                     className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
                   >
                     <Image src={card} alt="" className="w-[20px] h-[18px]" />
                     <p className="text-[16px] font-normal text-black">
@@ -174,6 +186,7 @@ export default function Navbar() {
                   <Link
                     href="/ReferralRanking"
                     className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
                   >
                     <Image src={bulid} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-black">
@@ -183,13 +196,17 @@ export default function Navbar() {
                   <Link
                     href="/PaymentPlan"
                     className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
                   >
                     <Image src={crown} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-black">
                       Grazzle Membership
                     </p>
                   </Link>
-                  <div className="flex gap-2 mt-4 items-center">
+                  <div
+                    className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
+                  >
                     <Image src={Setting} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-black">
                       Notification Settings
@@ -198,13 +215,18 @@ export default function Navbar() {
                   <p className="text-[16px] font-semibold mt-3 text-black">
                     Grazzle
                   </p>
-                  <Link href="/FAQs" className="flex gap-2 mt-4 items-center">
+                  <Link
+                    href="/FAQs"
+                    className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
+                  >
                     <Image src={FAQ} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-black">FAQs</p>
                   </Link>
                   <Link
                     href="/Terms&Conditions"
                     className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
                   >
                     <Image src={terms} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-black">
@@ -214,13 +236,17 @@ export default function Navbar() {
                   <Link
                     href="/Terms&Conditions"
                     className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
                   >
                     <Image src={Privcy} alt="" className="w-[18px] h-[18px]" />
                     <p className="text-[16px] font-normal text-black ">
                       Privacy Policy
                     </p>
                   </Link>
-                  <div className="flex gap-2 mt-4 items-center">
+                  <div
+                    className="flex gap-2 mt-4 items-center"
+                    onClick={handleMenuclose}
+                  >
                     <BiLogOut className="text-[18px] text-[#777777]" />
                     <p className="text-[16px] font-normal text-black">Logout</p>
                   </div>{" "}
@@ -228,11 +254,13 @@ export default function Navbar() {
               </div>
             )}
 
-            <Image
-              src={logo}
-              alt="Logo"
-              className="lg:w-[80px] lg:h-[47px]  w-[60px] h-[37px] "
-            />
+            <Link href="/">
+              <Image
+                src={logo}
+                alt="Logo"
+                className="lg:w-[80px] lg:h-[47px]  w-[60px] h-[37px] "
+              />
+            </Link>
           </div>
           <Link
             href="/"
@@ -326,7 +354,7 @@ export default function Navbar() {
               )}
             </div>
           </div>
-          <div className="flex items-center  text-[14px] font-normal lg:ml-[0px] md:ml-[200px] sm:ml-[0px]">
+          <div className="flex items-center w-[150px] lg:w-[470px]  text-[14px] font-normal lg:ml-[0px] md:ml-[200px] sm:ml-[0px]">
             <Link href="/CartPage" className="flex items-center mr-4 ">
               <Image src={Cart} alt="Cart" className="w-[24px] h-[24px] mr-2" />
               <p className="text-[12px] hidden sm:block">Cart</p>
