@@ -10,7 +10,7 @@ import { Avatar } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { AiOutlineUser } from "react-icons/ai";
-import { IoHeartOutline } from "react-icons/io5";
+import { IoClose, IoHeartOutline } from "react-icons/io5";
 import { CiLocationOn, CiTimer } from "react-icons/ci";
 import { MdOutlinePrivacyTip } from "react-icons/md";
 import user from "@/assets/users.png";
@@ -24,6 +24,8 @@ import FAQ from "@/assets/Group 1820549989.png";
 import terms from "@/assets/Group 1820549990.png";
 import Privcy from "@/assets/Layer 2.png";
 import { IoIosTimer } from "react-icons/io";
+import { FaUser } from "react-icons/fa";
+import { BiLogOut } from "react-icons/bi";
 
 export default function Navbar() {
   const router = useRouter();
@@ -33,19 +35,30 @@ export default function Navbar() {
   };
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenSearch, setIsOpenSearch] = useState(false);
+  const [menuBar, setIsMenuBar] = useState(false);
 
-  const containerRef = useRef<any>(null);
-  const searchContainerRef = useRef<any>(null);
+  const containerRef = useRef(null);
+  const searchContainerRef: any = useRef(null);
+  const MenubarRef: any = useRef(null);
+
+  const handleToggleMenu = () => {
+    setIsMenuBar((prev) => !prev);
+  };
+  const handleMenuclose = () => {
+    setIsMenuBar(false);
+  };
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
-
   const handleToggleSearch = () => {
     setIsOpenSearch((prev) => !prev);
   };
 
   const handleClickOutside = (event: any) => {
+    if (MenubarRef.current && !MenubarRef.current.contains(event.target)) {
+      setIsMenuBar(false);
+    }
     if (containerRef.current && !containerRef.current.contains(event.target)) {
       setIsOpen(false);
     }
@@ -100,9 +113,121 @@ export default function Navbar() {
             <Image
               src={MenuIcon}
               alt="Menu"
-              className="w-[30px] h-[24px] mr-2 sm:hidden"
-              onClick={handleToggle}
+              className="w-[30px] h-[24px] relative mr-2 sm:hidden"
+              onClick={handleToggleMenu}
             />
+            {menuBar && (
+              <div className="absolute left-0 top-10 mt-2 w-[335px] bg-white z-10 shadow-lg border border-[#D2D4DA] rounded-md">
+                <div className="flex items-center justify-between bg-[#F700000D] px-6 py-3">
+                  <div className="flex  gap-2 items-center">
+                    <FaUser className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-medium text-black">
+                      Hi, Log in
+                    </p>
+                  </div>
+                  <IoClose
+                    className="w-[18px] h-[18px]"
+                    onClick={handleMenuclose}
+                  />
+                </div>
+                <div className="px-6 pb-6">
+                  <Link
+                    href="/MyAccount"
+                    className="flex gap-2 mt-6 items-center"
+                  >
+                    <Image src={user} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-black">
+                      Your Account
+                    </p>
+                  </Link>
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={bulid} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-black">
+                      My Order
+                    </p>
+                  </div>{" "}
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={Fav} alt="" className="w-[20px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-black">
+                      Favourites
+                    </p>
+                  </div>{" "}
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image
+                      src={Location}
+                      alt=""
+                      className="w-[18px] h-[18px]"
+                    />
+                    <p className="text-[16px] font-normal text-black">
+                      Manage Addresses
+                    </p>
+                  </div>{" "}
+                  <Link
+                    href="/CreditLimit"
+                    className="flex gap-2 mt-4 items-center"
+                  >
+                    <Image src={card} alt="" className="w-[20px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-black">
+                      Credit Limit
+                    </p>
+                  </Link>
+                  <Link
+                    href="/ReferralRanking"
+                    className="flex gap-2 mt-4 items-center"
+                  >
+                    <Image src={bulid} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-black">
+                      Referral Ranking
+                    </p>
+                  </Link>
+                  <Link
+                    href="/PaymentPlan"
+                    className="flex gap-2 mt-4 items-center"
+                  >
+                    <Image src={crown} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-black">
+                      Grazzle Membership
+                    </p>
+                  </Link>
+                  <div className="flex gap-2 mt-4 items-center">
+                    <Image src={Setting} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-black">
+                      Notification Settings
+                    </p>
+                  </div>{" "}
+                  <p className="text-[16px] font-semibold mt-3 text-black">
+                    Grazzle
+                  </p>
+                  <Link href="/FAQs" className="flex gap-2 mt-4 items-center">
+                    <Image src={FAQ} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-black">FAQs</p>
+                  </Link>
+                  <Link
+                    href="/Terms&Conditions"
+                    className="flex gap-2 mt-4 items-center"
+                  >
+                    <Image src={terms} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-black">
+                      Terms of Use
+                    </p>
+                  </Link>
+                  <Link
+                    href="/Terms&Conditions"
+                    className="flex gap-2 mt-4 items-center"
+                  >
+                    <Image src={Privcy} alt="" className="w-[18px] h-[18px]" />
+                    <p className="text-[16px] font-normal text-black ">
+                      Privacy Policy
+                    </p>
+                  </Link>
+                  <div className="flex gap-2 mt-4 items-center">
+                    <BiLogOut className="text-[18px] text-[#777777]" />
+                    <p className="text-[16px] font-normal text-black">Logout</p>
+                  </div>{" "}
+                </div>
+              </div>
+            )}
+
             <Image
               src={logo}
               alt="Logo"
@@ -262,12 +387,15 @@ export default function Navbar() {
                         Credit Limit
                       </p>
                     </Link>
-                    <div className="flex gap-2 mt-4 items-center">
+                    <Link
+                      href="/ReferralRanking"
+                      className="flex gap-2 mt-4 items-center"
+                    >
                       <Image src={bulid} alt="" className="w-[18px] h-[18px]" />
                       <p className="text-[16px] font-normal text-[#777777]">
                         Referral Ranking
                       </p>
-                    </div>{" "}
+                    </Link>
                     <Link
                       href="/PaymentPlan"
                       className="flex gap-2 mt-4 items-center"

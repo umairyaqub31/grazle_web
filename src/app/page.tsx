@@ -186,23 +186,23 @@ export default function Home() {
 
   return (
     <>
-      <div className="mx-auto lg:mx-[150px] md:mx-[60px] mb-3">
-        <div className="flex flex-col lg:flex-row items-center justify-between py-5 px-5 lg:px-10 bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] w-full lg:w-[100%] h-auto rounded-lg shadow-lg">
+      <div className="lg:my-[20px] my-[10px] sm:my-[10px] md:my-[20px] lg:mx-[150px] mx-[0px] sm:mx-[20px] md:mx-[30px]">
+        <div className="flex  items-center justify-between py-5 px-5  bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] w-full lg:w-[100%] h-auto rounded-lg shadow-lg">
           <div className="flex items-center gap-4">
             <div className="rounded-full h-[60px] w-[60px] bg-[#FA6464] flex items-center justify-center">
               <Image alt="" src={Card} className="h-[40px] w-[40px]" />
             </div>
             <div>
-              <p className="text-white text-xl lg:text-2xl font-semibold">
+              <p className="text-white text-md lg:text-2xl font-semibold">
                 Credit Limit
               </p>
-              <p className="text-white text-base lg:text-lg font-normal">
+              <p className="text-white text-sm lg:text-lg font-normal">
                 Get Credit Up to 10 Lacs
               </p>
             </div>
           </div>
           <button
-            className="text-[#F70000] text-lg lg:text-xl font-semibold bg-white border-[1px] border-[#F70000] rounded-full h-[45px] lg:h-[50px] px-6 lg:px-8"
+            className="text-[#F70000] text-sm lg:text-xl font-semibold bg-white border-[1px] border-[#F70000] rounded-full h-[45px] lg:h-[50px] px-4 lg:px-8"
             onClick={goToCreditLimit}
           >
             Get Now
@@ -343,6 +343,11 @@ export default function Home() {
               </p>
               <p className="text-[16px] font-semibold">Shop now</p>
             </div>
+            <Image
+              src={Rasmcc}
+              alt=""
+              className="w-[278px] absolute top-[235px] h-[232px]"
+            />
           </div>
           <div
             style={{ backgroundColor: "rgba(244, 162, 0, 0.2)" }}
@@ -536,13 +541,17 @@ export default function Home() {
       {/* small appliances */}
       <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto">
         <div className="flex items-center justify-start space-x-[16px] w-max">
-          <div className="lg:w-[402px] md:w-[402px] sm:w-full card relative h-[290px] flex lg:items-center rounded-lg bg-[#FFF5EE] text-[#91553A] p-[32px] box-border">
+          <div className="lg:w-[402px] md:w-[402px] sm:w-full card relative h-[290px] flex lg:items-center rounded-lg bg-[#EBFFF1] text-[#4FAD2E] p-[32px] box-border">
             <div className="lg:w-[171px] sm:w-auto">
-              <p className="text-[24px] font-semibold">Small Appliances</p>
-              <p className="text-[16px] font-semibold my-[24px]">
+              <p className="text-[24px] font-semibold text-[#4FAD2E] ">
+                Small Appliances
+              </p>
+              <p className="text-[16px] font-semibold my-[24px] text-[#4FAD2E] ">
                 upto 40% off kitchen products.
               </p>
-              <p className="text-[16px] font-semibold">Shop now</p>
+              <p className="text-[16px] font-semibold text-[#4FAD2E] ">
+                Shop now
+              </p>
             </div>
             <Image
               src={Rasmcc}
@@ -595,26 +604,26 @@ export default function Home() {
             alt=""
             className="lg:w-[120px] lg:h-[70px] md:w-[100px] md:h-[60px] w-[80px] h-[50px]"
           />
-          <div className="lg:w-[570px] md:w-[400px] w-full mt-[32px]">
-            <p className="lg:text-[48px] md:text-[36px] text-[18px] font-bold">
+          <div className="lg:w-[570px] md:w-[400px] w-[180px] mt-[32px]">
+            <p className="lg:text-[48px] md:text-[36px] text-[14px] font-bold">
               Simplify your shopping with GRAZLE
             </p>
-            <p className="lg:text-[16px] md:text-[14px] text-[12px]">
+            <p className="lg:text-[16px] md:text-[14px] text-[10px]">
               SHOPPING ON THE GO IS FAST AND EASY
             </p>
-            <p className="lg:text-[16px] md:text-[14px] text-[12px] mt-[32px] text-[#393A44] font-medium">
+            <p className="lg:text-[16px] md:text-[14px] text-[10px] mt-[8px] text-[#393A44] font-medium">
               Get the App
             </p>
-            <div className="flex items-center mt-[32px]">
+            <div className="flex items-center lg:mt-[32px] mt-[8px] sm:mt-[8px]  md:mt-[8px]   mb-4">
               <Image
                 src={Google}
                 alt=""
-                className="lg:w-[135px] lg:h-[40px] md:w-[120px] md:h-[35px] w-[100px] h-[30px] mr-[16px]"
+                className="lg:w-[135px] lg:h-[40px] md:w-[120px] md:h-[35px] w-[80px] h-[25px] mr-[16px]"
               />
               <Image
                 src={Apple}
                 alt=""
-                className="lg:w-[135px] lg:h-[40px] md:w-[120px] md:h-[35px] w-[100px] h-[30px]"
+                className="lg:w-[135px] lg:h-[40px] md:w-[120px] md:h-[35px] w-[80px] h-[25px]"
               />
             </div>
           </div>
@@ -623,12 +632,12 @@ export default function Home() {
           <Image
             src={Phone1}
             alt=""
-            className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[150px] h-[180px] lg:relative lg:right-[34px] lg:top-[-66px] lg:ml-[16px] md:absolute md:right-[185px] md:top-[0px] relative"
+            className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[100px] h-[130px] lg:relative lg:right-[34px] lg:top-[-66px] lg:ml-[16px] md:absolute md:right-[185px] md:top-[0px] relative"
           />
           <Image
             src={Phone2}
             alt=""
-            className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[150px] h-[180px] lg:relative lg:right-[40px] right-[-80px] lg:bottom-[-66px] lg:mt-0 mt-[16px] md:absolute md:right-[40px] md:bottom-[0px] relative"
+            className="lg:w-[278px] lg:h-[356px] md:w-[170px] md:h-[250px] w-[100px] h-[130px] lg:relative lg:right-[40px] top-[-10px]  right-[-80px] lg:bottom-[-66px] lg:mt-0 mt-[16px] md:absolute md:right-[40px] md:bottom-[0px] relative"
           />
         </div>
       </div>

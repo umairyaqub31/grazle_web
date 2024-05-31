@@ -31,13 +31,13 @@ export default function RegisterSeller() {
         <Image
           src={register}
           alt=""
-          className="w-[100%] top-[100px] absolute right-[30px] lg:h-[600px] h-[650px] sm:h-[800px]"
+          className="w-[100%] top-[100px] absolute right-[30px] lg:h-[670px] h-[650px] sm:h-[800px]"
         />
       </div>
       <div className="lg:w-[50%] w-[100%] sm:w-[100%] md:w-[100%]  h-[100vh] lg:pl-[50px] lg:m-0 m-3 lg:py-[50px] ">
         <div className="flex flex-col justify-center items-center ">
           <Image src={logo} alt="" className="w-[210px] h-[125px]" />
-          <p className="mt-6 text-[40px] font-semibold">Welcome Back</p>
+          <p className="mt-6 text-[40px] font-semibold">Become a Seller!</p>
           <p className=" text-[18px] font-medium text-[#777777]">
             Please log in into your account
           </p>

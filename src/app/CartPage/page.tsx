@@ -46,16 +46,16 @@ export default function Cartpage() {
               </p>
               <p className="text-[16px] font-medium text-[#F70000]">+ Add</p>
             </div>
-            <div className="mt-5 flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap items-center justify-between">
+            <div className="mt-5 flex items-center justify-between">
               <div className="flex items-center">
-                <CiSquareCheck className="text-[#F70000] text-[32px] mr-3" />
+                <CiSquareCheck className="text-[#F70000] lg:block sm:hidden hidden text-[32px] mr-3" />
                 <Image
                   src={airpod}
                   alt="Airpod"
-                  className="rounded-2xl w-[90px] h-[90px] mr-7"
+                  className="rounded-2xl lg:w-[90px] w-[60px] h-[60px] lg:h-[90px] lg:mr-7 mr-3 "
                 />{" "}
                 <div>
-                  <p className="lg:text-[24px] text-[16px] sm:text-[18px] md:text-[18px] font-medium text-black">
+                  <p className="lg:text-[24px] text-[12px] sm:text-[14px] md:text-[16px] font-medium text-black">
                     Wear Saka Store
                   </p>
                   <div className="my-3 flex items-center">
@@ -64,7 +64,7 @@ export default function Cartpage() {
                         10%
                       </p>
                     </div>
-                    <p className="line-through lg:text-[16px] text-[12px] sm:text-[14px] md:text-[16px] font-medium text-[#777777]">
+                    <p className="line-through lg:text-[16px] text-[10px] sm:text-[12px] md:text-[14px] font-medium text-[#777777]">
                       Rs 345.000
                     </p>
                   </div>
@@ -74,20 +74,20 @@ export default function Cartpage() {
 
               <div>
                 <div className="lg:w-[124px] lg:mt-0 mt-3 sm:mt-3 md:mt-3   rounded-full border-[1px] border-[#E6E6E6] p-2 flex items-center justify-between">
-                  <div className="w-[34px] h-[34px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
+                  <div className="lg:w-[34px] lg:h-[34px] h-[24px] w-[24px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
                     <HiOutlineMinus className="text-[16px] font-bold " />
                   </div>
-                  <p className="text-[16px] font-bold ">1</p>
-                  <div className="w-[34px] h-[34px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
+                  <p className="text-[16px] font-bold lg:mx-0 mx-3">1</p>
+                  <div className="g:w-[34px] lg:h-[34px] h-[24px] w-[24px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
                     <HiOutlinePlus className="text-[16px] font-bold " />
                   </div>
                 </div>
                 <div className="flex justify-end mt-4 gap-4">
-                  <div className="w-[43px] h-[43px] bg-[#5EF7000A] rounded-md flex items-center justify-center">
-                    <FaRegEdit className="text-[24px] text-[#00F763]" />
+                  <div className="lg:w-[43px] lg:h-[43px] h-[30px] w-[30px]  bg-[#5EF7000A] rounded-md flex items-center justify-center">
+                    <FaRegEdit className="lg:text-[24px] text-[18px] text-[#00F763]" />
                   </div>
-                  <div className="w-[43px] h-[43px] bg-[#F700000A] rounded-md flex items-center justify-center">
-                    <RiDeleteBin6Fill className="text-[24px] text-[#F70000]" />
+                  <div className="lg:w-[43px] lg:h-[43px] h-[30px] w-[30px] bg-[#F700000A] rounded-md flex items-center justify-center">
+                    <RiDeleteBin6Fill className="lg:text-[24px] text-[18px] text-[#F70000]" />
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function Cartpage() {
           </div>
           <div
             style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-            className="w-[100%] rounded-[20px] p-[20px] lg:mt-6 mt-4 sm:mt-4 md:mt-4  border-[1px] border-[#F70000]"
+            className="w-[100%] mt-4 rounded-[20px] p-[20px]  border-[1px] border-[#F70000]"
           >
             <div className="flex  items-center">
               <CiSquareCheck className="text-[#F70000] text-[24px] mr-3" />
@@ -108,16 +108,16 @@ export default function Cartpage() {
               </p>
               <p className="text-[16px] font-medium text-[#F70000]">+ Add</p>
             </div>
-            <div className="mt-5 flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap items-center justify-between">
+            <div className="mt-5 flex items-center justify-between">
               <div className="flex items-center">
-                <CiSquareCheck className="text-[#F70000] text-[32px] mr-3" />
+                <CiSquareCheck className="text-[#F70000] lg:block sm:hidden hidden text-[32px] mr-3" />
                 <Image
                   src={airpod}
                   alt="Airpod"
-                  className="rounded-2xl w-[90px] h-[90px] mr-7"
+                  className="rounded-2xl lg:w-[90px] w-[60px] h-[60px] lg:h-[90px] lg:mr-7 mr-3 "
                 />{" "}
                 <div>
-                  <p className="lg:text-[24px] text-[16px] sm:text-[18px] md:text-[18px] font-medium text-black">
+                  <p className="lg:text-[24px] text-[12px] sm:text-[14px] md:text-[16px] font-medium text-black">
                     Wear Saka Store
                   </p>
                   <div className="my-3 flex items-center">
@@ -126,7 +126,7 @@ export default function Cartpage() {
                         10%
                       </p>
                     </div>
-                    <p className="line-through lg:text-[16px] text-[12px] sm:text-[14px] md:text-[16px] font-medium text-[#777777]">
+                    <p className="line-through lg:text-[16px] text-[10px] sm:text-[12px] md:text-[14px] font-medium text-[#777777]">
                       Rs 345.000
                     </p>
                   </div>
@@ -136,20 +136,20 @@ export default function Cartpage() {
 
               <div>
                 <div className="lg:w-[124px] lg:mt-0 mt-3 sm:mt-3 md:mt-3   rounded-full border-[1px] border-[#E6E6E6] p-2 flex items-center justify-between">
-                  <div className="w-[34px] h-[34px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
+                  <div className="lg:w-[34px] lg:h-[34px] h-[24px] w-[24px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
                     <HiOutlineMinus className="text-[16px] font-bold " />
                   </div>
-                  <p className="text-[16px] font-bold ">1</p>
-                  <div className="w-[34px] h-[34px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
+                  <p className="text-[16px] font-bold lg:mx-0 mx-3">1</p>
+                  <div className="g:w-[34px] lg:h-[34px] h-[24px] w-[24px] rounded-full bg-[#F2F2F2] flex items-center cusor-pointer justify-center">
                     <HiOutlinePlus className="text-[16px] font-bold " />
                   </div>
                 </div>
                 <div className="flex justify-end mt-4 gap-4">
-                  <div className="w-[43px] h-[43px] bg-[#5EF7000A] rounded-md flex items-center justify-center">
-                    <FaRegEdit className="text-[24px] text-[#00F763]" />
+                  <div className="lg:w-[43px] lg:h-[43px] h-[30px] w-[30px]  bg-[#5EF7000A] rounded-md flex items-center justify-center">
+                    <FaRegEdit className="lg:text-[24px] text-[18px] text-[#00F763]" />
                   </div>
-                  <div className="w-[43px] h-[43px] bg-[#F700000A] rounded-md flex items-center justify-center">
-                    <RiDeleteBin6Fill className="text-[24px] text-[#F70000]" />
+                  <div className="lg:w-[43px] lg:h-[43px] h-[30px] w-[30px] bg-[#F700000A] rounded-md flex items-center justify-center">
+                    <RiDeleteBin6Fill className="lg:text-[24px] text-[18px] text-[#F70000]" />
                   </div>
                 </div>
               </div>
@@ -158,7 +158,7 @@ export default function Cartpage() {
         </div>
         <div
           style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
-          className="lg:w-[35%] w-[100%] sm:w-[100%] md:w-[100%] rounded-[20px] p-[20px]"
+          className="lg:w-[25%] w-[100%] sm:w-[100%] md:w-[100%] rounded-[20px] p-[20px]"
         >
           <div className="w-[100%] ">
             <p className="text-[16px] font-medium text-[#777777]">

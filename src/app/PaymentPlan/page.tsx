@@ -8,7 +8,7 @@ export default function PaymentPlan() {
       <Image
         src={logo}
         alt="Menu"
-        className="lg:w-[216px] w-[80%] sm:w-[70%] md:w-[50%] h-[127px] mt-[52px]"
+        className="lg:w-[216px] w-[100px] sm:w-[120px] md:w-[130px] lg:h-[127px] h-[70px] sm:h-[75px] md:h-[80px] mt-[52px]"
       />
       <p className="mt-[18px] lg:text-[40px] text-[24px] sm:text-[24px] md:text-[24px] font-bold">
         Buy Grazle Premium

@@ -62,8 +62,11 @@ const MainSlider = () => {
         dotListClass="custom-dot-list-style"
       >
         {sliderItems.map((item, index) => (
-          <div key={index} style={{ width: "100%" }}>
-            <Image src={item.imageUrl} className="lg:h-[400px] h-[260px]" />
+          <div key={index} style={{ width: "100%" }} className="">
+            <Image
+              src={item.imageUrl}
+              className="lg:h-[400px] h-[140px] sm:h-[200px] md:h-[250px]  rounded-3 lg:rounded-0 sm:rounded-3"
+            />
           </div>
         ))}
       </Carousel>
