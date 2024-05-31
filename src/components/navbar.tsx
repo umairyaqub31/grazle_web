@@ -354,7 +354,7 @@ export default function Navbar() {
               )}
             </div>
           </div>
-          <div className="flex items-center  text-[14px] font-normal lg:ml-[0px] md:ml-[200px] sm:ml-[0px]">
+          <div className="flex items-center w-[150px] lg:w-[470px]  text-[14px] font-normal lg:ml-[0px] md:ml-[200px] sm:ml-[0px]">
             <Link href="/CartPage" className="flex items-center mr-4 ">
               <Image src={Cart} alt="Cart" className="w-[24px] h-[24px] mr-2" />
               <p className="text-[12px] hidden sm:block">Cart</p>
