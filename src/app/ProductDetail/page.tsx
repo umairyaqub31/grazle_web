@@ -10,7 +10,7 @@ import { Box, Rating } from "@mui/material";
 import LinearProgress from "@mui/joy/LinearProgress";
 import Card1 from "@/assets/a5a6296b2158604a47215a2b0a00bde0.png";
 import { HiOutlineMinus, HiOutlinePlus } from "react-icons/hi";
-import { IoIosHeartEmpty } from "react-icons/io";
+import { IoIosCheckmarkCircleOutline, IoIosHeartEmpty } from "react-icons/io";
 import Logoo from "@/assets/Grazle Logo.png";
 import { FaAngleDown, FaStar } from "react-icons/fa6";
 import { FaCheckCircle } from "react-icons/fa";
@@ -30,6 +30,15 @@ export default function ProductDetail() {
 
   const goToShop = () => {
     router.push("/StoreProduct");
+  };
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleClick = () => {
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
   return (
     <div className="lg:my-[50px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px]">
@@ -128,9 +137,25 @@ export default function ProductDetail() {
               </div>
             </div>
             <div className="flex gap-4">
-              <button className=" bg-[#F70000] rounded-full h-[50px] mt-[20px] lg:w-[275px] w-[200px] sm:w-[200px] md:w-[200px] font-medium text-white">
-                Add to carts
+              <button
+                className="bg-[#F70000] rounded-full h-[50px] mt-[20px] lg:w-[275px] w-[200px] sm:w-[200px] md:w-[200px] font-medium text-white"
+                onClick={handleClick}
+              >
+                Add to cart
               </button>
+              {showPopup && (
+                <div className="bg-[#F8F8F8] absolute top-[250px] right-0 h-[50px] shadow-lg  w-[350px] flex items-center">
+                  <div className="rounded-l-lg bg-[#4FAD2E] w-3  h-[50px]"></div>
+
+                  <div className="mx-4 flex items-center gap-6">
+                    <IoIosCheckmarkCircleOutline className="text-[#4FAD2E] text-[20px]" />
+
+                    <p className="text-black text-[14px] font-semibold">
+                      The Item has added into cart
+                    </p>
+                  </div>
+                </div>
+              )}
               <button className="border-[1px] border-[#F70000] rounded-full h-[50px] mt-[20px] lg:w-[275px] w-[200px] sm:w-[200px] md:w-[200px]  font-medium text-[#F70000]">
                 Get Started
               </button>

@@ -203,21 +203,21 @@ export default function MyAccount() {
                   <option>FeMale</option>
                 </select>
               </div>
-              <div className="flex items-center justify-between mt-[30px]">
-                <button className=" bg-[#F70000] rounded-2xl h-[50px]  w-[181px] text-[18px] font-medium text-white">
+              <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center justify-between mt-[30px]">
+                <button className=" bg-[#F70000] rounded-2xl h-[50px]  lg:w-[181px] w-[100%] text-[18px] font-medium text-white">
                   Update Change
                 </button>
-                <div className="flex items-center">
+                <div className="flex items-center lg:mt-0  mt-3 sm:mt-3">
                   <MdOutlineDeleteOutline
-                    className="text-[#F70000] text-[28px] mr-[16px]"
+                    className="text-[#F70000] lg:text-[28px] text-[20px] sm:text-[20px]  mr-[16px]"
                     onClick={handleOpenModelDelete}
                   />
-                  <p className="text-[#F70000] text-[16px] font-semibold mr-[16px]">
+                  <p className="text-[#F70000] lg:text-[16px] text-[12px] sm:text-[14px] font-semibold mr-[16px]">
                     Delete Account
                   </p>
 
-                  <LiaUserSlashSolid className="text-[#777777] text-[28px] mr-[16px]" />
-                  <p className="text-[#777777] text-[16px] font-semibold mr-[16px]">
+                  <LiaUserSlashSolid className="text-[#F70000] lg:text-[28px] text-[20px] sm:text-[20px]  mr-[16px]" />
+                  <p className="text-[#777777] lg:text-[16px] text-[12px] sm:text-[14px] font-semibold mr-[16px]">
                     Delete Account
                   </p>
                 </div>
@@ -375,7 +375,7 @@ export default function MyAccount() {
               >
                 <p
                   onClick={() => handleSectionChangeorder("Active")}
-                  className={`lg:text-[16px] text-[12px] sm:text-[13px] md:text-[14px]  font-normal text-[#777777] cursor-pointer ${
+                  className={`lg:text-[16px] text-[9px] sm:text-[13px] md:text-[14px]  font-normal text-[#777777] cursor-pointer ${
                     activeSectionorder === "Active"
                       ? "border-b-[4px] border-[#F70000] font-semibold"
                       : "text-[#8B8B8B]"
@@ -385,7 +385,7 @@ export default function MyAccount() {
                 </p>
                 <p
                   onClick={() => handleSectionChangeorder("Completed")}
-                  className={`lg:text-[16px] text-[12px] sm:text-[13px] md:text-[14px] font-normal text-[#777777] cursor-pointer ${
+                  className={`lg:text-[16px] text-[9px] sm:text-[13px] md:text-[14px] font-normal text-[#777777] cursor-pointer ${
                     activeSectionorder === "Completed"
                       ? "border-b-[4px] border-[#F70000] font-semibold"
                       : "text-[#8B8B8B]"
@@ -395,7 +395,7 @@ export default function MyAccount() {
                 </p>
                 <p
                   onClick={() => handleSectionChangeorder("Cancelled")}
-                  className={`lg:text-[16px] text-[12px] sm:text-[13px] md:text-[14px] font-normal text-[#777777] cursor-pointer ${
+                  className={`lg:text-[16px] text-[9px] sm:text-[13px] md:text-[14px] font-normal text-[#777777] cursor-pointer ${
                     activeSectionorder === "Cancelled"
                       ? "border-b-[4px] border-[#F70000] font-semibold"
                       : "text-[#8B8B8B]"
@@ -410,7 +410,7 @@ export default function MyAccount() {
                     style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
                     className="w-100 rounded-3xl p-6 mt-6 hover:border-[1px] border-[#F70000]"
                   >
-                    <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center  justify-between">
+                    <div className="flex items-center  justify-between">
                       <div className="border-[1px] border-[#777777] rounded-full w-[230px] px-4 py-2 flex items-center">
                         <IoLockClosed className="w-[14px] h-[14px] mr-2" />
                         <p className="text-[14px] font-normal text-[#777777]">
@@ -419,7 +419,7 @@ export default function MyAccount() {
                       </div>
 
                       <div className="flex items-center mt-3 lg:mt-0 sm:mt-3 md:mt-2   ">
-                        <div className="flex items-center p-2 rounded-lg shadow-lg mr-3  cursor-pointer">
+                        <div className=" lg:flex sm:hidden hidden items-center p-2 rounded-lg shadow-lg mr-3  cursor-pointer">
                           <IoCloseSharp
                             className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
                             onClick={handleOpeneModel}
@@ -433,7 +433,16 @@ export default function MyAccount() {
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-wrap lg:flex-nowrap sm:flex-wrap md:flex-wrap items-center justify-between mt-5">
+                    <div className=" lg:hidden sm:flex flex mt-4 sm:mt-2 lg:mt-0 items-center p-2 rounded-lg shadow-lg mr-3  cursor-pointer">
+                      <IoCloseSharp
+                        className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
+                        onClick={handleOpeneModel}
+                      />
+                      <p className="text-[#FC0005] text-[16px] font-semibold mr-4">
+                        Cancel Order
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap  items-center justify-between mt-5">
                       <div className="flex items-center">
                         <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                           <Image
@@ -465,7 +474,7 @@ export default function MyAccount() {
                           In Progress
                         </button>
                         <button
-                          className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#26F63B] outline-dashed rounded-2xl h-[50px] lg:w-[181px] w-[300px] sm:w-[300px] md:w-[300px]  text-[18px] font-medium text-[#F69B26]"
+                          className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px] lg:w-[181px] w-[300px] sm:w-[300px] md:w-[300px]  text-[18px] font-medium text-[#F69B26]"
                           onClick={handleButtonClick}
                         >
                           Order Tracking
@@ -479,17 +488,17 @@ export default function MyAccount() {
                             Delivery Details
                           </p>
                         </div>
-                        <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap  gap-8 mt-5">
+                        <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap  lg:gap-8 gap-2 sm:gap-2 mt-5">
                           <p className="text-[14px] text-[#909198] font-normal">
                             Delivery Details
                           </p>
-                          <p className="text-[14px] text-black font-semibold">
+                          <p className="text-[14px]  sm:ml-7 lg:ml-7  ml-10 text-black font-semibold">
                             23 sep 2023
                           </p>
                           <p className="text-[14px] text-[#909198] font-normal">
                             Tracking ID:
                           </p>
-                          <p className="text-[14px] text-black font-semibold">
+                          <p className="text-[14px] sm:ml-7 lg:ml-7  ml-10 text-black font-semibold">
                             TYRGSH465Y6443
                           </p>
                         </div>
@@ -498,7 +507,7 @@ export default function MyAccount() {
                             Delivery Details
                           </p>
                         </div>
-                        <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap  gap-8 mt-5">
+                        <div className="lg:flex  sm:hidden md:hidden hidden  gap-8 mt-5">
                           <div className="flex items-center gap-4 lg:w-auto w-[100%] sm: w-[100%] md: w-[100%]">
                             <Image
                               src={AAA}
@@ -560,7 +569,7 @@ export default function MyAccount() {
                             </div>
                           </div>
                         </div>
-                        <div className="flex items-center  gap-3 mt-5">
+                        <div className="lg:flex  sm:hidden md:hidden hidden items-center  gap-3 mt-5">
                           <FaCheckCircle className="text-[#F70000] h-[24px] w-[24px]" />
                           <div className="border-[#F70000] border-t-[2px] w-[200px] ">
                             {" "}
@@ -574,6 +583,92 @@ export default function MyAccount() {
                             {" "}
                           </div>
                           <FaCheckCircle className="text-[#D2D4DA] h-[24px] w-[24px]" />
+                        </div>
+
+                        <div className="mt-5 sm:block block lg:hidden">
+                          <div className="flex gap-3 items-start">
+                            <div className="mt-2 ">
+                              <FaCheckCircle className="text-[#F70000] h-[24px] w-[24px]" />
+                              <div className="border-[#F70000] ml-3 mt-2 border-l-[2px] h-[100px] "></div>
+                            </div>
+                            <div className="flex items-center gap-4 lg:w-auto w-[100%] sm: w-[100%] md: w-[100%]">
+                              <Image
+                                src={AAA}
+                                alt=""
+                                className="w-[32px] h-[32px]"
+                              />
+                              <div>
+                                <p className="text-[14px] text-black font-semibold">
+                                  Order placed
+                                </p>
+                                <p className="text-[14px] text-[#909198] font-normal">
+                                  12 sep 2024, 04:25 PM
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex gap-3 items-start">
+                            <div className="mt-2 ">
+                              <FaCheckCircle className="text-[#F70000] h-[24px] w-[24px]" />
+                              <div className="border-[#F70000] ml-3 mt-2 border-l-[2px] h-[100px] "></div>
+                            </div>
+                            <div className="flex items-center gap-4 lg:w-auto w-[100%] sm: w-[100%] md: w-[100%]">
+                              <Image
+                                src={BBB}
+                                alt=""
+                                className="w-[32px] h-[32px]"
+                              />
+                              <div>
+                                <p className="text-[14px] text-black font-semibold">
+                                  Order placed
+                                </p>
+                                <p className="text-[14px] text-[#909198] font-normal">
+                                  12 sep 2024, 04:25 PM
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex gap-3 items-start">
+                            <div className="mt-2 ">
+                              <FaCheckCircle className="text-[#D2D4DA] h-[24px] w-[24px]" />
+                              <div className="border-[#D2D4DA] ml-3 mt-2 border-l-[2px] h-[100px] "></div>
+                            </div>
+                            <div className="flex items-center gap-4 lg:w-auto w-[100%] sm: w-[100%] md: w-[100%]">
+                              <Image
+                                src={CCC}
+                                alt=""
+                                className="w-[32px] h-[32px]"
+                              />
+                              <div>
+                                <p className="text-[14px] text-black font-semibold">
+                                  Order placed
+                                </p>
+                                <p className="text-[14px] text-[#909198] font-normal">
+                                  12 sep 2024, 04:25 PM
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex gap-3 items-start">
+                            <div className="mt-2 ">
+                              <FaCheckCircle className="text-[#D2D4DA] h-[24px] w-[24px]" />
+                            </div>
+                            <div className="flex items-center gap-4 lg:w-auto w-[100%] sm: w-[100%] md: w-[100%]">
+                              <Image
+                                src={DDD}
+                                alt=""
+                                className="w-[32px] h-[32px]"
+                              />
+                              <div>
+                                <p className="text-[14px] text-black font-semibold">
+                                  Order placed
+                                </p>
+                                <p className="text-[14px] text-[#909198] font-normal">
+                                  12 sep 2024, 04:25 PM
+                                </p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </>
                     )}
@@ -649,7 +744,7 @@ export default function MyAccount() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center justify-between mt-5">
+                    <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center lg:gap-[80px] mt-5">
                       <div className="flex items-center">
                         <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                           <Image
@@ -658,7 +753,7 @@ export default function MyAccount() {
                             className="w-[60px] h-[60px]"
                           />
                         </div>
-                        <div>
+                        <div className="lg:w-[200px]">
                           <p className="text-[18px] font-medium ">
                             Wear Saka Store{" "}
                           </p>
@@ -670,18 +765,18 @@ export default function MyAccount() {
                           </p>
                         </div>
                       </div>
-                      <p className="text-[24px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 mr-2 lg:mr-0  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 mr-2 lg:mr-0  font-medium">
                         Quantity 4
                       </p>
-                      <p className="text-[24px] text-[#777777]  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 lg:ml-[0px] ml-[70px] sm:ml-[70px]  font-medium">
                         Price: $567.00
                       </p>
-                      <div className="mt-3 lg:mt-0 sm:mt-3">
-                        <button className=" mr-4 bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  w-[181px] text-[18px] font-medium text-[#07D459]">
+                      <div className="mt-3 lg:block flex sm:flex lg:mt-0 sm:mt-3">
+                        <button className=" mr-4 bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  lg:w-[181px] w-[130px] lg:text-[18px] text-[14px] sm:text-[14px] lg:ml-auto font-medium text-[#07D459]">
                           Completed
                         </button>
                         <button
-                          className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px]  w-[181px] text-[18px] font-medium text-[#F69B26]"
+                          className=" bg-[#FFFAF4] lg:mt-3 mt-0 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px] lg:w-[181px] w-[130px] lg:w-[181px] sm:w-[100px]   lg:text-[18px] text-[14px] sm:text-[14px] font-medium text-[#F69B26]"
                           onClick={handleOpeneModelLeave}
                         >
                           Leave Review
@@ -701,7 +796,7 @@ export default function MyAccount() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center justify-between mt-5">
+                    <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center lg:gap-[80px] mt-5">
                       <div className="flex items-center">
                         <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                           <Image
@@ -710,7 +805,7 @@ export default function MyAccount() {
                             className="w-[60px] h-[60px]"
                           />
                         </div>
-                        <div>
+                        <div className="lg:w-[200px]">
                           <p className="text-[18px] font-medium ">
                             Wear Saka Store{" "}
                           </p>
@@ -722,25 +817,25 @@ export default function MyAccount() {
                           </p>
                         </div>
                       </div>
-                      <p className="text-[24px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 mr-2 lg:mr-0  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 mr-2 lg:mr-0  font-medium">
                         Quantity 4
                       </p>
-                      <p className="text-[24px] text-[#777777]  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 lg:ml-[0px] ml-[70px] sm:ml-[70px]  font-medium">
                         Price: $567.00
                       </p>
-                      <div className="mt-3 lg:mt-0 sm:mt-3">
-                        <button className=" mr-4 bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  w-[181px] text-[18px] font-medium text-[#07D459]">
+                      <div className="mt-3 lg:block flex sm:flex lg:mt-0 sm:mt-3">
+                        <button className=" mr-4 bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  lg:w-[181px] w-[130px] lg:text-[18px] text-[14px] sm:text-[14px] lg:ml-auto font-medium text-[#07D459]">
                           Completed
                         </button>
                         <button
-                          className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px]  w-[181px] text-[18px] font-medium text-[#F69B26]"
+                          className=" bg-[#FFFAF4] lg:mt-3 mt-0 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px] lg:w-[181px] w-[130px] lg:w-[181px] sm:w-[100px]   lg:text-[18px] text-[14px] sm:text-[14px] font-medium text-[#F69B26]"
                           onClick={handleOpeneModelLeave}
                         >
                           Leave Review
                         </button>
                       </div>
                     </div>
-                  </div>
+                  </div>{" "}
                   <div
                     style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
                     className="w-100 rounded-3xl p-6 mt-6 hover:border-[1px] border-[#F70000]"
@@ -753,7 +848,7 @@ export default function MyAccount() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center justify-between mt-5">
+                    <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-center lg:gap-[80px] mt-5">
                       <div className="flex items-center">
                         <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
                           <Image
@@ -762,7 +857,7 @@ export default function MyAccount() {
                             className="w-[60px] h-[60px]"
                           />
                         </div>
-                        <div>
+                        <div className="lg:w-[200px]">
                           <p className="text-[18px] font-medium ">
                             Wear Saka Store{" "}
                           </p>
@@ -774,18 +869,18 @@ export default function MyAccount() {
                           </p>
                         </div>
                       </div>
-                      <p className="text-[24px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 mr-2 lg:mr-0  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 mr-2 lg:mr-0  font-medium">
                         Quantity 4
                       </p>
-                      <p className="text-[24px] text-[#777777]  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] text-[#777777] mt-3 lg:mt-0 sm:mt-3 lg:ml-[0px] ml-[70px] sm:ml-[70px]  font-medium">
                         Price: $567.00
                       </p>
-                      <div className="mt-3 lg:mt-0 sm:mt-3">
-                        <button className=" mr-4 bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  w-[181px] text-[18px] font-medium text-[#07D459]">
+                      <div className="mt-3 lg:block flex sm:flex lg:mt-0 sm:mt-3">
+                        <button className=" mr-4 bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  lg:w-[181px] w-[130px] lg:text-[18px] text-[14px] sm:text-[14px] lg:ml-auto font-medium text-[#07D459]">
                           Completed
                         </button>
                         <button
-                          className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px]  w-[181px] text-[18px] font-medium text-[#F69B26]"
+                          className=" bg-[#FFFAF4] lg:mt-3 mt-0 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px] lg:w-[181px] w-[130px] lg:w-[181px] sm:w-[100px]   lg:text-[18px] text-[14px] sm:text-[14px] font-medium text-[#F69B26]"
                           onClick={handleOpeneModelLeave}
                         >
                           Leave Review
@@ -793,7 +888,6 @@ export default function MyAccount() {
                       </div>
                     </div>
                   </div>
-
                   <CustomModal showModal={showleave}>
                     <div className="flex-col justify-center w-[800px]">
                       <div className="w-[100%] rounded-[30px] p-[30px]">
@@ -921,14 +1015,14 @@ export default function MyAccount() {
                           </p>
                         </div>
                       </div>
-                      <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                         Quantity 4
                       </p>
-                      <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                         Price: $567.00
                       </p>
                       <div className="lg:mt-0 mt-3 sm:mt-3 md:mt-3">
-                        <button className=" mr-4 bg-[#F700001A] rounded-2xl h-[50px] outline-[2px] outline-[#F70000] outline-dashed  w-[181px] text-[18px] font-medium text-[#F70000]">
+                        <button className=" mr-4 bg-[#F700001A] rounded-2xl h-[50px] outline-[2px] outline-[#F70000] outline-dashed  lg:w-[181px] w-[300px] sm:w-[300px] text-[18px] font-medium text-[#F70000]">
                           Completed
                         </button>
                       </div>
@@ -967,14 +1061,14 @@ export default function MyAccount() {
                           </p>
                         </div>
                       </div>
-                      <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                         Quantity 4
                       </p>
-                      <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                         Price: $567.00
                       </p>
                       <div className="lg:mt-0 mt-3 sm:mt-3 md:mt-3">
-                        <button className=" mr-4 bg-[#F700001A] rounded-2xl h-[50px] outline-[2px] outline-[#F70000] outline-dashed  w-[181px] text-[18px] font-medium text-[#F70000]">
+                        <button className=" mr-4 bg-[#F700001A] rounded-2xl h-[50px] outline-[2px] outline-[#F70000] outline-dashed  lg:w-[181px] w-[300px] sm:w-[300px] text-[18px] font-medium text-[#F70000]">
                           Completed
                         </button>
                       </div>
@@ -1013,14 +1107,14 @@ export default function MyAccount() {
                           </p>
                         </div>
                       </div>
-                      <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                         Quantity 4
                       </p>
-                      <p className="text-[24px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
+                      <p className="lg:text-[24px] text-[16px] sm:text-[16px] md:text-[18px] lg:mt-0 mt-3 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                         Price: $567.00
                       </p>
                       <div className="lg:mt-0 mt-3 sm:mt-3 md:mt-3">
-                        <button className=" mr-4 bg-[#F700001A] rounded-2xl h-[50px] outline-[2px] outline-[#F70000] outline-dashed  w-[181px] text-[18px] font-medium text-[#F70000]">
+                        <button className=" mr-4 bg-[#F700001A] rounded-2xl h-[50px] outline-[2px] outline-[#F70000] outline-dashed  lg:w-[181px] w-[300px] sm:w-[300px] text-[18px] font-medium text-[#F70000]">
                           Completed
                         </button>
                       </div>

@@ -16,7 +16,7 @@ export default function CreditLimit() {
     setShowSendModel(false);
   };
   return (
-    <div className="lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px] gap-4 flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap lg:my-[32px] my-[20px] sm:my-[20px] md: my-[30px] ">
+    <div className="lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px] gap-4 flex flex-wrap-reverse sm:flex-wrap-reverse md:flex-wrap-reverse lg:flex-nowrap lg:my-[32px] my-[20px] sm:my-[20px] md: my-[30px] ">
       <div
         style={{ boxShadow: "0px 4px 29px 0px #0000000A" }}
         className="lg:w-[60%] w-[100%] sm:w-[100%] md:w-[100%] rounded-3xl p-[24px] h-auto"
@@ -82,7 +82,7 @@ export default function CreditLimit() {
           background:
             "linear-gradient(107.86deg, #F70000 -1.3%, #F69B26 81.68%",
         }}
-        className="lg:w-[40%] w-[100%] sm:w-[100%] md:w-[100%] text-white rounded-2xl p-[24px] h-[300px]"
+        className="lg:w-[40%] w-[100%] sm:w-[100%] md:w-[100%] text-white rounded-2xl p-[24px] lg:h-[300px] h-[220px] sm:h-[230px]"
       >
         <div className="flex items-center">
           <div className="w-[60px] h-[60px] bg-[#F96609] rounded-full flex items-center justify-center">
@@ -93,14 +93,18 @@ export default function CreditLimit() {
           </p>
         </div>
         <div className="mt-6 flex items-center">
-          <p className="text-[24px] font-semibold text-white ">
+          <p className="lg:text-[24px]  text-[18px] sm:text-[18px] md:text-[20px]  font-semibold text-white ">
             Get Credit Upto
           </p>
-          <p className="text-[64px] ml-6 font-bold text-white ">66 Lac</p>
+          <p className="lg:text-[64px] text-[32px] sm:text-[32px] md:text-[32px]  ml-6 font-bold text-white ">
+            66 Lac
+          </p>
         </div>
         <div className="mt-6 flex items-center">
-          <div className="border-b-[1px] border-white w-[70%]"></div>
-          <p className="text-[16px] font-semibold">Only For Retailers</p>
+          <div className="border-b-[1px] border-white lg:w-[70%] w-[60%] sm:[60%]"></div>
+          <p className="lg:text-[16px] text-[12px] ml-2 sm:text-[14px] md:text-[16px] font-semibold">
+            Only For Retailers
+          </p>
         </div>
       </div>
       <CustomModal showModal={showSendModel}>
