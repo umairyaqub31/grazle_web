@@ -334,7 +334,7 @@ export default function Home() {
         <div className="flex items-center justify-start space-x-[16px] w-max">
           <div
             style={{ backgroundColor: "rgba(195, 95, 65, 0.2)" }}
-            className="lg:w-[308px] md:w-[460px] sm:w-[308px] card h-[469px] rounded-lg text-[#BC5A3D] p-[32px] box-border relative"
+            className="lg:w-[308px] md:w-[460px] sm:w-[308px] card h-[509px] rounded-lg text-[#BC5A3D] p-[32px] box-border relative"
           >
             <div>
               <p className="text-[24px] font-semibold">Small Appliances</p>
