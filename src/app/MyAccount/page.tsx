@@ -469,12 +469,12 @@ export default function MyAccount() {
                       <p className="lg:text-[24px] text-[18px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                         Price: $567.00
                       </p>
-                      <div className="flex-col mt-3 lg:mt-0 sm:mt-3 md:mt-3  flex">
-                        <button className=" bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  lg:w-[181px] w-[300px] sm:w-[300px] md:w-[300px] text-[18px] font-medium text-[#07D459]">
+                      <div className="lg:flex-col flex-row justify-between sm:flex-row mt-3 lg:mt-0 sm:mt-3 md:mt-3  flex">
+                        <button className=" bg-[#00F7630F] lg:rounded-2xl rounded-lg sm:rounded-lg  lg:h-[50px] h-[40px] sm:h-[40px]  outline-[2px] outline-[#26F63B] outline-dashed  lg:w-[181px] w-[150px] sm:w-[300px] md:w-[300px] lg:text-[18px] text-[14px] sm:text-[14px] font-medium text-[#07D459]">
                           In Progress
                         </button>
                         <button
-                          className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px] lg:w-[181px] w-[300px] sm:w-[300px] md:w-[300px]  text-[18px] font-medium text-[#F69B26]"
+                          className=" bg-[#FFFAF4] lg:ml-0 ml-3 sm:ml-3 lg:mt-3 mt-0 sm:mt-0 outline-[2px] outline-[#F69B26] outline-dashed lg:rounded-2xl rounded-lg sm:rounded-lg lg:h-[50px] h-[40px] sm:h-[40px] lg:w-[181px] w-[150px] sm:w-[300px] md:w-[300px]  lg:text-[18px] text-[14px] sm:text-[14px] font-medium text-[#F69B26]"
                           onClick={handleButtonClick}
                         >
                           Order Tracking

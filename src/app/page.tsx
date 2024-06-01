@@ -213,6 +213,7 @@ export default function Home() {
           </button>
         </div>
       </div>
+      {/* MianSlider */}
       <div className="lg:mx-[150px] md:mx-[60px] lg:px-0 sm:px-3 px-3 md:px-3">
         <MainSlider />
       </div>

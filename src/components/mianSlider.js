@@ -68,6 +68,7 @@ const MainSlider = () => {
               className="lg:h-[400px] h-[160px] sm:h-[200px] md:h-[250px] w-[100%]  rounded-lg lg:rounded-none sm:rounded-lg"
             />
           </div>
+          //  Slider
         ))}
       </Carousel>
     </div>
