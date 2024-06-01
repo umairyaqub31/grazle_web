@@ -480,7 +480,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        {/* <div className="mt-4 sm:mt-0 md:mt-3 w-full lg:hidden">
+        <div className="mt-4 sm:mt-0 md:mt-3 w-full lg:hidden">
           <div ref={searchContainerRef} className="relative w-full">
             <input
               placeholder="Search"
@@ -498,7 +498,7 @@ export default function Navbar() {
               </div>
             )}
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );
