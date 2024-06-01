@@ -65,7 +65,7 @@ const MainSlider = () => {
           <div key={index} style={{ width: "100%" }} className="">
             <Image
               src={item.imageUrl}
-              className="lg:h-[400px] h-[240px] sm:h-[200px] md:h-[250px] w-[100%]  rounded-3 lg:rounded-0 sm:rounded-3"
+              className="lg:h-[400px] h-[160px] sm:h-[200px] md:h-[250px] w-[100%]  rounded-lg lg:rounded-none sm:rounded-lg"
             />
           </div>
         ))}

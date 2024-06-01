@@ -197,27 +197,25 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="text-white text-md lg:text-2xl font-semibold">
+              <p className="text-white text-[10px] lg:text-2xl font-semibold">
                 Credit Limit
               </p>
-              <p className="text-white text-sm lg:text-lg font-normal">
+              <p className="text-white text-[8px] lg:text-lg font-normal">
                 Get Credit Up to 10 Lacs
               </p>
             </div>
           </div>
           <button
-            className="text-[#F70000] text-sm lg:text-xl font-semibold bg-white border-[1px] border-[#F70000] rounded-full h-[45px] lg:h-[50px] px-4 lg:px-8"
+            className="text-[#F70000] text-[10px] lg:text-xl font-semibold bg-white border-[1px] border-[#F70000] rounded-full lg:h-[45px] h-[35px] lg:w-[210px] sm:h-[40px] lg:h-[50px] px-10 lg:px-10"
             onClick={goToCreditLimit}
           >
             Get Now
           </button>
         </div>
       </div>
-      {/* mianSlider */}
       <div className="lg:mx-[150px] md:mx-[60px] lg:px-0 sm:px-3 px-3 md:px-3">
         <MainSlider />
       </div>
-      {/* categories */}
       <div className="lg:mx-[150px] lg:mt-0 gap-2 sm:gap-2 lg:gap-0 mt-3 lg:mt-2 md:mx-auto overflow:-webkit-scrollbar: none; md:overflow-x-auto md:w-[645px] lg:w-auto sm:mx-auto sm:max-w-[calc(100vw - 120px)] flex items-center justify-between overflow-x-auto">
         <div className="w-[92px] sm:mt-2   md:gap-2 flex flex-col justify-center items-center">
           <div className=" flex  justify-center items-center lg:w-[92px] lg:h-[92px] w-[70px] h-[70px] sm:w-[70px] sm:h-[70px] rounded-full bg-gradient-to-r from-[#F81F1F] to-[#FFA31A] ">
@@ -227,7 +225,7 @@ export default function Home() {
               className="lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] sm:h-[30px] sm:w-[30px] "
             />
           </div>
-          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[10px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -239,7 +237,7 @@ export default function Home() {
               className="lg:w-[40px] lg:h-[40px] w-[30px] h-[30px] sm:h-[30px] sm:w-[30px] "
             />
           </div>
-          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[10px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -251,7 +249,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[10px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -263,7 +261,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[10px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -275,7 +273,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[10px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -287,7 +285,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[10px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -299,7 +297,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[10px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -311,7 +309,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[10px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -323,7 +321,7 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[10px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
@@ -335,12 +333,11 @@ export default function Home() {
               className=" lg:w-[80px] lg:h-[80px] w-[60px] h-[60px] sm:h-[60px] sm:w-[60px]  rounded-full "
             />
           </div>
-          <p className="color-[#393A44] lg:text-[14px] text-[12px] sm:text-[12px] font-normal mt-[4px]">
+          <p className="color-[#393A44] lg:text-[14px] text-[10px] sm:text-[12px] font-normal mt-[4px]">
             Categories
           </p>
         </div>
       </div>
-      {/* small appliances */}
       <div className="lg:mx-[150px] md:mx-[60px] my-[16px] overflow-x-auto overflow:-webkit-scrollbar: none;">
         <div className="flex items-center justify-start space-x-[16px] w-max">
           <div
