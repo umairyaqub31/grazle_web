@@ -12,7 +12,7 @@ import Appartment from "@/assets/Group444.png";
 import Office from "@/assets/Layer_1.png";
 import { Avatar, Checkbox, Radio } from "@mui/material";
 import CustomModal from "@/components/CustomModel";
-import { MdOutlineDeleteOutline } from "react-icons/md";
+import { MdDelete, MdOutlineDeleteOutline } from "react-icons/md";
 import { LiaUserSlashSolid } from "react-icons/lia";
 import { FiEdit } from "react-icons/fi";
 import { IoLockClosed } from "react-icons/io5";
@@ -82,6 +82,12 @@ export default function MyAccount() {
   const handleButtonClick = () => {
     setIsDivVisible((prev) => !prev);
   };
+  const [isCancelOrderVisible, setIsCancelOrderVisible] = useState(false);
+
+  const toggleCancelOrderVisibility = () => {
+    setIsCancelOrderVisible(!isCancelOrderVisible);
+  };
+
   return (
     <div className="lg:my-[80px] my-[20px] sm:my-[20px] md:my-[30px] lg:mx-[150px] mx-[20px] sm:mx-[20px] md:mx-[30px]">
       <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap items-start gap-6 h-auto">
@@ -419,29 +425,26 @@ export default function MyAccount() {
                       </div>
 
                       <div className="flex items-center mt-3 lg:mt-0 sm:mt-3 md:mt-2   ">
-                        <div className=" lg:flex sm:hidden hidden items-center p-2 rounded-lg shadow-lg mr-3  cursor-pointer">
-                          <IoCloseSharp
-                            className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
-                            onClick={handleOpeneModel}
-                          />
-                          <p className="text-[#FC0005] text-[16px] font-semibold mr-4">
-                            Cancel Order
-                          </p>
-                        </div>
-                        <div className="border-#00000017 border-[1px] rounded-md h-[30px] w-[30px] flex items-center justify-center">
+                        {isCancelOrderVisible && (
+                          <div className=" lg:flex sm:hidden hidden items-center p-2 rounded-lg shadow-lg mr-3  cursor-pointer">
+                            <IoCloseSharp
+                              className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
+                              onClick={handleOpeneModel}
+                            />
+                            <p className="text-[#FC0005] text-[16px] font-semibold mr-4">
+                              Cancel Order
+                            </p>
+                          </div>
+                        )}
+                        <div
+                          className="border-#00000017 border-[1px] rounded-md h-[30px] w-[30px] flex items-center justify-center"
+                          onClick={toggleCancelOrderVisibility}
+                        >
                           <HiOutlineDotsVertical className="h-[15px] w-4 text-[#D9D9D9]" />
                         </div>
                       </div>
                     </div>
-                    <div className=" lg:hidden sm:flex flex mt-4 sm:mt-2 lg:mt-0 items-center p-2 rounded-lg shadow-lg mr-3  cursor-pointer">
-                      <IoCloseSharp
-                        className="text-[24px] text-[#FC0005] mr-4 cursor-pointer"
-                        onClick={handleOpeneModel}
-                      />
-                      <p className="text-[#FC0005] text-[16px] font-semibold mr-4">
-                        Cancel Order
-                      </p>
-                    </div>
+
                     <div className="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap  items-center justify-between mt-5">
                       <div className="flex items-center">
                         <div className="h-[100px] bg-[#F700000D] flex items-center justify-center w-[100px] rounded-2xl mr-5">
@@ -463,22 +466,59 @@ export default function MyAccount() {
                           </p>
                         </div>
                       </div>
-                      <p className="lg:text-[24px] text-[18px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
+
+                      <p className="lg:text-[24px] lg:block sm:hidden hidden text-[14px] sm:text-[14px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                         Quantity 4
                       </p>
-                      <p className="lg:text-[24px] text-[18px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
+                      <p className="lg:text-[24px] lg:block sm:hidden hidden text-[14px] m:text-[14px] mt-3 lg:mt-0 sm:mt-3 md:mt-3 text-[#777777]  font-medium">
                         Price: $567.00
                       </p>
-                      <div className="flex-col mt-3 lg:mt-0 sm:mt-3 md:mt-3  flex">
-                        <button className=" bg-[#00F7630F] rounded-2xl h-[50px] outline-[2px] outline-[#26F63B] outline-dashed  lg:w-[181px] w-[300px] sm:w-[300px] md:w-[300px] text-[18px] font-medium text-[#07D459]">
+                      <div className="lg:flex-col flex-row justify-between sm:flex-row mt-3 lg:mt-0 sm:mt-3 md:mt-3  flex">
+                        <button className=" hidden sm:hidden lg:block bg-[#00F7630F] lg:rounded-2xl rounded-lg sm:rounded-lg  lg:h-[50px] h-[40px] sm:h-[40px]  outline-[2px] outline-[#26F63B] outline-dashed  lg:w-[181px] w-[150px] sm:w-[300px] md:w-[300px] lg:text-[18px] text-[14px] sm:text-[14px] font-medium text-[#07D459]">
                           In Progress
                         </button>
                         <button
-                          className=" bg-[#FFFAF4] mt-3 outline-[2px] outline-[#F69B26] outline-dashed rounded-2xl h-[50px] lg:w-[181px] w-[300px] sm:w-[300px] md:w-[300px]  text-[18px] font-medium text-[#F69B26]"
+                          className=" bg-[#FFFAF4] hidden sm:hidden lg:block lg:ml-0 ml-3 sm:ml-3 lg:mt-3 mt-0 sm:mt-0 outline-[2px] outline-[#F69B26] outline-dashed lg:rounded-2xl rounded-lg sm:rounded-lg lg:h-[50px] h-[40px] sm:h-[40px] lg:w-[181px] w-[150px] sm:w-[300px] md:w-[300px]  lg:text-[18px] text-[14px] sm:text-[14px] font-medium text-[#F69B26]"
                           onClick={handleButtonClick}
                         >
                           Order Tracking
                         </button>
+                      </div>
+                    </div>
+                    <div className="lg:hidden block sm:block">
+                      <div className="flex mt-3 justify-between items-center">
+                        <p className=" text-[14px] text-[#777777]  font-medium">
+                          Quantity 4
+                        </p>
+                        <div>
+                          {isCancelOrderVisible && (
+                            <div className="flex  items-center cursor-pointer">
+                              <MdDelete
+                                className="text-[15px] mr-3 text-[#FC0005]  cursor-pointer"
+                                onClick={handleOpeneModel}
+                              />
+                              <p className="text-[#FC0005] text-[12px] font-semibold">
+                                Cancel Order
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex mt-2 justify-between items-center">
+                        <p className="text-[14px] text-[#777777] w-[35%]  font-medium">
+                          Price: $567.00
+                        </p>
+                        <div className=" justify-between items-center  mt-2 flex ">
+                          <button
+                            className=" bg-[#FFFAF4] outline-[2px] outline-[#F69B26] outline-dashed  rounded-lg mr-3  h-[30px] w-[85px] text-[10px] font-medium text-[#F69B26]"
+                            onClick={handleButtonClick}
+                          >
+                            Order Tracking
+                          </button>
+                          <button className="bg-[#00F7630F]  rounded-lg h-[30px]  outline-[2px] outline-[#26F63B] outline-dashed   w-[85px] text-[10px] font-medium text-[#07D459]">
+                            In Progress
+                          </button>
+                        </div>
                       </div>
                     </div>
                     {isDivVisible && (

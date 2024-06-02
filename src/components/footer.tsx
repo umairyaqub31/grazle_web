@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import logo from "@/assets/Grazle Logo.png";
 import Instagram from "@/assets/Instagram.png";
@@ -8,10 +9,48 @@ import Youtube from "@/assets/Youtube.png";
 import Email from "@/assets/email-icon.png";
 import Location from "@/assets/location-icon.png";
 import Phone from "@/assets/phone-icon.png";
+import { GrInstagram } from "react-icons/gr";
+import { FaFacebook, FaPinterest, FaTwitter } from "react-icons/fa";
+import { SiLinkedin } from "react-icons/si";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
+import { FaChevronDown } from "react-icons/fa6";
+
+interface FAQData {
+  header: string;
+}
+
 export default function Footer() {
+  const accordionData: FAQData[] = [
+    {
+      header: "Product",
+    },
+    {
+      header: "Company",
+    },
+    {
+      header: "Support",
+    },
+    {
+      header: "Legal",
+    },
+  ];
+
+  const [expanded, setExpanded] = useState<number | null>(null);
+
+  const handleAccordionChange =
+    (panelIndex: number) =>
+    (event: React.ChangeEvent<{}>, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panelIndex : null);
+    };
+
   return (
     <>
-      <div className="lg:px-[150px] md:px-[60px] px-[16px] py-[63px] bg-[#F8F8F8] flex flex-col lg:flex-row items-start lg:items-start justify-between">
+      <div className="lg:px-[150px] md:px-[60px] px-[16px] py-[63px] bg-[#F8F8F8]  lg:flex sm:hidden hidden  items-start lg:items-start justify-between">
         <div className="w-full lg:w-[196px] mb-[32px] lg:mb-0 text-center lg:text-left">
           <Image
             src={logo}
@@ -107,7 +146,159 @@ export default function Footer() {
         </div>
       </div>
 
-      <div></div>
+      <div className="flex flex-col sm:flex-col lg:hidden mx-[20px]">
+        <Image src={logo} alt="" className="w-[120px] h-[70px] " />
+        <p className="mt-3 text-[14px] font-normal text-[#4E4E4E]">
+          Lorem ipsum dolor sit amet cons ectet ur. Nunc sed erat tristique sed
+          magna. Eget condimentum.
+        </p>
+        <p className="mt-3 text-[16px] font-semibold text-[#4E4E4E]">
+          Follow Us
+        </p>
+        <div className="flex items-center gap-6  mt-4">
+          <FaTwitter className="text-[24px] text-[#434343]" />
+          <FaFacebook className="text-[24px] text-[#434343]" />
+          <SiLinkedin className="text-[24px] text-[#434343]" />
+          <FaPinterest className="text-[24px] text-[#434343]" />
+          <GrInstagram className="text-[24px] text-[#434343]" />
+        </div>
+        <div>
+          {accordionData.map((data, index) => (
+            <div key={index}>
+              <Accordion
+                style={{
+                  backgroundColor: "transparent",
+                  border: "none",
+                  boxShadow: "none",
+                  borderBottom: "1px solid #0000001A",
+                }}
+                expanded={expanded === index}
+                onChange={handleAccordionChange(index)}
+              >
+                <AccordionSummary
+                  style={{
+                    padding: "10px 0px",
+                    borderRadius: "0px",
+                  }}
+                  expandIcon={<FaChevronDown style={{ color: "#434343" }} />}
+                  aria-controls={`panel${index + 1}-content`}
+                  id={`panel${index + 1}-header`}
+                >
+                  <Typography style={{ fontWeight: "500" }}>
+                    <div>
+                      <p
+                        style={{
+                          textAlign: "start",
+                          color: "#434343",
+                          fontSize: "16px",
+                          fontWeight: "600",
+                        }}
+                      >
+                        {data.header}
+                      </p>
+                    </div>
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails
+                  style={{
+                    padding: "0px 0px 16px 0px",
+                    textAlign: "start",
+                    textJustify: "none",
+                  }}
+                >
+                  <Typography
+                    style={{
+                      backgroundColor: "transparent",
+                      paddingTop: "0px",
+                    }}
+                  >
+                    {index === 0 && (
+                      <>
+                        <p className="text-[14px] font-medium mt-[0px]">
+                          Overview
+                        </p>
+                        <div className="flex items-center justify-start mt-[8px]">
+                          <p className="text-[14px] font-medium">Features</p>
+                          <p className="text-[14px] font-bold ml-[12px] text-[#2EC5CE]">
+                            New
+                          </p>
+                        </div>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Tutorials
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Pricing
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Releases
+                        </p>
+                      </>
+                    )}
+                    {index === 1 && (
+                      <div>
+                        <p className="text-[14px] font-medium ">About</p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Press
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Careers
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Contact
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Partners
+                        </p>
+                      </div>
+                    )}
+                    {index === 2 && (
+                      <>
+                        <p className="text-[14px] font-medium mt-[0px]">
+                          Help Center
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Safety Center
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Legal
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Privacy policy
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Status
+                        </p>
+                      </>
+                    )}
+                    {index === 3 && (
+                      <>
+                        <p className="text-[14px] font-medium mt-[0px]">
+                          Cookies Policy
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Privacy Policy
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Terms of Service
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Law Enforcement
+                        </p>
+                        <p className="text-[14px] font-medium mt-[8px]">
+                          Status
+                        </p>
+                      </>
+                    )}
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          ))}
+          <p className="mt-5 mb-9 text-[12px] font-normal flex justify-center text-cneter text-[#949494] ">
+            © 2020 Landify UI Kit. All rights reserved
+          </p>
+        </div>
+      </div>
     </>
   );
 }
