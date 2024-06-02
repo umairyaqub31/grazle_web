@@ -287,66 +287,68 @@ export default function Navbar() {
                 className="w-[36px] h-[36px] absolute top-[50%] left-[10px] transform -translate-y-1/2"
               />
               {isOpenSearch && (
-                <div className="absolute right-[0%] mt-2 w-[400px] bg-white z-10 p-4 px-6 shadow-lg border border-[#D2D4DA] rounded-xl">
-                  <div className="flex gap-3 items-center">
-                    <CiTimer className="text-black text-[#777777]" />
-                    <p className="text-black text-[16px] font-semibold">
-                      Recent Searches
-                    </p>
-                  </div>
-                  <div className="flex gap-3 mt-3">
-                    <Link
-                      href="/StoreprouctPage"
-                      className="border-[1px] border-[#777777] rounded-full px-3 py-2"
-                    >
-                      <p className="text-black text-[14px] font-normal">
-                        Display Tech
-                      </p>
-                    </Link>
-                    <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
-                      <p className="text-black text-[14px] font-normal">
-                        Display Tech
+                <div className="fixed inset-0 z-50 opacity-100 bg-[rgba(0,0,0,0.5);] top-[115px]">
+                  <div className="absolute bg-white opacity-100  right-[37%] mt-2 w-[400px]  z-10 p-4 px-6 shadow-lg border border-[#D2D4DA] rounded-xl">
+                    <div className="flex gap-3 items-center">
+                      <CiTimer className="text-black text-[#777777]" />
+                      <p className="text-black text-[16px] font-semibold">
+                        Recent Searches
                       </p>
                     </div>
-                  </div>
-                  <div className="flex gap-3 mt-3">
-                    <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
-                      <p className="text-black text-[14px] font-normal">
-                        Display Tech
-                      </p>
-                    </div>
-                    <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
-                      <p className="text-black text-[14px] font-normal">
-                        Display Tech
-                      </p>
-                    </div>
-                  </div>
-                  <div className="rounded-xl mt-3 bg-[#E8E8E8] p-3 w-[80%]">
-                    <p className="text-black text-[16px] font-semibold">
-                      Popular Searches
-                    </p>{" "}
                     <div className="flex gap-3 mt-3">
-                      <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                      <Link
+                        href="/StoreprouctPage"
+                        className="border-[1px] border-[#777777] rounded-full px-3 py-2"
+                      >
                         <p className="text-black text-[14px] font-normal">
                           Display Tech
                         </p>
-                      </div>
-                      <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                      </Link>
+                      <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
                         <p className="text-black text-[14px] font-normal">
                           Display Tech
                         </p>
                       </div>
                     </div>
                     <div className="flex gap-3 mt-3">
-                      <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                      <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
                         <p className="text-black text-[14px] font-normal">
                           Display Tech
                         </p>
                       </div>
-                      <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                      <div className="border-[1px] border-[#777777] rounded-full px-3 py-2">
                         <p className="text-black text-[14px] font-normal">
                           Display Tech
                         </p>
+                      </div>
+                    </div>
+                    <div className="rounded-xl mt-3 bg-[#E8E8E8] p-3 w-[80%]">
+                      <p className="text-black text-[16px] font-semibold">
+                        Popular Searches
+                      </p>{" "}
+                      <div className="flex gap-3 mt-3">
+                        <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                          <p className="text-black text-[14px] font-normal">
+                            Display Tech
+                          </p>
+                        </div>
+                        <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                          <p className="text-black text-[14px] font-normal">
+                            Display Tech
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex gap-3 mt-3">
+                        <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                          <p className="text-black text-[14px] font-normal">
+                            Display Tech
+                          </p>
+                        </div>
+                        <div className="border-[1px] bg-white border-white rounded-full px-3 py-2">
+                          <p className="text-black text-[14px] font-normal">
+                            Display Tech
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>

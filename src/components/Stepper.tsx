@@ -34,15 +34,34 @@ const CustomStepper = (props: Partial<Props>) => {
         activeStep={selectedStep}
         sx={{
           "& .MuiStepLabel-label.Mui-completed": {
-            color: "#F70000",
+            fill: "#F70000",
             fontWeight: "500",
           },
 
           "& .MuiStepIcon-root.Mui-completed": {
-            color: "#F70000",
+            fill: "#F70000",
+            border: "none",
           },
           "& .MuiStepIcon-root.Mui-active": {
-            color: "#F70000",
+            fill: "#F70000",
+            border: "none",
+            "& MuiStepIcon-text": {
+              fontSize: "10px",
+              fill: "white",
+            },
+          },
+          "& .MuiStepIcon-root": {
+            fill: "white",
+            border: "2px solid #D9DDDD",
+            borderRadius: "50%",
+          },
+          "& .MuiStepIcon-text": {
+            fontSize: "14px",
+            fill: "#D9DDDD",
+          },
+          "& MuiStepIcon-text.Mui-active": {
+            fontSize: "14px",
+            fill: "white",
           },
         }}
         alternativeLabel
