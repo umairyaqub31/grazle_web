@@ -92,7 +92,7 @@ export default function StoreProduct() {
             <FaAngleDown className="text-[#777777]  text-[16px]" />
           </div>
           {isOpen && (
-            <div className="absolute mt-[60px] p-3 w-[370px] border-[1px] rounded-lg p-4 bg-white shadow-lg">
+            <div className="absolute z-50 mt-[60px] p-3 w-[370px] border-[1px] rounded-lg p-4 bg-white shadow-lg">
               <div className="relative  w-full">
                 <IoSearchOutline className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#777777] text-[20px]" />
                 <input
